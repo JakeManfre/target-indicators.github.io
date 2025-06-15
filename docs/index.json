@@ -1,4 +1,9 @@
 {
+  "CHANGELOG.html": {
+    "href": "CHANGELOG.html",
+    "title": "Changelog | Target Indicators Documentation",
+    "summary": "Changelog All notable changes to this project will be documented in this file. The format is based on Keep a Changelog, and this project adheres to Semantic Versioning. [Unreleased] Added Changed Deprecated Removed Fixed"
+  },
   "api/TargetIndicators.BoundaryShape.html": {
     "href": "api/TargetIndicators.BoundaryShape.html",
     "title": "Enum BoundaryShape | Target Indicators Documentation",
@@ -66,12 +71,37 @@
   },
   "index.html": {
     "href": "index.html",
-    "title": "This is the HOMEPAGE. | Target Indicators Documentation",
-    "summary": "This is the HOMEPAGE. Refer to Markdown for how to write markdown files. Quick Start Notes: Add images to the images folder if the file is referencing an image. Here is an elipse"
+    "title": "",
+    "summary": ""
   },
   "introduction.html": {
     "href": "introduction.html",
     "title": "Introduction | Target Indicators Documentation",
     "summary": "Introduction"
+  },
+  "manual/index.html": {
+    "href": "manual/index.html",
+    "title": "Target Indicators | Target Indicators Documentation",
+    "summary": "Target Indicators Target Indicators is a Unity asset that enables you to easily create visual indicators to track targets in your Unity app. Track waypoints, points of interest, enemies, other players, or any transform or 3D point. Features Target Indicators supports the following boundary types: Boundary Type Description Padded Absolute CompassTape None Padded and Absolute Boundary types supports the following boundary shapes: Boundary Shape Description Rectangle Ellipse"
+  },
+  "manual/project-setup.html": {
+    "href": "manual/project-setup.html",
+    "title": "Project Setup | Target Indicators Documentation",
+    "summary": "Project Setup General project setup instructions go here."
+  },
+  "manual/samples/samples.html": {
+    "href": "manual/samples/samples.html",
+    "title": "Samples | Target Indicators Documentation",
+    "summary": "Samples"
+  },
+  "manual/setup/setup-part1.html": {
+    "href": "manual/setup/setup-part1.html",
+    "title": "Part 1 Setup | Target Indicators Documentation",
+    "summary": "Part 1 Setup Setup part 1 instructions go here"
+  },
+  "manual/setup/setup-part2.html": {
+    "href": "manual/setup/setup-part2.html",
+    "title": "Part 2 Setup | Target Indicators Documentation",
+    "summary": "Part 2 Setup Setup part 2 instructions go here"
   }
 }

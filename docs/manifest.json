@@ -11,6 +11,16 @@
       }
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "CHANGELOG.md",
+      "output": {
+        ".html": {
+          "relative_path": "CHANGELOG.html"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "ManagedReference",
       "source_relative_path": "api/TargetIndicators.BoundaryShape.yml",
       "output": {
@@ -203,6 +213,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/complex-target-indicator-demo.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/complex-target-indicator-demo.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/ellipse.png",
       "output": {
         "resource": {
@@ -222,7 +242,7 @@
       "version": ""
     },
     {
-      "type": "Conceptual",
+      "type": "Redirection",
       "source_relative_path": "index.md",
       "output": {
         ".html": {
@@ -237,6 +257,69 @@
       "output": {
         ".html": {
           "relative_path": "introduction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/project-setup.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/project-setup.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/samples/samples.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/samples/samples.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/setup/setup-part1.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/setup/setup-part1.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/setup/setup-part2.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/setup/setup-part2.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "manual/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "manual/toc.html"
+        },
+        ".json": {
+          "relative_path": "manual/toc.json"
         }
       },
       "version": ""

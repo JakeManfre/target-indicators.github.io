@@ -847,3 +847,21 @@ references:
   commentId: Overload:TargetIndicators.TargetIndicatorManagerEditor.OnInspectorGUI
   fullName: TargetIndicators.TargetIndicatorManagerEditor.OnInspectorGUI
   nameWithType: TargetIndicatorManagerEditor.OnInspectorGUI
+- uid: target-indicators-changelog
+  name: Changelog
+  href: CHANGELOG.html
+- uid: target-indicators-manual
+  name: Target Indicators
+  href: manual/index.html
+- uid: target-indicators-project-setup
+  name: Project Setup
+  href: manual/project-setup.html
+- uid: target-indicators-samples
+  name: Samples
+  href: manual/samples/samples.html
+- uid: target-indicators-setup-part1
+  name: Part 1 Setup
+  href: manual/setup/setup-part1.html
+- uid: target-indicators-setup-part2
+  name: Part 2 Setup
+  href: manual/setup/setup-part2.html
