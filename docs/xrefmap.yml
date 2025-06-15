@@ -1,0 +1,849 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: TargetIndicators
+  name: TargetIndicators
+  href: api/TargetIndicators.html
+  commentId: N:TargetIndicators
+  fullName: TargetIndicators
+  nameWithType: TargetIndicators
+- uid: TargetIndicators.BoundaryShape
+  name: BoundaryShape
+  href: api/TargetIndicators.BoundaryShape.html
+  commentId: T:TargetIndicators.BoundaryShape
+  fullName: TargetIndicators.BoundaryShape
+  nameWithType: BoundaryShape
+- uid: TargetIndicators.BoundaryShape.Ellipse
+  name: Ellipse
+  href: api/TargetIndicators.BoundaryShape.html#TargetIndicators_BoundaryShape_Ellipse
+  commentId: F:TargetIndicators.BoundaryShape.Ellipse
+  fullName: TargetIndicators.BoundaryShape.Ellipse
+  nameWithType: BoundaryShape.Ellipse
+- uid: TargetIndicators.BoundaryShape.Rectangle
+  name: Rectangle
+  href: api/TargetIndicators.BoundaryShape.html#TargetIndicators_BoundaryShape_Rectangle
+  commentId: F:TargetIndicators.BoundaryShape.Rectangle
+  fullName: TargetIndicators.BoundaryShape.Rectangle
+  nameWithType: BoundaryShape.Rectangle
+- uid: TargetIndicators.BoundaryType
+  name: BoundaryType
+  href: api/TargetIndicators.BoundaryType.html
+  commentId: T:TargetIndicators.BoundaryType
+  fullName: TargetIndicators.BoundaryType
+  nameWithType: BoundaryType
+- uid: TargetIndicators.BoundaryType.Absolute
+  name: Absolute
+  href: api/TargetIndicators.BoundaryType.html#TargetIndicators_BoundaryType_Absolute
+  commentId: F:TargetIndicators.BoundaryType.Absolute
+  fullName: TargetIndicators.BoundaryType.Absolute
+  nameWithType: BoundaryType.Absolute
+- uid: TargetIndicators.BoundaryType.CompassTape
+  name: CompassTape
+  href: api/TargetIndicators.BoundaryType.html#TargetIndicators_BoundaryType_CompassTape
+  commentId: F:TargetIndicators.BoundaryType.CompassTape
+  fullName: TargetIndicators.BoundaryType.CompassTape
+  nameWithType: BoundaryType.CompassTape
+- uid: TargetIndicators.BoundaryType.None
+  name: None
+  href: api/TargetIndicators.BoundaryType.html#TargetIndicators_BoundaryType_None
+  commentId: F:TargetIndicators.BoundaryType.None
+  fullName: TargetIndicators.BoundaryType.None
+  nameWithType: BoundaryType.None
+- uid: TargetIndicators.BoundaryType.Padded
+  name: Padded
+  href: api/TargetIndicators.BoundaryType.html#TargetIndicators_BoundaryType_Padded
+  commentId: F:TargetIndicators.BoundaryType.Padded
+  fullName: TargetIndicators.BoundaryType.Padded
+  nameWithType: BoundaryType.Padded
+- uid: TargetIndicators.Ellipse
+  name: Ellipse
+  href: api/TargetIndicators.Ellipse.html
+  commentId: T:TargetIndicators.Ellipse
+  fullName: TargetIndicators.Ellipse
+  nameWithType: Ellipse
+- uid: TargetIndicators.Ellipse.#ctor(UnityEngine.Vector2,System.Single,System.Single)
+  name: Ellipse(Vector2, float, float)
+  href: api/TargetIndicators.Ellipse.html#TargetIndicators_Ellipse__ctor_UnityEngine_Vector2_System_Single_System_Single_
+  commentId: M:TargetIndicators.Ellipse.#ctor(UnityEngine.Vector2,System.Single,System.Single)
+  name.vb: New(Vector2, Single, Single)
+  fullName: TargetIndicators.Ellipse.Ellipse(UnityEngine.Vector2, float, float)
+  fullName.vb: TargetIndicators.Ellipse.New(UnityEngine.Vector2, Single, Single)
+  nameWithType: Ellipse.Ellipse(Vector2, float, float)
+  nameWithType.vb: Ellipse.New(Vector2, Single, Single)
+- uid: TargetIndicators.Ellipse.#ctor*
+  name: Ellipse
+  href: api/TargetIndicators.Ellipse.html#TargetIndicators_Ellipse__ctor_
+  commentId: Overload:TargetIndicators.Ellipse.#ctor
+  name.vb: New
+  fullName: TargetIndicators.Ellipse.Ellipse
+  fullName.vb: TargetIndicators.Ellipse.New
+  nameWithType: Ellipse.Ellipse
+  nameWithType.vb: Ellipse.New
+- uid: TargetIndicators.Ellipse.Center
+  name: Center
+  href: api/TargetIndicators.Ellipse.html#TargetIndicators_Ellipse_Center
+  commentId: P:TargetIndicators.Ellipse.Center
+  fullName: TargetIndicators.Ellipse.Center
+  nameWithType: Ellipse.Center
+- uid: TargetIndicators.Ellipse.Center*
+  name: Center
+  href: api/TargetIndicators.Ellipse.html#TargetIndicators_Ellipse_Center_
+  commentId: Overload:TargetIndicators.Ellipse.Center
+  fullName: TargetIndicators.Ellipse.Center
+  nameWithType: Ellipse.Center
+- uid: TargetIndicators.Ellipse.SemiMajorAxisLength
+  name: SemiMajorAxisLength
+  href: api/TargetIndicators.Ellipse.html#TargetIndicators_Ellipse_SemiMajorAxisLength
+  commentId: P:TargetIndicators.Ellipse.SemiMajorAxisLength
+  fullName: TargetIndicators.Ellipse.SemiMajorAxisLength
+  nameWithType: Ellipse.SemiMajorAxisLength
+- uid: TargetIndicators.Ellipse.SemiMajorAxisLength*
+  name: SemiMajorAxisLength
+  href: api/TargetIndicators.Ellipse.html#TargetIndicators_Ellipse_SemiMajorAxisLength_
+  commentId: Overload:TargetIndicators.Ellipse.SemiMajorAxisLength
+  fullName: TargetIndicators.Ellipse.SemiMajorAxisLength
+  nameWithType: Ellipse.SemiMajorAxisLength
+- uid: TargetIndicators.Ellipse.SemiMinorAxisLength
+  name: SemiMinorAxisLength
+  href: api/TargetIndicators.Ellipse.html#TargetIndicators_Ellipse_SemiMinorAxisLength
+  commentId: P:TargetIndicators.Ellipse.SemiMinorAxisLength
+  fullName: TargetIndicators.Ellipse.SemiMinorAxisLength
+  nameWithType: Ellipse.SemiMinorAxisLength
+- uid: TargetIndicators.Ellipse.SemiMinorAxisLength*
+  name: SemiMinorAxisLength
+  href: api/TargetIndicators.Ellipse.html#TargetIndicators_Ellipse_SemiMinorAxisLength_
+  commentId: Overload:TargetIndicators.Ellipse.SemiMinorAxisLength
+  fullName: TargetIndicators.Ellipse.SemiMinorAxisLength
+  nameWithType: Ellipse.SemiMinorAxisLength
+- uid: TargetIndicators.TargetIndicator
+  name: TargetIndicator
+  href: api/TargetIndicators.TargetIndicator.html
+  commentId: T:TargetIndicators.TargetIndicator
+  fullName: TargetIndicators.TargetIndicator
+  nameWithType: TargetIndicator
+- uid: TargetIndicators.TargetIndicator.#ctor(TargetIndicators.TargetIndicatorId,UnityEngine.Transform,UnityEngine.Pose,System.Boolean)
+  name: TargetIndicator(TargetIndicatorId, Transform, Pose, bool)
+  href: api/TargetIndicators.TargetIndicator.html#TargetIndicators_TargetIndicator__ctor_TargetIndicators_TargetIndicatorId_UnityEngine_Transform_UnityEngine_Pose_System_Boolean_
+  commentId: M:TargetIndicators.TargetIndicator.#ctor(TargetIndicators.TargetIndicatorId,UnityEngine.Transform,UnityEngine.Pose,System.Boolean)
+  name.vb: New(TargetIndicatorId, Transform, Pose, Boolean)
+  fullName: TargetIndicators.TargetIndicator.TargetIndicator(TargetIndicators.TargetIndicatorId, UnityEngine.Transform, UnityEngine.Pose, bool)
+  fullName.vb: TargetIndicators.TargetIndicator.New(TargetIndicators.TargetIndicatorId, UnityEngine.Transform, UnityEngine.Pose, Boolean)
+  nameWithType: TargetIndicator.TargetIndicator(TargetIndicatorId, Transform, Pose, bool)
+  nameWithType.vb: TargetIndicator.New(TargetIndicatorId, Transform, Pose, Boolean)
+- uid: TargetIndicators.TargetIndicator.#ctor(TargetIndicators.TargetIndicatorId,UnityEngine.Transform,UnityEngine.Vector3,UnityEngine.Quaternion,System.Boolean)
+  name: TargetIndicator(TargetIndicatorId, Transform, Vector3, Quaternion, bool)
+  href: api/TargetIndicators.TargetIndicator.html#TargetIndicators_TargetIndicator__ctor_TargetIndicators_TargetIndicatorId_UnityEngine_Transform_UnityEngine_Vector3_UnityEngine_Quaternion_System_Boolean_
+  commentId: M:TargetIndicators.TargetIndicator.#ctor(TargetIndicators.TargetIndicatorId,UnityEngine.Transform,UnityEngine.Vector3,UnityEngine.Quaternion,System.Boolean)
+  name.vb: New(TargetIndicatorId, Transform, Vector3, Quaternion, Boolean)
+  fullName: TargetIndicators.TargetIndicator.TargetIndicator(TargetIndicators.TargetIndicatorId, UnityEngine.Transform, UnityEngine.Vector3, UnityEngine.Quaternion, bool)
+  fullName.vb: TargetIndicators.TargetIndicator.New(TargetIndicators.TargetIndicatorId, UnityEngine.Transform, UnityEngine.Vector3, UnityEngine.Quaternion, Boolean)
+  nameWithType: TargetIndicator.TargetIndicator(TargetIndicatorId, Transform, Vector3, Quaternion, bool)
+  nameWithType.vb: TargetIndicator.New(TargetIndicatorId, Transform, Vector3, Quaternion, Boolean)
+- uid: TargetIndicators.TargetIndicator.#ctor*
+  name: TargetIndicator
+  href: api/TargetIndicators.TargetIndicator.html#TargetIndicators_TargetIndicator__ctor_
+  commentId: Overload:TargetIndicators.TargetIndicator.#ctor
+  name.vb: New
+  fullName: TargetIndicators.TargetIndicator.TargetIndicator
+  fullName.vb: TargetIndicators.TargetIndicator.New
+  nameWithType: TargetIndicator.TargetIndicator
+  nameWithType.vb: TargetIndicator.New
+- uid: TargetIndicators.TargetIndicator.Default
+  name: Default
+  href: api/TargetIndicators.TargetIndicator.html#TargetIndicators_TargetIndicator_Default
+  commentId: P:TargetIndicators.TargetIndicator.Default
+  fullName: TargetIndicators.TargetIndicator.Default
+  nameWithType: TargetIndicator.Default
+- uid: TargetIndicators.TargetIndicator.Default*
+  name: Default
+  href: api/TargetIndicators.TargetIndicator.html#TargetIndicators_TargetIndicator_Default_
+  commentId: Overload:TargetIndicators.TargetIndicator.Default
+  fullName: TargetIndicators.TargetIndicator.Default
+  nameWithType: TargetIndicator.Default
+- uid: TargetIndicators.TargetIndicator.Id
+  name: Id
+  href: api/TargetIndicators.TargetIndicator.html#TargetIndicators_TargetIndicator_Id
+  commentId: P:TargetIndicators.TargetIndicator.Id
+  fullName: TargetIndicators.TargetIndicator.Id
+  nameWithType: TargetIndicator.Id
+- uid: TargetIndicators.TargetIndicator.Id*
+  name: Id
+  href: api/TargetIndicators.TargetIndicator.html#TargetIndicators_TargetIndicator_Id_
+  commentId: Overload:TargetIndicators.TargetIndicator.Id
+  fullName: TargetIndicators.TargetIndicator.Id
+  nameWithType: TargetIndicator.Id
+- uid: TargetIndicators.TargetIndicator.IsOutsideBounds
+  name: IsOutsideBounds
+  href: api/TargetIndicators.TargetIndicator.html#TargetIndicators_TargetIndicator_IsOutsideBounds
+  commentId: P:TargetIndicators.TargetIndicator.IsOutsideBounds
+  fullName: TargetIndicators.TargetIndicator.IsOutsideBounds
+  nameWithType: TargetIndicator.IsOutsideBounds
+- uid: TargetIndicators.TargetIndicator.IsOutsideBounds*
+  name: IsOutsideBounds
+  href: api/TargetIndicators.TargetIndicator.html#TargetIndicators_TargetIndicator_IsOutsideBounds_
+  commentId: Overload:TargetIndicators.TargetIndicator.IsOutsideBounds
+  fullName: TargetIndicators.TargetIndicator.IsOutsideBounds
+  nameWithType: TargetIndicator.IsOutsideBounds
+- uid: TargetIndicators.TargetIndicator.ScreenPose
+  name: ScreenPose
+  href: api/TargetIndicators.TargetIndicator.html#TargetIndicators_TargetIndicator_ScreenPose
+  commentId: P:TargetIndicators.TargetIndicator.ScreenPose
+  fullName: TargetIndicators.TargetIndicator.ScreenPose
+  nameWithType: TargetIndicator.ScreenPose
+- uid: TargetIndicators.TargetIndicator.ScreenPose*
+  name: ScreenPose
+  href: api/TargetIndicators.TargetIndicator.html#TargetIndicators_TargetIndicator_ScreenPose_
+  commentId: Overload:TargetIndicators.TargetIndicator.ScreenPose
+  fullName: TargetIndicators.TargetIndicator.ScreenPose
+  nameWithType: TargetIndicator.ScreenPose
+- uid: TargetIndicators.TargetIndicator.Target
+  name: Target
+  href: api/TargetIndicators.TargetIndicator.html#TargetIndicators_TargetIndicator_Target
+  commentId: P:TargetIndicators.TargetIndicator.Target
+  fullName: TargetIndicators.TargetIndicator.Target
+  nameWithType: TargetIndicator.Target
+- uid: TargetIndicators.TargetIndicator.Target*
+  name: Target
+  href: api/TargetIndicators.TargetIndicator.html#TargetIndicators_TargetIndicator_Target_
+  commentId: Overload:TargetIndicators.TargetIndicator.Target
+  fullName: TargetIndicators.TargetIndicator.Target
+  nameWithType: TargetIndicator.Target
+- uid: TargetIndicators.TargetIndicatorBoundaryVisualizer
+  name: TargetIndicatorBoundaryVisualizer
+  href: api/TargetIndicators.TargetIndicatorBoundaryVisualizer.html
+  commentId: T:TargetIndicators.TargetIndicatorBoundaryVisualizer
+  fullName: TargetIndicators.TargetIndicatorBoundaryVisualizer
+  nameWithType: TargetIndicatorBoundaryVisualizer
+- uid: TargetIndicators.TargetIndicatorBoundaryVisualizer.#ctor
+  name: TargetIndicatorBoundaryVisualizer()
+  href: api/TargetIndicators.TargetIndicatorBoundaryVisualizer.html#TargetIndicators_TargetIndicatorBoundaryVisualizer__ctor
+  commentId: M:TargetIndicators.TargetIndicatorBoundaryVisualizer.#ctor
+  name.vb: New()
+  fullName: TargetIndicators.TargetIndicatorBoundaryVisualizer.TargetIndicatorBoundaryVisualizer()
+  fullName.vb: TargetIndicators.TargetIndicatorBoundaryVisualizer.New()
+  nameWithType: TargetIndicatorBoundaryVisualizer.TargetIndicatorBoundaryVisualizer()
+  nameWithType.vb: TargetIndicatorBoundaryVisualizer.New()
+- uid: TargetIndicators.TargetIndicatorBoundaryVisualizer.#ctor*
+  name: TargetIndicatorBoundaryVisualizer
+  href: api/TargetIndicators.TargetIndicatorBoundaryVisualizer.html#TargetIndicators_TargetIndicatorBoundaryVisualizer__ctor_
+  commentId: Overload:TargetIndicators.TargetIndicatorBoundaryVisualizer.#ctor
+  name.vb: New
+  fullName: TargetIndicators.TargetIndicatorBoundaryVisualizer.TargetIndicatorBoundaryVisualizer
+  fullName.vb: TargetIndicators.TargetIndicatorBoundaryVisualizer.New
+  nameWithType: TargetIndicatorBoundaryVisualizer.TargetIndicatorBoundaryVisualizer
+  nameWithType.vb: TargetIndicatorBoundaryVisualizer.New
+- uid: TargetIndicators.TargetIndicatorBoundaryVisualizerEditor
+  name: TargetIndicatorBoundaryVisualizerEditor
+  href: api/TargetIndicators.TargetIndicatorBoundaryVisualizerEditor.html
+  commentId: T:TargetIndicators.TargetIndicatorBoundaryVisualizerEditor
+  fullName: TargetIndicators.TargetIndicatorBoundaryVisualizerEditor
+  nameWithType: TargetIndicatorBoundaryVisualizerEditor
+- uid: TargetIndicators.TargetIndicatorBoundaryVisualizerEditor.#ctor
+  name: TargetIndicatorBoundaryVisualizerEditor()
+  href: api/TargetIndicators.TargetIndicatorBoundaryVisualizerEditor.html#TargetIndicators_TargetIndicatorBoundaryVisualizerEditor__ctor
+  commentId: M:TargetIndicators.TargetIndicatorBoundaryVisualizerEditor.#ctor
+  name.vb: New()
+  fullName: TargetIndicators.TargetIndicatorBoundaryVisualizerEditor.TargetIndicatorBoundaryVisualizerEditor()
+  fullName.vb: TargetIndicators.TargetIndicatorBoundaryVisualizerEditor.New()
+  nameWithType: TargetIndicatorBoundaryVisualizerEditor.TargetIndicatorBoundaryVisualizerEditor()
+  nameWithType.vb: TargetIndicatorBoundaryVisualizerEditor.New()
+- uid: TargetIndicators.TargetIndicatorBoundaryVisualizerEditor.#ctor*
+  name: TargetIndicatorBoundaryVisualizerEditor
+  href: api/TargetIndicators.TargetIndicatorBoundaryVisualizerEditor.html#TargetIndicators_TargetIndicatorBoundaryVisualizerEditor__ctor_
+  commentId: Overload:TargetIndicators.TargetIndicatorBoundaryVisualizerEditor.#ctor
+  name.vb: New
+  fullName: TargetIndicators.TargetIndicatorBoundaryVisualizerEditor.TargetIndicatorBoundaryVisualizerEditor
+  fullName.vb: TargetIndicators.TargetIndicatorBoundaryVisualizerEditor.New
+  nameWithType: TargetIndicatorBoundaryVisualizerEditor.TargetIndicatorBoundaryVisualizerEditor
+  nameWithType.vb: TargetIndicatorBoundaryVisualizerEditor.New
+- uid: TargetIndicators.TargetIndicatorBoundaryVisualizerEditor.OnInspectorGUI
+  name: OnInspectorGUI()
+  href: api/TargetIndicators.TargetIndicatorBoundaryVisualizerEditor.html#TargetIndicators_TargetIndicatorBoundaryVisualizerEditor_OnInspectorGUI
+  commentId: M:TargetIndicators.TargetIndicatorBoundaryVisualizerEditor.OnInspectorGUI
+  fullName: TargetIndicators.TargetIndicatorBoundaryVisualizerEditor.OnInspectorGUI()
+  nameWithType: TargetIndicatorBoundaryVisualizerEditor.OnInspectorGUI()
+- uid: TargetIndicators.TargetIndicatorBoundaryVisualizerEditor.OnInspectorGUI*
+  name: OnInspectorGUI
+  href: api/TargetIndicators.TargetIndicatorBoundaryVisualizerEditor.html#TargetIndicators_TargetIndicatorBoundaryVisualizerEditor_OnInspectorGUI_
+  commentId: Overload:TargetIndicators.TargetIndicatorBoundaryVisualizerEditor.OnInspectorGUI
+  fullName: TargetIndicators.TargetIndicatorBoundaryVisualizerEditor.OnInspectorGUI
+  nameWithType: TargetIndicatorBoundaryVisualizerEditor.OnInspectorGUI
+- uid: TargetIndicators.TargetIndicatorId
+  name: TargetIndicatorId
+  href: api/TargetIndicators.TargetIndicatorId.html
+  commentId: T:TargetIndicators.TargetIndicatorId
+  fullName: TargetIndicators.TargetIndicatorId
+  nameWithType: TargetIndicatorId
+- uid: TargetIndicators.TargetIndicatorId.#ctor(System.Guid)
+  name: TargetIndicatorId(Guid)
+  href: api/TargetIndicators.TargetIndicatorId.html#TargetIndicators_TargetIndicatorId__ctor_System_Guid_
+  commentId: M:TargetIndicators.TargetIndicatorId.#ctor(System.Guid)
+  name.vb: New(Guid)
+  fullName: TargetIndicators.TargetIndicatorId.TargetIndicatorId(System.Guid)
+  fullName.vb: TargetIndicators.TargetIndicatorId.New(System.Guid)
+  nameWithType: TargetIndicatorId.TargetIndicatorId(Guid)
+  nameWithType.vb: TargetIndicatorId.New(Guid)
+- uid: TargetIndicators.TargetIndicatorId.#ctor*
+  name: TargetIndicatorId
+  href: api/TargetIndicators.TargetIndicatorId.html#TargetIndicators_TargetIndicatorId__ctor_
+  commentId: Overload:TargetIndicators.TargetIndicatorId.#ctor
+  name.vb: New
+  fullName: TargetIndicators.TargetIndicatorId.TargetIndicatorId
+  fullName.vb: TargetIndicators.TargetIndicatorId.New
+  nameWithType: TargetIndicatorId.TargetIndicatorId
+  nameWithType.vb: TargetIndicatorId.New
+- uid: TargetIndicators.TargetIndicatorId.Default
+  name: Default
+  href: api/TargetIndicators.TargetIndicatorId.html#TargetIndicators_TargetIndicatorId_Default
+  commentId: P:TargetIndicators.TargetIndicatorId.Default
+  fullName: TargetIndicators.TargetIndicatorId.Default
+  nameWithType: TargetIndicatorId.Default
+- uid: TargetIndicators.TargetIndicatorId.Default*
+  name: Default
+  href: api/TargetIndicators.TargetIndicatorId.html#TargetIndicators_TargetIndicatorId_Default_
+  commentId: Overload:TargetIndicators.TargetIndicatorId.Default
+  fullName: TargetIndicators.TargetIndicatorId.Default
+  nameWithType: TargetIndicatorId.Default
+- uid: TargetIndicators.TargetIndicatorId.Equals(System.Object)
+  name: Equals(object)
+  href: api/TargetIndicators.TargetIndicatorId.html#TargetIndicators_TargetIndicatorId_Equals_System_Object_
+  commentId: M:TargetIndicators.TargetIndicatorId.Equals(System.Object)
+  name.vb: Equals(Object)
+  fullName: TargetIndicators.TargetIndicatorId.Equals(object)
+  fullName.vb: TargetIndicators.TargetIndicatorId.Equals(Object)
+  nameWithType: TargetIndicatorId.Equals(object)
+  nameWithType.vb: TargetIndicatorId.Equals(Object)
+- uid: TargetIndicators.TargetIndicatorId.Equals(TargetIndicators.TargetIndicatorId)
+  name: Equals(TargetIndicatorId)
+  href: api/TargetIndicators.TargetIndicatorId.html#TargetIndicators_TargetIndicatorId_Equals_TargetIndicators_TargetIndicatorId_
+  commentId: M:TargetIndicators.TargetIndicatorId.Equals(TargetIndicators.TargetIndicatorId)
+  fullName: TargetIndicators.TargetIndicatorId.Equals(TargetIndicators.TargetIndicatorId)
+  nameWithType: TargetIndicatorId.Equals(TargetIndicatorId)
+- uid: TargetIndicators.TargetIndicatorId.Equals*
+  name: Equals
+  href: api/TargetIndicators.TargetIndicatorId.html#TargetIndicators_TargetIndicatorId_Equals_
+  commentId: Overload:TargetIndicators.TargetIndicatorId.Equals
+  fullName: TargetIndicators.TargetIndicatorId.Equals
+  nameWithType: TargetIndicatorId.Equals
+- uid: TargetIndicators.TargetIndicatorId.GetHashCode
+  name: GetHashCode()
+  href: api/TargetIndicators.TargetIndicatorId.html#TargetIndicators_TargetIndicatorId_GetHashCode
+  commentId: M:TargetIndicators.TargetIndicatorId.GetHashCode
+  fullName: TargetIndicators.TargetIndicatorId.GetHashCode()
+  nameWithType: TargetIndicatorId.GetHashCode()
+- uid: TargetIndicators.TargetIndicatorId.GetHashCode*
+  name: GetHashCode
+  href: api/TargetIndicators.TargetIndicatorId.html#TargetIndicators_TargetIndicatorId_GetHashCode_
+  commentId: Overload:TargetIndicators.TargetIndicatorId.GetHashCode
+  fullName: TargetIndicators.TargetIndicatorId.GetHashCode
+  nameWithType: TargetIndicatorId.GetHashCode
+- uid: TargetIndicators.TargetIndicatorId.Id
+  name: Id
+  href: api/TargetIndicators.TargetIndicatorId.html#TargetIndicators_TargetIndicatorId_Id
+  commentId: P:TargetIndicators.TargetIndicatorId.Id
+  fullName: TargetIndicators.TargetIndicatorId.Id
+  nameWithType: TargetIndicatorId.Id
+- uid: TargetIndicators.TargetIndicatorId.Id*
+  name: Id
+  href: api/TargetIndicators.TargetIndicatorId.html#TargetIndicators_TargetIndicatorId_Id_
+  commentId: Overload:TargetIndicators.TargetIndicatorId.Id
+  fullName: TargetIndicators.TargetIndicatorId.Id
+  nameWithType: TargetIndicatorId.Id
+- uid: TargetIndicators.TargetIndicatorId.op_Equality(TargetIndicators.TargetIndicatorId,TargetIndicators.TargetIndicatorId)
+  name: operator ==(TargetIndicatorId, TargetIndicatorId)
+  href: api/TargetIndicators.TargetIndicatorId.html#TargetIndicators_TargetIndicatorId_op_Equality_TargetIndicators_TargetIndicatorId_TargetIndicators_TargetIndicatorId_
+  commentId: M:TargetIndicators.TargetIndicatorId.op_Equality(TargetIndicators.TargetIndicatorId,TargetIndicators.TargetIndicatorId)
+  name.vb: =(TargetIndicatorId, TargetIndicatorId)
+  fullName: TargetIndicators.TargetIndicatorId.operator ==(TargetIndicators.TargetIndicatorId, TargetIndicators.TargetIndicatorId)
+  fullName.vb: TargetIndicators.TargetIndicatorId.=(TargetIndicators.TargetIndicatorId, TargetIndicators.TargetIndicatorId)
+  nameWithType: TargetIndicatorId.operator ==(TargetIndicatorId, TargetIndicatorId)
+  nameWithType.vb: TargetIndicatorId.=(TargetIndicatorId, TargetIndicatorId)
+- uid: TargetIndicators.TargetIndicatorId.op_Equality*
+  name: operator ==
+  href: api/TargetIndicators.TargetIndicatorId.html#TargetIndicators_TargetIndicatorId_op_Equality_
+  commentId: Overload:TargetIndicators.TargetIndicatorId.op_Equality
+  name.vb: =
+  fullName: TargetIndicators.TargetIndicatorId.operator ==
+  fullName.vb: TargetIndicators.TargetIndicatorId.=
+  nameWithType: TargetIndicatorId.operator ==
+  nameWithType.vb: TargetIndicatorId.=
+- uid: TargetIndicators.TargetIndicatorId.op_Inequality(TargetIndicators.TargetIndicatorId,TargetIndicators.TargetIndicatorId)
+  name: operator !=(TargetIndicatorId, TargetIndicatorId)
+  href: api/TargetIndicators.TargetIndicatorId.html#TargetIndicators_TargetIndicatorId_op_Inequality_TargetIndicators_TargetIndicatorId_TargetIndicators_TargetIndicatorId_
+  commentId: M:TargetIndicators.TargetIndicatorId.op_Inequality(TargetIndicators.TargetIndicatorId,TargetIndicators.TargetIndicatorId)
+  name.vb: <>(TargetIndicatorId, TargetIndicatorId)
+  fullName: TargetIndicators.TargetIndicatorId.operator !=(TargetIndicators.TargetIndicatorId, TargetIndicators.TargetIndicatorId)
+  fullName.vb: TargetIndicators.TargetIndicatorId.<>(TargetIndicators.TargetIndicatorId, TargetIndicators.TargetIndicatorId)
+  nameWithType: TargetIndicatorId.operator !=(TargetIndicatorId, TargetIndicatorId)
+  nameWithType.vb: TargetIndicatorId.<>(TargetIndicatorId, TargetIndicatorId)
+- uid: TargetIndicators.TargetIndicatorId.op_Inequality*
+  name: operator !=
+  href: api/TargetIndicators.TargetIndicatorId.html#TargetIndicators_TargetIndicatorId_op_Inequality_
+  commentId: Overload:TargetIndicators.TargetIndicatorId.op_Inequality
+  name.vb: <>
+  fullName: TargetIndicators.TargetIndicatorId.operator !=
+  fullName.vb: TargetIndicators.TargetIndicatorId.<>
+  nameWithType: TargetIndicatorId.operator !=
+  nameWithType.vb: TargetIndicatorId.<>
+- uid: TargetIndicators.TargetIndicatorManager
+  name: TargetIndicatorManager
+  href: api/TargetIndicators.TargetIndicatorManager.html
+  commentId: T:TargetIndicators.TargetIndicatorManager
+  fullName: TargetIndicators.TargetIndicatorManager
+  nameWithType: TargetIndicatorManager
+- uid: TargetIndicators.TargetIndicatorManager.#ctor
+  name: TargetIndicatorManager()
+  href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager__ctor
+  commentId: M:TargetIndicators.TargetIndicatorManager.#ctor
+  name.vb: New()
+  fullName: TargetIndicators.TargetIndicatorManager.TargetIndicatorManager()
+  fullName.vb: TargetIndicators.TargetIndicatorManager.New()
+  nameWithType: TargetIndicatorManager.TargetIndicatorManager()
+  nameWithType.vb: TargetIndicatorManager.New()
+- uid: TargetIndicators.TargetIndicatorManager.#ctor*
+  name: TargetIndicatorManager
+  href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager__ctor_
+  commentId: Overload:TargetIndicators.TargetIndicatorManager.#ctor
+  name.vb: New
+  fullName: TargetIndicators.TargetIndicatorManager.TargetIndicatorManager
+  fullName.vb: TargetIndicators.TargetIndicatorManager.New
+  nameWithType: TargetIndicatorManager.TargetIndicatorManager
+  nameWithType.vb: TargetIndicatorManager.New
+- uid: TargetIndicators.TargetIndicatorManager.BottomPadding
+  name: BottomPadding
+  href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_BottomPadding
+  commentId: P:TargetIndicators.TargetIndicatorManager.BottomPadding
+  fullName: TargetIndicators.TargetIndicatorManager.BottomPadding
+  nameWithType: TargetIndicatorManager.BottomPadding
+- uid: TargetIndicators.TargetIndicatorManager.BottomPadding*
+  name: BottomPadding
+  href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_BottomPadding_
+  commentId: Overload:TargetIndicators.TargetIndicatorManager.BottomPadding
+  fullName: TargetIndicators.TargetIndicatorManager.BottomPadding
+  nameWithType: TargetIndicatorManager.BottomPadding
+- uid: TargetIndicators.TargetIndicatorManager.BoundaryShape
+  name: BoundaryShape
+  href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_BoundaryShape
+  commentId: P:TargetIndicators.TargetIndicatorManager.BoundaryShape
+  fullName: TargetIndicators.TargetIndicatorManager.BoundaryShape
+  nameWithType: TargetIndicatorManager.BoundaryShape
+- uid: TargetIndicators.TargetIndicatorManager.BoundaryShape*
+  name: BoundaryShape
+  href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_BoundaryShape_
+  commentId: Overload:TargetIndicators.TargetIndicatorManager.BoundaryShape
+  fullName: TargetIndicators.TargetIndicatorManager.BoundaryShape
+  nameWithType: TargetIndicatorManager.BoundaryShape
+- uid: TargetIndicators.TargetIndicatorManager.BoundaryType
+  name: BoundaryType
+  href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_BoundaryType
+  commentId: P:TargetIndicators.TargetIndicatorManager.BoundaryType
+  fullName: TargetIndicators.TargetIndicatorManager.BoundaryType
+  nameWithType: TargetIndicatorManager.BoundaryType
+- uid: TargetIndicators.TargetIndicatorManager.BoundaryType*
+  name: BoundaryType
+  href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_BoundaryType_
+  commentId: Overload:TargetIndicators.TargetIndicatorManager.BoundaryType
+  fullName: TargetIndicators.TargetIndicatorManager.BoundaryType
+  nameWithType: TargetIndicatorManager.BoundaryType
+- uid: TargetIndicators.TargetIndicatorManager.Camera
+  name: Camera
+  href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_Camera
+  commentId: P:TargetIndicators.TargetIndicatorManager.Camera
+  fullName: TargetIndicators.TargetIndicatorManager.Camera
+  nameWithType: TargetIndicatorManager.Camera
+- uid: TargetIndicators.TargetIndicatorManager.Camera*
+  name: Camera
+  href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_Camera_
+  commentId: Overload:TargetIndicators.TargetIndicatorManager.Camera
+  fullName: TargetIndicators.TargetIndicatorManager.Camera
+  nameWithType: TargetIndicatorManager.Camera
+- uid: TargetIndicators.TargetIndicatorManager.Ellipse
+  name: Ellipse
+  href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_Ellipse
+  commentId: P:TargetIndicators.TargetIndicatorManager.Ellipse
+  fullName: TargetIndicators.TargetIndicatorManager.Ellipse
+  nameWithType: TargetIndicatorManager.Ellipse
+- uid: TargetIndicators.TargetIndicatorManager.Ellipse*
+  name: Ellipse
+  href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_Ellipse_
+  commentId: Overload:TargetIndicators.TargetIndicatorManager.Ellipse
+  fullName: TargetIndicators.TargetIndicatorManager.Ellipse
+  nameWithType: TargetIndicatorManager.Ellipse
+- uid: TargetIndicators.TargetIndicatorManager.EnableTargetIndicatorsUpdatedEvent
+  name: EnableTargetIndicatorsUpdatedEvent
+  href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_EnableTargetIndicatorsUpdatedEvent
+  commentId: P:TargetIndicators.TargetIndicatorManager.EnableTargetIndicatorsUpdatedEvent
+  fullName: TargetIndicators.TargetIndicatorManager.EnableTargetIndicatorsUpdatedEvent
+  nameWithType: TargetIndicatorManager.EnableTargetIndicatorsUpdatedEvent
+- uid: TargetIndicators.TargetIndicatorManager.EnableTargetIndicatorsUpdatedEvent*
+  name: EnableTargetIndicatorsUpdatedEvent
+  href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_EnableTargetIndicatorsUpdatedEvent_
+  commentId: Overload:TargetIndicators.TargetIndicatorManager.EnableTargetIndicatorsUpdatedEvent
+  fullName: TargetIndicators.TargetIndicatorManager.EnableTargetIndicatorsUpdatedEvent
+  nameWithType: TargetIndicatorManager.EnableTargetIndicatorsUpdatedEvent
+- uid: TargetIndicators.TargetIndicatorManager.GetScreenPose(UnityEngine.Vector3@,System.Boolean@)
+  name: GetScreenPose(in Vector3, out bool)
+  href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_GetScreenPose_UnityEngine_Vector3__System_Boolean__
+  commentId: M:TargetIndicators.TargetIndicatorManager.GetScreenPose(UnityEngine.Vector3@,System.Boolean@)
+  name.vb: GetScreenPose(Vector3, Boolean)
+  fullName: TargetIndicators.TargetIndicatorManager.GetScreenPose(in UnityEngine.Vector3, out bool)
+  fullName.vb: TargetIndicators.TargetIndicatorManager.GetScreenPose(UnityEngine.Vector3, Boolean)
+  nameWithType: TargetIndicatorManager.GetScreenPose(in Vector3, out bool)
+  nameWithType.vb: TargetIndicatorManager.GetScreenPose(Vector3, Boolean)
+- uid: TargetIndicators.TargetIndicatorManager.GetScreenPose*
+  name: GetScreenPose
+  href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_GetScreenPose_
+  commentId: Overload:TargetIndicators.TargetIndicatorManager.GetScreenPose
+  fullName: TargetIndicators.TargetIndicatorManager.GetScreenPose
+  nameWithType: TargetIndicatorManager.GetScreenPose
+- uid: TargetIndicators.TargetIndicatorManager.Height
+  name: Height
+  href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_Height
+  commentId: P:TargetIndicators.TargetIndicatorManager.Height
+  fullName: TargetIndicators.TargetIndicatorManager.Height
+  nameWithType: TargetIndicatorManager.Height
+- uid: TargetIndicators.TargetIndicatorManager.Height*
+  name: Height
+  href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_Height_
+  commentId: Overload:TargetIndicators.TargetIndicatorManager.Height
+  fullName: TargetIndicators.TargetIndicatorManager.Height
+  nameWithType: TargetIndicatorManager.Height
+- uid: TargetIndicators.TargetIndicatorManager.IsOutsideBounds(UnityEngine.Vector3@)
+  name: IsOutsideBounds(in Vector3)
+  href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_IsOutsideBounds_UnityEngine_Vector3__
+  commentId: M:TargetIndicators.TargetIndicatorManager.IsOutsideBounds(UnityEngine.Vector3@)
+  name.vb: IsOutsideBounds(Vector3)
+  fullName: TargetIndicators.TargetIndicatorManager.IsOutsideBounds(in UnityEngine.Vector3)
+  fullName.vb: TargetIndicators.TargetIndicatorManager.IsOutsideBounds(UnityEngine.Vector3)
+  nameWithType: TargetIndicatorManager.IsOutsideBounds(in Vector3)
+  nameWithType.vb: TargetIndicatorManager.IsOutsideBounds(Vector3)
+- uid: TargetIndicators.TargetIndicatorManager.IsOutsideBounds*
+  name: IsOutsideBounds
+  href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_IsOutsideBounds_
+  commentId: Overload:TargetIndicators.TargetIndicatorManager.IsOutsideBounds
+  fullName: TargetIndicators.TargetIndicatorManager.IsOutsideBounds
+  nameWithType: TargetIndicatorManager.IsOutsideBounds
+- uid: TargetIndicators.TargetIndicatorManager.LeftPadding
+  name: LeftPadding
+  href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_LeftPadding
+  commentId: P:TargetIndicators.TargetIndicatorManager.LeftPadding
+  fullName: TargetIndicators.TargetIndicatorManager.LeftPadding
+  nameWithType: TargetIndicatorManager.LeftPadding
+- uid: TargetIndicators.TargetIndicatorManager.LeftPadding*
+  name: LeftPadding
+  href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_LeftPadding_
+  commentId: Overload:TargetIndicators.TargetIndicatorManager.LeftPadding
+  fullName: TargetIndicators.TargetIndicatorManager.LeftPadding
+  nameWithType: TargetIndicatorManager.LeftPadding
+- uid: TargetIndicators.TargetIndicatorManager.MaxTargets
+  name: MaxTargets
+  href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_MaxTargets
+  commentId: P:TargetIndicators.TargetIndicatorManager.MaxTargets
+  fullName: TargetIndicators.TargetIndicatorManager.MaxTargets
+  nameWithType: TargetIndicatorManager.MaxTargets
+- uid: TargetIndicators.TargetIndicatorManager.MaxTargets*
+  name: MaxTargets
+  href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_MaxTargets_
+  commentId: Overload:TargetIndicators.TargetIndicatorManager.MaxTargets
+  fullName: TargetIndicators.TargetIndicatorManager.MaxTargets
+  nameWithType: TargetIndicatorManager.MaxTargets
+- uid: TargetIndicators.TargetIndicatorManager.Rectangle
+  name: Rectangle
+  href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_Rectangle
+  commentId: P:TargetIndicators.TargetIndicatorManager.Rectangle
+  fullName: TargetIndicators.TargetIndicatorManager.Rectangle
+  nameWithType: TargetIndicatorManager.Rectangle
+- uid: TargetIndicators.TargetIndicatorManager.Rectangle*
+  name: Rectangle
+  href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_Rectangle_
+  commentId: Overload:TargetIndicators.TargetIndicatorManager.Rectangle
+  fullName: TargetIndicators.TargetIndicatorManager.Rectangle
+  nameWithType: TargetIndicatorManager.Rectangle
+- uid: TargetIndicators.TargetIndicatorManager.RemoveAllTargets
+  name: RemoveAllTargets()
+  href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_RemoveAllTargets
+  commentId: M:TargetIndicators.TargetIndicatorManager.RemoveAllTargets
+  fullName: TargetIndicators.TargetIndicatorManager.RemoveAllTargets()
+  nameWithType: TargetIndicatorManager.RemoveAllTargets()
+- uid: TargetIndicators.TargetIndicatorManager.RemoveAllTargets*
+  name: RemoveAllTargets
+  href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_RemoveAllTargets_
+  commentId: Overload:TargetIndicators.TargetIndicatorManager.RemoveAllTargets
+  fullName: TargetIndicators.TargetIndicatorManager.RemoveAllTargets
+  nameWithType: TargetIndicatorManager.RemoveAllTargets
+- uid: TargetIndicators.TargetIndicatorManager.RightPadding
+  name: RightPadding
+  href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_RightPadding
+  commentId: P:TargetIndicators.TargetIndicatorManager.RightPadding
+  fullName: TargetIndicators.TargetIndicatorManager.RightPadding
+  nameWithType: TargetIndicatorManager.RightPadding
+- uid: TargetIndicators.TargetIndicatorManager.RightPadding*
+  name: RightPadding
+  href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_RightPadding_
+  commentId: Overload:TargetIndicators.TargetIndicatorManager.RightPadding
+  fullName: TargetIndicators.TargetIndicatorManager.RightPadding
+  nameWithType: TargetIndicatorManager.RightPadding
+- uid: TargetIndicators.TargetIndicatorManager.TargetIndicatorsAdded
+  name: TargetIndicatorsAdded
+  href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_TargetIndicatorsAdded
+  commentId: E:TargetIndicators.TargetIndicatorManager.TargetIndicatorsAdded
+  fullName: TargetIndicators.TargetIndicatorManager.TargetIndicatorsAdded
+  nameWithType: TargetIndicatorManager.TargetIndicatorsAdded
+- uid: TargetIndicators.TargetIndicatorManager.TargetIndicatorsRemoved
+  name: TargetIndicatorsRemoved
+  href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_TargetIndicatorsRemoved
+  commentId: E:TargetIndicators.TargetIndicatorManager.TargetIndicatorsRemoved
+  fullName: TargetIndicators.TargetIndicatorManager.TargetIndicatorsRemoved
+  nameWithType: TargetIndicatorManager.TargetIndicatorsRemoved
+- uid: TargetIndicators.TargetIndicatorManager.TargetIndicatorsRemovedDelegate
+  name: TargetIndicatorManager.TargetIndicatorsRemovedDelegate
+  href: api/TargetIndicators.TargetIndicatorManager.TargetIndicatorsRemovedDelegate.html
+  commentId: T:TargetIndicators.TargetIndicatorManager.TargetIndicatorsRemovedDelegate
+  fullName: TargetIndicators.TargetIndicatorManager.TargetIndicatorsRemovedDelegate
+  nameWithType: TargetIndicatorManager.TargetIndicatorsRemovedDelegate
+- uid: TargetIndicators.TargetIndicatorManager.TargetIndicatorsRemovedDelegate.#ctor(System.Object,System.IntPtr)
+  name: TargetIndicatorsRemovedDelegate(object, nint)
+  href: api/TargetIndicators.TargetIndicatorManager.TargetIndicatorsRemovedDelegate.html#TargetIndicators_TargetIndicatorManager_TargetIndicatorsRemovedDelegate__ctor_System_Object_System_IntPtr_
+  commentId: M:TargetIndicators.TargetIndicatorManager.TargetIndicatorsRemovedDelegate.#ctor(System.Object,System.IntPtr)
+  name.vb: New(Object, IntPtr)
+  fullName: TargetIndicators.TargetIndicatorManager.TargetIndicatorsRemovedDelegate.TargetIndicatorsRemovedDelegate(object, nint)
+  fullName.vb: TargetIndicators.TargetIndicatorManager.TargetIndicatorsRemovedDelegate.New(Object, System.IntPtr)
+  nameWithType: TargetIndicatorManager.TargetIndicatorsRemovedDelegate.TargetIndicatorsRemovedDelegate(object, nint)
+  nameWithType.vb: TargetIndicatorManager.TargetIndicatorsRemovedDelegate.New(Object, IntPtr)
+- uid: TargetIndicators.TargetIndicatorManager.TargetIndicatorsRemovedDelegate.#ctor*
+  name: TargetIndicatorsRemovedDelegate
+  href: api/TargetIndicators.TargetIndicatorManager.TargetIndicatorsRemovedDelegate.html#TargetIndicators_TargetIndicatorManager_TargetIndicatorsRemovedDelegate__ctor_
+  commentId: Overload:TargetIndicators.TargetIndicatorManager.TargetIndicatorsRemovedDelegate.#ctor
+  name.vb: New
+  fullName: TargetIndicators.TargetIndicatorManager.TargetIndicatorsRemovedDelegate.TargetIndicatorsRemovedDelegate
+  fullName.vb: TargetIndicators.TargetIndicatorManager.TargetIndicatorsRemovedDelegate.New
+  nameWithType: TargetIndicatorManager.TargetIndicatorsRemovedDelegate.TargetIndicatorsRemovedDelegate
+  nameWithType.vb: TargetIndicatorManager.TargetIndicatorsRemovedDelegate.New
+- uid: TargetIndicators.TargetIndicatorManager.TargetIndicatorsRemovedDelegate.BeginInvoke(System.ReadOnlySpan{TargetIndicators.TargetIndicatorId},System.AsyncCallback,System.Object)
+  name: BeginInvoke(ReadOnlySpan<TargetIndicatorId>, AsyncCallback, object)
+  href: api/TargetIndicators.TargetIndicatorManager.TargetIndicatorsRemovedDelegate.html#TargetIndicators_TargetIndicatorManager_TargetIndicatorsRemovedDelegate_BeginInvoke_System_ReadOnlySpan_TargetIndicators_TargetIndicatorId__System_AsyncCallback_System_Object_
+  commentId: M:TargetIndicators.TargetIndicatorManager.TargetIndicatorsRemovedDelegate.BeginInvoke(System.ReadOnlySpan{TargetIndicators.TargetIndicatorId},System.AsyncCallback,System.Object)
+  name.vb: BeginInvoke(ReadOnlySpan(Of TargetIndicatorId), AsyncCallback, Object)
+  fullName: TargetIndicators.TargetIndicatorManager.TargetIndicatorsRemovedDelegate.BeginInvoke(System.ReadOnlySpan<TargetIndicators.TargetIndicatorId>, System.AsyncCallback, object)
+  fullName.vb: TargetIndicators.TargetIndicatorManager.TargetIndicatorsRemovedDelegate.BeginInvoke(System.ReadOnlySpan(Of TargetIndicators.TargetIndicatorId), System.AsyncCallback, Object)
+  nameWithType: TargetIndicatorManager.TargetIndicatorsRemovedDelegate.BeginInvoke(ReadOnlySpan<TargetIndicatorId>, AsyncCallback, object)
+  nameWithType.vb: TargetIndicatorManager.TargetIndicatorsRemovedDelegate.BeginInvoke(ReadOnlySpan(Of TargetIndicatorId), AsyncCallback, Object)
+- uid: TargetIndicators.TargetIndicatorManager.TargetIndicatorsRemovedDelegate.BeginInvoke*
+  name: BeginInvoke
+  href: api/TargetIndicators.TargetIndicatorManager.TargetIndicatorsRemovedDelegate.html#TargetIndicators_TargetIndicatorManager_TargetIndicatorsRemovedDelegate_BeginInvoke_
+  commentId: Overload:TargetIndicators.TargetIndicatorManager.TargetIndicatorsRemovedDelegate.BeginInvoke
+  fullName: TargetIndicators.TargetIndicatorManager.TargetIndicatorsRemovedDelegate.BeginInvoke
+  nameWithType: TargetIndicatorManager.TargetIndicatorsRemovedDelegate.BeginInvoke
+- uid: TargetIndicators.TargetIndicatorManager.TargetIndicatorsRemovedDelegate.EndInvoke(System.IAsyncResult)
+  name: EndInvoke(IAsyncResult)
+  href: api/TargetIndicators.TargetIndicatorManager.TargetIndicatorsRemovedDelegate.html#TargetIndicators_TargetIndicatorManager_TargetIndicatorsRemovedDelegate_EndInvoke_System_IAsyncResult_
+  commentId: M:TargetIndicators.TargetIndicatorManager.TargetIndicatorsRemovedDelegate.EndInvoke(System.IAsyncResult)
+  fullName: TargetIndicators.TargetIndicatorManager.TargetIndicatorsRemovedDelegate.EndInvoke(System.IAsyncResult)
+  nameWithType: TargetIndicatorManager.TargetIndicatorsRemovedDelegate.EndInvoke(IAsyncResult)
+- uid: TargetIndicators.TargetIndicatorManager.TargetIndicatorsRemovedDelegate.EndInvoke*
+  name: EndInvoke
+  href: api/TargetIndicators.TargetIndicatorManager.TargetIndicatorsRemovedDelegate.html#TargetIndicators_TargetIndicatorManager_TargetIndicatorsRemovedDelegate_EndInvoke_
+  commentId: Overload:TargetIndicators.TargetIndicatorManager.TargetIndicatorsRemovedDelegate.EndInvoke
+  fullName: TargetIndicators.TargetIndicatorManager.TargetIndicatorsRemovedDelegate.EndInvoke
+  nameWithType: TargetIndicatorManager.TargetIndicatorsRemovedDelegate.EndInvoke
+- uid: TargetIndicators.TargetIndicatorManager.TargetIndicatorsRemovedDelegate.Invoke(System.ReadOnlySpan{TargetIndicators.TargetIndicatorId})
+  name: Invoke(ReadOnlySpan<TargetIndicatorId>)
+  href: api/TargetIndicators.TargetIndicatorManager.TargetIndicatorsRemovedDelegate.html#TargetIndicators_TargetIndicatorManager_TargetIndicatorsRemovedDelegate_Invoke_System_ReadOnlySpan_TargetIndicators_TargetIndicatorId__
+  commentId: M:TargetIndicators.TargetIndicatorManager.TargetIndicatorsRemovedDelegate.Invoke(System.ReadOnlySpan{TargetIndicators.TargetIndicatorId})
+  name.vb: Invoke(ReadOnlySpan(Of TargetIndicatorId))
+  fullName: TargetIndicators.TargetIndicatorManager.TargetIndicatorsRemovedDelegate.Invoke(System.ReadOnlySpan<TargetIndicators.TargetIndicatorId>)
+  fullName.vb: TargetIndicators.TargetIndicatorManager.TargetIndicatorsRemovedDelegate.Invoke(System.ReadOnlySpan(Of TargetIndicators.TargetIndicatorId))
+  nameWithType: TargetIndicatorManager.TargetIndicatorsRemovedDelegate.Invoke(ReadOnlySpan<TargetIndicatorId>)
+  nameWithType.vb: TargetIndicatorManager.TargetIndicatorsRemovedDelegate.Invoke(ReadOnlySpan(Of TargetIndicatorId))
+- uid: TargetIndicators.TargetIndicatorManager.TargetIndicatorsRemovedDelegate.Invoke*
+  name: Invoke
+  href: api/TargetIndicators.TargetIndicatorManager.TargetIndicatorsRemovedDelegate.html#TargetIndicators_TargetIndicatorManager_TargetIndicatorsRemovedDelegate_Invoke_
+  commentId: Overload:TargetIndicators.TargetIndicatorManager.TargetIndicatorsRemovedDelegate.Invoke
+  fullName: TargetIndicators.TargetIndicatorManager.TargetIndicatorsRemovedDelegate.Invoke
+  nameWithType: TargetIndicatorManager.TargetIndicatorsRemovedDelegate.Invoke
+- uid: TargetIndicators.TargetIndicatorManager.TargetIndicatorsUpdated
+  name: TargetIndicatorsUpdated
+  href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_TargetIndicatorsUpdated
+  commentId: E:TargetIndicators.TargetIndicatorManager.TargetIndicatorsUpdated
+  fullName: TargetIndicators.TargetIndicatorManager.TargetIndicatorsUpdated
+  nameWithType: TargetIndicatorManager.TargetIndicatorsUpdated
+- uid: TargetIndicators.TargetIndicatorManager.TargetIndicatorsUpdatedDelegate
+  name: TargetIndicatorManager.TargetIndicatorsUpdatedDelegate
+  href: api/TargetIndicators.TargetIndicatorManager.TargetIndicatorsUpdatedDelegate.html
+  commentId: T:TargetIndicators.TargetIndicatorManager.TargetIndicatorsUpdatedDelegate
+  fullName: TargetIndicators.TargetIndicatorManager.TargetIndicatorsUpdatedDelegate
+  nameWithType: TargetIndicatorManager.TargetIndicatorsUpdatedDelegate
+- uid: TargetIndicators.TargetIndicatorManager.TargetIndicatorsUpdatedDelegate.#ctor(System.Object,System.IntPtr)
+  name: TargetIndicatorsUpdatedDelegate(object, nint)
+  href: api/TargetIndicators.TargetIndicatorManager.TargetIndicatorsUpdatedDelegate.html#TargetIndicators_TargetIndicatorManager_TargetIndicatorsUpdatedDelegate__ctor_System_Object_System_IntPtr_
+  commentId: M:TargetIndicators.TargetIndicatorManager.TargetIndicatorsUpdatedDelegate.#ctor(System.Object,System.IntPtr)
+  name.vb: New(Object, IntPtr)
+  fullName: TargetIndicators.TargetIndicatorManager.TargetIndicatorsUpdatedDelegate.TargetIndicatorsUpdatedDelegate(object, nint)
+  fullName.vb: TargetIndicators.TargetIndicatorManager.TargetIndicatorsUpdatedDelegate.New(Object, System.IntPtr)
+  nameWithType: TargetIndicatorManager.TargetIndicatorsUpdatedDelegate.TargetIndicatorsUpdatedDelegate(object, nint)
+  nameWithType.vb: TargetIndicatorManager.TargetIndicatorsUpdatedDelegate.New(Object, IntPtr)
+- uid: TargetIndicators.TargetIndicatorManager.TargetIndicatorsUpdatedDelegate.#ctor*
+  name: TargetIndicatorsUpdatedDelegate
+  href: api/TargetIndicators.TargetIndicatorManager.TargetIndicatorsUpdatedDelegate.html#TargetIndicators_TargetIndicatorManager_TargetIndicatorsUpdatedDelegate__ctor_
+  commentId: Overload:TargetIndicators.TargetIndicatorManager.TargetIndicatorsUpdatedDelegate.#ctor
+  name.vb: New
+  fullName: TargetIndicators.TargetIndicatorManager.TargetIndicatorsUpdatedDelegate.TargetIndicatorsUpdatedDelegate
+  fullName.vb: TargetIndicators.TargetIndicatorManager.TargetIndicatorsUpdatedDelegate.New
+  nameWithType: TargetIndicatorManager.TargetIndicatorsUpdatedDelegate.TargetIndicatorsUpdatedDelegate
+  nameWithType.vb: TargetIndicatorManager.TargetIndicatorsUpdatedDelegate.New
+- uid: TargetIndicators.TargetIndicatorManager.TargetIndicatorsUpdatedDelegate.BeginInvoke(System.ReadOnlySpan{TargetIndicators.TargetIndicator},System.AsyncCallback,System.Object)
+  name: BeginInvoke(ReadOnlySpan<TargetIndicator>, AsyncCallback, object)
+  href: api/TargetIndicators.TargetIndicatorManager.TargetIndicatorsUpdatedDelegate.html#TargetIndicators_TargetIndicatorManager_TargetIndicatorsUpdatedDelegate_BeginInvoke_System_ReadOnlySpan_TargetIndicators_TargetIndicator__System_AsyncCallback_System_Object_
+  commentId: M:TargetIndicators.TargetIndicatorManager.TargetIndicatorsUpdatedDelegate.BeginInvoke(System.ReadOnlySpan{TargetIndicators.TargetIndicator},System.AsyncCallback,System.Object)
+  name.vb: BeginInvoke(ReadOnlySpan(Of TargetIndicator), AsyncCallback, Object)
+  fullName: TargetIndicators.TargetIndicatorManager.TargetIndicatorsUpdatedDelegate.BeginInvoke(System.ReadOnlySpan<TargetIndicators.TargetIndicator>, System.AsyncCallback, object)
+  fullName.vb: TargetIndicators.TargetIndicatorManager.TargetIndicatorsUpdatedDelegate.BeginInvoke(System.ReadOnlySpan(Of TargetIndicators.TargetIndicator), System.AsyncCallback, Object)
+  nameWithType: TargetIndicatorManager.TargetIndicatorsUpdatedDelegate.BeginInvoke(ReadOnlySpan<TargetIndicator>, AsyncCallback, object)
+  nameWithType.vb: TargetIndicatorManager.TargetIndicatorsUpdatedDelegate.BeginInvoke(ReadOnlySpan(Of TargetIndicator), AsyncCallback, Object)
+- uid: TargetIndicators.TargetIndicatorManager.TargetIndicatorsUpdatedDelegate.BeginInvoke*
+  name: BeginInvoke
+  href: api/TargetIndicators.TargetIndicatorManager.TargetIndicatorsUpdatedDelegate.html#TargetIndicators_TargetIndicatorManager_TargetIndicatorsUpdatedDelegate_BeginInvoke_
+  commentId: Overload:TargetIndicators.TargetIndicatorManager.TargetIndicatorsUpdatedDelegate.BeginInvoke
+  fullName: TargetIndicators.TargetIndicatorManager.TargetIndicatorsUpdatedDelegate.BeginInvoke
+  nameWithType: TargetIndicatorManager.TargetIndicatorsUpdatedDelegate.BeginInvoke
+- uid: TargetIndicators.TargetIndicatorManager.TargetIndicatorsUpdatedDelegate.EndInvoke(System.IAsyncResult)
+  name: EndInvoke(IAsyncResult)
+  href: api/TargetIndicators.TargetIndicatorManager.TargetIndicatorsUpdatedDelegate.html#TargetIndicators_TargetIndicatorManager_TargetIndicatorsUpdatedDelegate_EndInvoke_System_IAsyncResult_
+  commentId: M:TargetIndicators.TargetIndicatorManager.TargetIndicatorsUpdatedDelegate.EndInvoke(System.IAsyncResult)
+  fullName: TargetIndicators.TargetIndicatorManager.TargetIndicatorsUpdatedDelegate.EndInvoke(System.IAsyncResult)
+  nameWithType: TargetIndicatorManager.TargetIndicatorsUpdatedDelegate.EndInvoke(IAsyncResult)
+- uid: TargetIndicators.TargetIndicatorManager.TargetIndicatorsUpdatedDelegate.EndInvoke*
+  name: EndInvoke
+  href: api/TargetIndicators.TargetIndicatorManager.TargetIndicatorsUpdatedDelegate.html#TargetIndicators_TargetIndicatorManager_TargetIndicatorsUpdatedDelegate_EndInvoke_
+  commentId: Overload:TargetIndicators.TargetIndicatorManager.TargetIndicatorsUpdatedDelegate.EndInvoke
+  fullName: TargetIndicators.TargetIndicatorManager.TargetIndicatorsUpdatedDelegate.EndInvoke
+  nameWithType: TargetIndicatorManager.TargetIndicatorsUpdatedDelegate.EndInvoke
+- uid: TargetIndicators.TargetIndicatorManager.TargetIndicatorsUpdatedDelegate.Invoke(System.ReadOnlySpan{TargetIndicators.TargetIndicator})
+  name: Invoke(ReadOnlySpan<TargetIndicator>)
+  href: api/TargetIndicators.TargetIndicatorManager.TargetIndicatorsUpdatedDelegate.html#TargetIndicators_TargetIndicatorManager_TargetIndicatorsUpdatedDelegate_Invoke_System_ReadOnlySpan_TargetIndicators_TargetIndicator__
+  commentId: M:TargetIndicators.TargetIndicatorManager.TargetIndicatorsUpdatedDelegate.Invoke(System.ReadOnlySpan{TargetIndicators.TargetIndicator})
+  name.vb: Invoke(ReadOnlySpan(Of TargetIndicator))
+  fullName: TargetIndicators.TargetIndicatorManager.TargetIndicatorsUpdatedDelegate.Invoke(System.ReadOnlySpan<TargetIndicators.TargetIndicator>)
+  fullName.vb: TargetIndicators.TargetIndicatorManager.TargetIndicatorsUpdatedDelegate.Invoke(System.ReadOnlySpan(Of TargetIndicators.TargetIndicator))
+  nameWithType: TargetIndicatorManager.TargetIndicatorsUpdatedDelegate.Invoke(ReadOnlySpan<TargetIndicator>)
+  nameWithType.vb: TargetIndicatorManager.TargetIndicatorsUpdatedDelegate.Invoke(ReadOnlySpan(Of TargetIndicator))
+- uid: TargetIndicators.TargetIndicatorManager.TargetIndicatorsUpdatedDelegate.Invoke*
+  name: Invoke
+  href: api/TargetIndicators.TargetIndicatorManager.TargetIndicatorsUpdatedDelegate.html#TargetIndicators_TargetIndicatorManager_TargetIndicatorsUpdatedDelegate_Invoke_
+  commentId: Overload:TargetIndicators.TargetIndicatorManager.TargetIndicatorsUpdatedDelegate.Invoke
+  fullName: TargetIndicators.TargetIndicatorManager.TargetIndicatorsUpdatedDelegate.Invoke
+  nameWithType: TargetIndicatorManager.TargetIndicatorsUpdatedDelegate.Invoke
+- uid: TargetIndicators.TargetIndicatorManager.TopPadding
+  name: TopPadding
+  href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_TopPadding
+  commentId: P:TargetIndicators.TargetIndicatorManager.TopPadding
+  fullName: TargetIndicators.TargetIndicatorManager.TopPadding
+  nameWithType: TargetIndicatorManager.TopPadding
+- uid: TargetIndicators.TargetIndicatorManager.TopPadding*
+  name: TopPadding
+  href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_TopPadding_
+  commentId: Overload:TargetIndicators.TargetIndicatorManager.TopPadding
+  fullName: TargetIndicators.TargetIndicatorManager.TopPadding
+  nameWithType: TargetIndicatorManager.TopPadding
+- uid: TargetIndicators.TargetIndicatorManager.TrackedTargetsCount
+  name: TrackedTargetsCount
+  href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_TrackedTargetsCount
+  commentId: P:TargetIndicators.TargetIndicatorManager.TrackedTargetsCount
+  fullName: TargetIndicators.TargetIndicatorManager.TrackedTargetsCount
+  nameWithType: TargetIndicatorManager.TrackedTargetsCount
+- uid: TargetIndicators.TargetIndicatorManager.TrackedTargetsCount*
+  name: TrackedTargetsCount
+  href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_TrackedTargetsCount_
+  commentId: Overload:TargetIndicators.TargetIndicatorManager.TrackedTargetsCount
+  fullName: TargetIndicators.TargetIndicatorManager.TrackedTargetsCount
+  nameWithType: TargetIndicatorManager.TrackedTargetsCount
+- uid: TargetIndicators.TargetIndicatorManager.TryAddTarget(UnityEngine.Transform,TargetIndicators.TargetIndicator@)
+  name: TryAddTarget(Transform, out TargetIndicator)
+  href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_TryAddTarget_UnityEngine_Transform_TargetIndicators_TargetIndicator__
+  commentId: M:TargetIndicators.TargetIndicatorManager.TryAddTarget(UnityEngine.Transform,TargetIndicators.TargetIndicator@)
+  name.vb: TryAddTarget(Transform, TargetIndicator)
+  fullName: TargetIndicators.TargetIndicatorManager.TryAddTarget(UnityEngine.Transform, out TargetIndicators.TargetIndicator)
+  fullName.vb: TargetIndicators.TargetIndicatorManager.TryAddTarget(UnityEngine.Transform, TargetIndicators.TargetIndicator)
+  nameWithType: TargetIndicatorManager.TryAddTarget(Transform, out TargetIndicator)
+  nameWithType.vb: TargetIndicatorManager.TryAddTarget(Transform, TargetIndicator)
+- uid: TargetIndicators.TargetIndicatorManager.TryAddTarget*
+  name: TryAddTarget
+  href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_TryAddTarget_
+  commentId: Overload:TargetIndicators.TargetIndicatorManager.TryAddTarget
+  fullName: TargetIndicators.TargetIndicatorManager.TryAddTarget
+  nameWithType: TargetIndicatorManager.TryAddTarget
+- uid: TargetIndicators.TargetIndicatorManager.TryGetTargetIndicator(TargetIndicators.TargetIndicatorId,TargetIndicators.TargetIndicator@)
+  name: TryGetTargetIndicator(TargetIndicatorId, out TargetIndicator)
+  href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_TryGetTargetIndicator_TargetIndicators_TargetIndicatorId_TargetIndicators_TargetIndicator__
+  commentId: M:TargetIndicators.TargetIndicatorManager.TryGetTargetIndicator(TargetIndicators.TargetIndicatorId,TargetIndicators.TargetIndicator@)
+  name.vb: TryGetTargetIndicator(TargetIndicatorId, TargetIndicator)
+  fullName: TargetIndicators.TargetIndicatorManager.TryGetTargetIndicator(TargetIndicators.TargetIndicatorId, out TargetIndicators.TargetIndicator)
+  fullName.vb: TargetIndicators.TargetIndicatorManager.TryGetTargetIndicator(TargetIndicators.TargetIndicatorId, TargetIndicators.TargetIndicator)
+  nameWithType: TargetIndicatorManager.TryGetTargetIndicator(TargetIndicatorId, out TargetIndicator)
+  nameWithType.vb: TargetIndicatorManager.TryGetTargetIndicator(TargetIndicatorId, TargetIndicator)
+- uid: TargetIndicators.TargetIndicatorManager.TryGetTargetIndicator*
+  name: TryGetTargetIndicator
+  href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_TryGetTargetIndicator_
+  commentId: Overload:TargetIndicators.TargetIndicatorManager.TryGetTargetIndicator
+  fullName: TargetIndicators.TargetIndicatorManager.TryGetTargetIndicator
+  nameWithType: TargetIndicatorManager.TryGetTargetIndicator
+- uid: TargetIndicators.TargetIndicatorManager.TryRemoveTarget(TargetIndicators.TargetIndicatorId)
+  name: TryRemoveTarget(TargetIndicatorId)
+  href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_TryRemoveTarget_TargetIndicators_TargetIndicatorId_
+  commentId: M:TargetIndicators.TargetIndicatorManager.TryRemoveTarget(TargetIndicators.TargetIndicatorId)
+  fullName: TargetIndicators.TargetIndicatorManager.TryRemoveTarget(TargetIndicators.TargetIndicatorId)
+  nameWithType: TargetIndicatorManager.TryRemoveTarget(TargetIndicatorId)
+- uid: TargetIndicators.TargetIndicatorManager.TryRemoveTarget*
+  name: TryRemoveTarget
+  href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_TryRemoveTarget_
+  commentId: Overload:TargetIndicators.TargetIndicatorManager.TryRemoveTarget
+  fullName: TargetIndicators.TargetIndicatorManager.TryRemoveTarget
+  nameWithType: TargetIndicatorManager.TryRemoveTarget
+- uid: TargetIndicators.TargetIndicatorManager.Width
+  name: Width
+  href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_Width
+  commentId: P:TargetIndicators.TargetIndicatorManager.Width
+  fullName: TargetIndicators.TargetIndicatorManager.Width
+  nameWithType: TargetIndicatorManager.Width
+- uid: TargetIndicators.TargetIndicatorManager.Width*
+  name: Width
+  href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_Width_
+  commentId: Overload:TargetIndicators.TargetIndicatorManager.Width
+  fullName: TargetIndicators.TargetIndicatorManager.Width
+  nameWithType: TargetIndicatorManager.Width
+- uid: TargetIndicators.TargetIndicatorManagerEditor
+  name: TargetIndicatorManagerEditor
+  href: api/TargetIndicators.TargetIndicatorManagerEditor.html
+  commentId: T:TargetIndicators.TargetIndicatorManagerEditor
+  fullName: TargetIndicators.TargetIndicatorManagerEditor
+  nameWithType: TargetIndicatorManagerEditor
+- uid: TargetIndicators.TargetIndicatorManagerEditor.#ctor
+  name: TargetIndicatorManagerEditor()
+  href: api/TargetIndicators.TargetIndicatorManagerEditor.html#TargetIndicators_TargetIndicatorManagerEditor__ctor
+  commentId: M:TargetIndicators.TargetIndicatorManagerEditor.#ctor
+  name.vb: New()
+  fullName: TargetIndicators.TargetIndicatorManagerEditor.TargetIndicatorManagerEditor()
+  fullName.vb: TargetIndicators.TargetIndicatorManagerEditor.New()
+  nameWithType: TargetIndicatorManagerEditor.TargetIndicatorManagerEditor()
+  nameWithType.vb: TargetIndicatorManagerEditor.New()
+- uid: TargetIndicators.TargetIndicatorManagerEditor.#ctor*
+  name: TargetIndicatorManagerEditor
+  href: api/TargetIndicators.TargetIndicatorManagerEditor.html#TargetIndicators_TargetIndicatorManagerEditor__ctor_
+  commentId: Overload:TargetIndicators.TargetIndicatorManagerEditor.#ctor
+  name.vb: New
+  fullName: TargetIndicators.TargetIndicatorManagerEditor.TargetIndicatorManagerEditor
+  fullName.vb: TargetIndicators.TargetIndicatorManagerEditor.New
+  nameWithType: TargetIndicatorManagerEditor.TargetIndicatorManagerEditor
+  nameWithType.vb: TargetIndicatorManagerEditor.New
+- uid: TargetIndicators.TargetIndicatorManagerEditor.OnInspectorGUI
+  name: OnInspectorGUI()
+  href: api/TargetIndicators.TargetIndicatorManagerEditor.html#TargetIndicators_TargetIndicatorManagerEditor_OnInspectorGUI
+  commentId: M:TargetIndicators.TargetIndicatorManagerEditor.OnInspectorGUI
+  fullName: TargetIndicators.TargetIndicatorManagerEditor.OnInspectorGUI()
+  nameWithType: TargetIndicatorManagerEditor.OnInspectorGUI()
+- uid: TargetIndicators.TargetIndicatorManagerEditor.OnInspectorGUI*
+  name: OnInspectorGUI
+  href: api/TargetIndicators.TargetIndicatorManagerEditor.html#TargetIndicators_TargetIndicatorManagerEditor_OnInspectorGUI_
+  commentId: Overload:TargetIndicators.TargetIndicatorManagerEditor.OnInspectorGUI
+  fullName: TargetIndicators.TargetIndicatorManagerEditor.OnInspectorGUI
+  nameWithType: TargetIndicatorManagerEditor.OnInspectorGUI

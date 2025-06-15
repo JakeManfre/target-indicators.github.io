@@ -1,0 +1,263 @@
+{
+  "source_base_path": "C:/dev/waypoint-indicator/Assets/Target Indicators/Documentation~",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TargetIndicators.BoundaryShape.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TargetIndicators.BoundaryShape.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TargetIndicators.BoundaryShape",
+      "Summary": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TargetIndicators.BoundaryType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TargetIndicators.BoundaryType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TargetIndicators.BoundaryType",
+      "Summary": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TargetIndicators.Ellipse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TargetIndicators.Ellipse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TargetIndicators.Ellipse",
+      "Summary": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TargetIndicators.TargetIndicator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TargetIndicators.TargetIndicator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TargetIndicators.TargetIndicator",
+      "Summary": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TargetIndicators.TargetIndicatorBoundaryVisualizer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TargetIndicators.TargetIndicatorBoundaryVisualizer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TargetIndicators.TargetIndicatorBoundaryVisualizer",
+      "Summary": "<p sourcefile=\"api/TargetIndicators.TargetIndicatorBoundaryVisualizer.yml\" sourcestartlinenumber=\"1\">Visualizes the boundary configured in <xref href=\"TargetIndicators.TargetIndicatorBoundaryVisualizer._targetIndicatorManager\" data-throw-if-not-resolved=\"false\"></xref>. Note that\n<xref href=\"TargetIndicators.BoundaryType.CompassTape?text=BoundaryType.CompassTape\" data-throw-if-not-resolved=\"false\"></xref> and\n<xref href=\"TargetIndicators.BoundaryType.None?text=BoundaryType.None\" data-throw-if-not-resolved=\"false\"></xref> can't be visualized.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TargetIndicators.TargetIndicatorBoundaryVisualizerEditor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TargetIndicators.TargetIndicatorBoundaryVisualizerEditor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TargetIndicators.TargetIndicatorBoundaryVisualizerEditor",
+      "Summary": "<p sourcefile=\"api/TargetIndicators.TargetIndicatorBoundaryVisualizerEditor.yml\" sourcestartlinenumber=\"1\">A comment.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TargetIndicators.TargetIndicatorId.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TargetIndicators.TargetIndicatorId.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TargetIndicators.TargetIndicatorId",
+      "Summary": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TargetIndicators.TargetIndicatorManager.TargetIndicatorsRemovedDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TargetIndicators.TargetIndicatorManager.TargetIndicatorsRemovedDelegate.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TargetIndicators.TargetIndicatorManager.TargetIndicatorsRemovedDelegate",
+      "Summary": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TargetIndicators.TargetIndicatorManager.TargetIndicatorsUpdatedDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TargetIndicators.TargetIndicatorManager.TargetIndicatorsUpdatedDelegate.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TargetIndicators.TargetIndicatorManager.TargetIndicatorsUpdatedDelegate",
+      "Summary": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TargetIndicators.TargetIndicatorManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TargetIndicators.TargetIndicatorManager.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TargetIndicators.TargetIndicatorManager",
+      "Summary": "<p sourcefile=\"api/TargetIndicators.TargetIndicatorManager.yml\" sourcestartlinenumber=\"1\">Transforms world space positions into screen space position for tracking targets with indicators. Useful for\ndisplaying to users which direction a target is relative to where they are looking.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TargetIndicators.TargetIndicatorManagerEditor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TargetIndicators.TargetIndicatorManagerEditor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TargetIndicators.TargetIndicatorManagerEditor",
+      "Summary": "<p sourcefile=\"api/TargetIndicators.TargetIndicatorManagerEditor.yml\" sourcestartlinenumber=\"1\">A comment.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TargetIndicators.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TargetIndicators.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TargetIndicators",
+      "Summary": null
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "getting-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "getting-started.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/ellipse.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/ellipse.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/target_indicators_light_icon.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/target_indicators_light_icon.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "introduction.md",
+      "output": {
+        ".html": {
+          "relative_path": "introduction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
