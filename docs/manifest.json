@@ -242,16 +242,6 @@
       "version": ""
     },
     {
-      "type": "Resource",
-      "source_relative_path": "images/target_indicators_light_icon_thin.svg",
-      "output": {
-        "resource": {
-          "relative_path": "images/target_indicators_light_icon_thin.svg"
-        }
-      },
-      "version": ""
-    },
-    {
       "type": "Redirection",
       "source_relative_path": "index.md",
       "output": {
