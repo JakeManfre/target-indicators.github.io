@@ -213,20 +213,20 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/complex-target-indicator-demo.png",
+      "source_relative_path": "images/ellipse.png",
       "output": {
         "resource": {
-          "relative_path": "images/complex-target-indicator-demo.png"
+          "relative_path": "images/ellipse.png"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/ellipse.png",
+      "source_relative_path": "images/sample-multi-target-indicators.png",
       "output": {
         "resource": {
-          "relative_path": "images/ellipse.png"
+          "relative_path": "images/sample-multi-target-indicators.png"
         }
       },
       "version": ""

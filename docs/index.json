@@ -82,7 +82,7 @@
   "manual/index.html": {
     "href": "manual/index.html",
     "title": "Target Indicators | Target Indicators Documentation",
-    "summary": "Target Indicators Target Indicators is a Unity asset that enables you to easily create visual indicators to track targets in your Unity app. Track waypoints, points of interest, enemies, other players, or any transform or 3D point. Features Target Indicators supports the following boundary types: Boundary Type Description Padded Absolute CompassTape None Padded and Absolute Boundary types supports the following boundary shapes: Boundary Shape Description Rectangle Ellipse"
+    "summary": "Target Indicators Target Indicators is a Unity package that enables you to easily create visual indicators to track targets in your Unity app. Track waypoints, points of interest, enemies, other players, or any transform or 3D point. Features Target Indicators supports the following boundary types: Boundary Type Description Padded Absolute CompassTape None Padded and Absolute Boundary types supports the following boundary shapes: Boundary Shape Description Rectangle Ellipse"
   },
   "manual/project-setup.html": {
     "href": "manual/project-setup.html",
