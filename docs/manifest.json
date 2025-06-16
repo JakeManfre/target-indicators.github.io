@@ -32,7 +32,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "TargetIndicators.BoundaryShape",
-      "Summary": ""
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -46,7 +46,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "TargetIndicators.BoundaryType",
-      "Summary": ""
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -60,7 +60,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "TargetIndicators.Ellipse",
-      "Summary": ""
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -74,7 +74,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "TargetIndicators.TargetIndicator",
-      "Summary": ""
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -88,7 +88,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "TargetIndicators.TargetIndicatorBoundaryVisualizer",
-      "Summary": "<p sourcefile=\"api/TargetIndicators.TargetIndicatorBoundaryVisualizer.yml\" sourcestartlinenumber=\"1\">Visualizes the boundary configured in <xref href=\"TargetIndicators.TargetIndicatorBoundaryVisualizer._targetIndicatorManager\" data-throw-if-not-resolved=\"false\"></xref>. Note that\n<xref href=\"TargetIndicators.BoundaryType.CompassTape?text=BoundaryType.CompassTape\" data-throw-if-not-resolved=\"false\"></xref> and\n<xref href=\"TargetIndicators.BoundaryType.None?text=BoundaryType.None\" data-throw-if-not-resolved=\"false\"></xref> can't be visualized.</p>\n"
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -116,7 +116,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "TargetIndicators.TargetIndicatorId",
-      "Summary": ""
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -130,7 +130,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "TargetIndicators.TargetIndicatorManager.TargetIndicatorsRemovedDelegate",
-      "Summary": ""
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -144,7 +144,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "TargetIndicators.TargetIndicatorManager.TargetIndicatorsUpdatedDelegate",
-      "Summary": ""
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -158,7 +158,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "TargetIndicators.TargetIndicatorManager",
-      "Summary": "<p sourcefile=\"api/TargetIndicators.TargetIndicatorManager.yml\" sourcestartlinenumber=\"1\">Transforms world space positions into screen space position for tracking targets with indicators. Useful for\ndisplaying to users which direction a target is relative to where they are looking.</p>\n"
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -202,6 +202,16 @@
       "version": ""
     },
     {
+      "type": "Redirection",
+      "source_relative_path": "get-target-indicators.md",
+      "output": {
+        ".html": {
+          "relative_path": "get-target-indicators.html"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "getting-started.md",
       "output": {
@@ -213,10 +223,180 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/ellipse.png",
+      "source_relative_path": "images/absolute-ellipse-example.png",
       "output": {
         "resource": {
-          "relative_path": "images/ellipse.png"
+          "relative_path": "images/absolute-ellipse-example.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/absolute-ellipse.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/absolute-ellipse.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/absolute-rectangle-example.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/absolute-rectangle-example.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/add-visualizer.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/add-visualizer.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/compass-tape-example.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/compass-tape-example.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/compass-tape.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/compass-tape.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/ellipse-boundary.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/ellipse-boundary.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/import-samples-starter-assets.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/import-samples-starter-assets.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/locate-downloaded-package.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/locate-downloaded-package.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/locating-imported-starter-assets.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/locating-imported-starter-assets.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/multiple-boundaries-example.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/multiple-boundaries-example.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/no-boundary-example.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/no-boundary-example.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/no-boundary.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/no-boundary.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/open-package-manager.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/open-package-manager.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/padded-ellipse-example.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/padded-ellipse-example.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/padded-rectangle-example.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/padded-rectangle-example.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/padded-rectangle.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/padded-rectangle.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/rectangle-boundary.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/rectangle-boundary.png"
         }
       },
       "version": ""
@@ -237,6 +417,16 @@
       "output": {
         "resource": {
           "relative_path": "images/target_indicators_light_icon.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/visualizer-options.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/visualizer-options.png"
         }
       },
       "version": ""
@@ -263,6 +453,16 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "manual/how-to-use.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/how-to-use.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "manual/index.md",
       "output": {
         ".html": {
@@ -273,10 +473,10 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "manual/project-setup.md",
+      "source_relative_path": "manual/install-package.md",
       "output": {
         ".html": {
-          "relative_path": "manual/project-setup.html"
+          "relative_path": "manual/install-package.html"
         }
       },
       "version": ""

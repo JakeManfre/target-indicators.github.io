@@ -79,55 +79,46 @@
             <article class="content wrap" id="_content" data-uid="target-indicators-manual">
 <h1 id="target-indicators">Target Indicators</h1>
 
-<p>Target Indicators is a Unity package that enables you to easily create visual indicators to track targets in your Unity app. Track waypoints, points of interest, enemies, other players, or any transform or 3D point.</p>
+<p>Target Indicators is a Unity package that enables you to easily create visual indicators to track targets. Use target indicators to guide users to points of interest, waypoints, other players, or any other 3D point. Customize your indicators to your project's needs.</p>
+<p>Works with any UI system, providing an API to get the screen pose of any 3D point or transform in screen space and bounded by your configuration. Included are <a href="xref:TODO">Samples</a> that can be used as a drag and drop system for a low code solution or a reference for how to use the target indicators API.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p><a href="xref:TODO">Get Target Indicators</a> on the Unity Asset Store.</p>
+</div>
 <p><img src="../images/sample-multi-target-indicators.png" alt="A screenshot from the sample's &quot;Multiple Target Indicator Categories Demo&quot; scene showing what target indicators are."></p>
 <h2 id="features">Features</h2>
-<p>Target Indicators supports the following boundary types:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Boundary Type</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><a href="xref:TODO">Padded</a></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr>
-<td style="text-align: left;"><a href="xref:TODO">Absolute</a></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr>
-<td style="text-align: left;"><a href="xref:TODO">CompassTape</a></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr>
-<td style="text-align: left;"><a href="xref:TODO">None</a></td>
-<td style="text-align: left;"></td>
-</tr>
-</tbody>
-</table>
-<p>Padded and Absolute Boundary types supports the following boundary shapes:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Boundary Shape</th>
-<th style="text-align: left;">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><a href="xref:TODO">Rectangle</a></td>
-<td style="text-align: left;"></td>
-</tr>
-<tr>
-<td style="text-align: left;"><a href="xref:TODO">Ellipse</a></td>
-<td style="text-align: left;"></td>
-</tr>
-</tbody>
-</table>
+<p>Target indicators focuses on simplicity and high performance including:</p>
+<ul>
+<li>Highly configurable at edit time and runtime</li>
+<li>Does not rely on <code>Object.Find</code> or any variations of scene searching at runtime</li>
+<li>Does not rely on <code>GetComponent</code> calls</li>
+<li>Minamal one time persistent heap allocations at startup that are only disposed when you are done with Target Indicators</li>
+<li>No post initialization heap allocations, keeps performance high.</li>
+<li>Can be used with any UI system*</li>
+<li>Simple and minmal samples scenes</li>
+<li>Works with traditional display and in XR</li>
+<li>Includes a debug visualizer to understand how your indicators will be bounded</li>
+</ul>
+<div class="NOTE">
+<h5>Note</h5>
+<p>*The package has a dependency on <code>com.unity.ugui</code> to support the samples and demo scenes.</p>
+</div>
+<h2 id="preview">Preview</h2>
+<p>The following describes the capabilities you can expect from Target Indicators:</p>
+<h3 id="rectangle-boundary-that-adjusts-with-screen-size">Rectangle boundary that adjusts with screen size</h3>
+<p><img src="../images/padded-rectangle-example.png" alt="A screenshot showing padded rectangle boundary."></p>
+<h3 id="ellipse-boundary-that-adjusts-with-screen-size">Ellipse boundary that adjusts with screen size</h3>
+<p><img src="../images/padded-ellipse-example.png" alt="A screenshot showing padded ellipse boundary."></p>
+<h3 id="rectangle-boundary-with-constant-size">Rectangle boundary with constant size</h3>
+<p><img src="../images/absolute-rectangle-example.png" alt="A screenshot showing absolute rectangle boundary."></p>
+<h3 id="ellipse-boundary-with-constant-size">Ellipse boundary with constant size</h3>
+<p><img src="../images/absolute-ellipse-example.png" alt="A screenshot showing absolute ellipse boundary."></p>
+<h3 id="compass-tape-boundary">Compass tape boundary</h3>
+<p><img src="../images/compass-tape-example.png" alt="A screenshot showing compass tape boundary."></p>
+<h2 id="no-boundary">No boundary</h2>
+<p><img src="../images/no-boundary-example.png" alt="A screenshot showing no boundary."></p>
+<h2 id="multiple-boundaries">Multiple boundaries</h2>
+<p><img src="../images/multiple-boundaries-example.png" alt="A screenshot showing no boundary."></p>
 
 </article>
           </div>

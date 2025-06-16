@@ -469,18 +469,6 @@ references:
   commentId: Overload:TargetIndicators.TargetIndicatorManager.Ellipse
   fullName: TargetIndicators.TargetIndicatorManager.Ellipse
   nameWithType: TargetIndicatorManager.Ellipse
-- uid: TargetIndicators.TargetIndicatorManager.EnableTargetIndicatorsUpdatedEvent
-  name: EnableTargetIndicatorsUpdatedEvent
-  href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_EnableTargetIndicatorsUpdatedEvent
-  commentId: P:TargetIndicators.TargetIndicatorManager.EnableTargetIndicatorsUpdatedEvent
-  fullName: TargetIndicators.TargetIndicatorManager.EnableTargetIndicatorsUpdatedEvent
-  nameWithType: TargetIndicatorManager.EnableTargetIndicatorsUpdatedEvent
-- uid: TargetIndicators.TargetIndicatorManager.EnableTargetIndicatorsUpdatedEvent*
-  name: EnableTargetIndicatorsUpdatedEvent
-  href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_EnableTargetIndicatorsUpdatedEvent_
-  commentId: Overload:TargetIndicators.TargetIndicatorManager.EnableTargetIndicatorsUpdatedEvent
-  fullName: TargetIndicators.TargetIndicatorManager.EnableTargetIndicatorsUpdatedEvent
-  nameWithType: TargetIndicatorManager.EnableTargetIndicatorsUpdatedEvent
 - uid: TargetIndicators.TargetIndicatorManager.GetScreenPose(UnityEngine.Vector3@,System.Boolean@)
   name: GetScreenPose(in Vector3, out bool)
   href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_GetScreenPose_UnityEngine_Vector3__System_Boolean__
@@ -850,12 +838,15 @@ references:
 - uid: target-indicators-changelog
   name: Changelog
   href: CHANGELOG.html
+- uid: target-indicators-how-to-use
+  name: How to use target indicators
+  href: manual/how-to-use.html
+- uid: target-indicators-install-package
+  name: Install package
+  href: manual/install-package.html
 - uid: target-indicators-manual
   name: Target Indicators
   href: manual/index.html
-- uid: target-indicators-project-setup
-  name: Project Setup
-  href: manual/project-setup.html
 - uid: target-indicators-samples
   name: Samples
   href: manual/samples/samples.html
