@@ -1,0 +1,9 @@
+# This is a CODEOWNERS file.
+# Lines starting with # are comments.
+
+# ----------------------------------------------------
+# 1. Default Owner (Fallback for unmatched files)
+# ----------------------------------------------------
+# This user will be requested for review on any file
+# that doesn't match a more specific rule below.
+* @JakeManfre
