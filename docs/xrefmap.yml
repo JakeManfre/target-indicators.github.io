@@ -172,18 +172,18 @@ references:
   commentId: Overload:TargetIndicators.TargetIndicator.Id
   fullName: TargetIndicators.TargetIndicator.Id
   nameWithType: TargetIndicator.Id
-- uid: TargetIndicators.TargetIndicator.IsOutsideBounds
-  name: IsOutsideBounds
-  href: api/TargetIndicators.TargetIndicator.html#TargetIndicators_TargetIndicator_IsOutsideBounds
-  commentId: P:TargetIndicators.TargetIndicator.IsOutsideBounds
-  fullName: TargetIndicators.TargetIndicator.IsOutsideBounds
-  nameWithType: TargetIndicator.IsOutsideBounds
-- uid: TargetIndicators.TargetIndicator.IsOutsideBounds*
-  name: IsOutsideBounds
-  href: api/TargetIndicators.TargetIndicator.html#TargetIndicators_TargetIndicator_IsOutsideBounds_
-  commentId: Overload:TargetIndicators.TargetIndicator.IsOutsideBounds
-  fullName: TargetIndicators.TargetIndicator.IsOutsideBounds
-  nameWithType: TargetIndicator.IsOutsideBounds
+- uid: TargetIndicators.TargetIndicator.IsOutsideBoundary
+  name: IsOutsideBoundary
+  href: api/TargetIndicators.TargetIndicator.html#TargetIndicators_TargetIndicator_IsOutsideBoundary
+  commentId: P:TargetIndicators.TargetIndicator.IsOutsideBoundary
+  fullName: TargetIndicators.TargetIndicator.IsOutsideBoundary
+  nameWithType: TargetIndicator.IsOutsideBoundary
+- uid: TargetIndicators.TargetIndicator.IsOutsideBoundary*
+  name: IsOutsideBoundary
+  href: api/TargetIndicators.TargetIndicator.html#TargetIndicators_TargetIndicator_IsOutsideBoundary_
+  commentId: Overload:TargetIndicators.TargetIndicator.IsOutsideBoundary
+  fullName: TargetIndicators.TargetIndicator.IsOutsideBoundary
+  nameWithType: TargetIndicator.IsOutsideBoundary
 - uid: TargetIndicators.TargetIndicator.ScreenPose
   name: ScreenPose
   href: api/TargetIndicators.TargetIndicator.html#TargetIndicators_TargetIndicator_ScreenPose
