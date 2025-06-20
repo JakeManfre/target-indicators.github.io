@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Target Indicator Manager | Target Indicators Documentation </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Target Indicator Manager | Target Indicators Documentation ">
+    
+    
+      <link rel="shortcut icon" href="../../images/target_indicators_light_icon.png">
+      <link rel="stylesheet" href="../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../styles/docfx.css">
+      <link rel="stylesheet" href="../../styles/main.css">
+      <meta property="docfx:navrel" content="../../toc.html">
+      <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/target_indicators_light_icon.png" alt="Target Indicators">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="target-indicators-target-indicator-manager">
+<h1 id="target-indicator-manager">Target Indicator Manager</h1>
+
+<p>Target Indicators only requires the <a class="xref" href="../../api/TargetIndicators.TargetIndicatorManager.html">TargetIndicatorManager</a> component which is responsible for handling added, updated, and removed targets to track.</p>
+<p>The following sections explain how to use the target indicator manager.</p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>By default <code>Target Indicators</code> does <strong>not</strong> display or draw any UI in the scene. It only returns screen coordinates for you to display your own indicators. This enables you to use any UI system you want. If you are interested in a prebuilt indicator UI you can import the sample's starter assets which provides a solution with <a href="https://docs.unity3d.com/Packages/com.unity.ugui@3.0/manual/index.html">Unity UI</a>. Refer to the <a href="xref:TODO">samples docs</a> to learn more about how to configure the prebuilt indicators.</p>
+</div>
+<h2 id="scene-setup">Scene Setup</h2>
+<p>Add the <a class="xref" href="../../api/TargetIndicators.TargetIndicatorManager.html">TargetIndicatorManager</a> to a GameObject in the hiearchy and edit the configuration to your projects needs.</p>
+<p><img src="../../images/target-indicator-manager-component.png" alt="The TargetIndicatorManager component attached to a GameObject."></p>
+<h2 id="configure-the-target-indicator-manager">Configure the Target Indicator Manager</h2>
+<p>The <code>TargetIndicatorManager</code> has several properties that can be edited within the inspector or set at runtime. The following sections explains each property in more detail.</p>
+<h3 id="camera">Camera</h3>
+<p>The camera is used for calculating the screen space coordinates of each target. By default, when the <code>TargetIndicatorManager</code> component is added or reset it will assign the camera in your scene with the <code>MainCamera</code> tag. If no camera has the <code>MainCamera</code> tag it will fallback to using the first camera in the scene. Assign the camera that you will be using to display target indicators.</p>
+<p>To assign the camera reference at runtime, use <a class="xref" href="../../api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_Camera">TargetIndicatorManager.Camera</a>.</p>
+<h3 id="boundary-type">Boundary type</h3>
+<p>The boundary type determines how target indicators should be bounded to the screen if the target moves outside of the boundary. For example indicators can be bound by the screen edges and automatically adjust to changes in screen size or they can have no boundary and only show an indicator when the target is on screen. To assign or change the boundary type at runtime, use <a class="xref" href="../../api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_BoundaryType">TargetIndicatorManager.BoundaryType</a>.</p>
+<p>There are four boundary types:</p>
+<ol>
+<li><p><strong>Padded</strong></p>
+<p>The padded boundary type bounds target indicators to the screen edges with adjustable padding. The boundary will dynamically update if the screen changes size.</p>
+<p><img src="../../images/padded-rectangle-boundary.png" alt="An example of a padded rectangle boundary"></p>
+<p>Padded boundary is common for indicating waypoints, enemies, and points of interest.</p>
+</li>
+<li><p><strong>Absolute</strong></p>
+<p>The absolute boundary type bounds target indicators to the screen with a fixed size. It will not change if the screen size changes.</p>
+<p><img src="../../images/absolute-ellipse-boundary.png" alt="An example of an absolute ellipse boundary"></p>
+<p>Absolute boundary is common in first person games where you want to indicate the direction a player or other character is attacking from when not directly in front of the user.</p>
+</li>
+<li><p><strong>Compass Tape</strong></p>
+<p>The compass tape boundary bounds targets to a horizontal compass referred to as a compass tape. Unlike the other boundary types, compass tape does not provide screen coordinates. Instead it provides a value between 0 and 1 for the <a class="xref" href="../../api/TargetIndicators.TargetIndicator.html#TargetIndicators_TargetIndicator_ScreenPose">TargetIndicator.ScreenPose.x</a> component.</p>
+<p><img src="../../images/compass-tape-boundary.png" alt="An example of a compass tape boundary"></p>
+<p>To learn more about how to use the screen pose for a target indicator on a compass tape refer to <a class="xref" href="target-indicator.html#compass-tape-boundary-type">target indicators with compass tape</a>.</p>
+<p>Refer to the <a href="xref:TODO">Samples</a> for an example of how to use compass tape.</p>
+</li>
+<li><p><strong>Unbounded</strong></p>
+<p>The unbounded boundary type does not bound target indicators at all and they always stick to the screen pose of the target. This means if the target goes off screen, the target indicator will also go off screen.</p>
+<p><img src="../../images/unbounded.png" alt="An example of an unbounded tape boundary"></p>
+</li>
+</ol>
+<h3 id="boundary-shape">Boundary shape</h3>
+<p>When using <code>Padded</code> or <code>Absolute</code> boundary types, configure the shape of the boundary with the <a class="xref" href="../../api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_BoundaryShape">BoundaryShape</a> property.</p>
+<p>There are two boundary shapes:</p>
+<ol>
+<li><p><strong>Rectangle</strong></p>
+<p><img src="../../images/padded-rectangle-boundary.png" alt="An example of a padded rectangle boundary"></p>
+<p><a class="xref" href="../../api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_Rectangle">TargetIndicatorManager.Ellipse</a> represents the rectangle data generated by the currnet configuration.</p>
+</li>
+<li><p><strong>Ellipse</strong></p>
+<p><img src="../../images/padded-ellipse-boundary.png" alt="An example of a padded ellipse boundary"></p>
+<p><a class="xref" href="../../api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_Ellipse">TargetIndicatorManager.Ellipse</a> represents the ellipse data generated by the current configuration.</p>
+</li>
+</ol>
+<h3 id="padding">Padding</h3>
+<p>When <code>BoundaryType</code> is <code>Padded</code> you can adjust the distance in pixels between the edge of the screen and the boundary. You can configure the padding for the <code>Top</code>, <code>Bottom</code>, <code>Left</code>, and <code>Right</code> edges independently. These properties are ignored if the boundary shape is not set to <code>Padded</code>.</p>
+<h3 id="size">Size</h3>
+<p>When <code>BoundaryType</code> is <code>Absolute</code> you can adjust the size by the <a class="xref" href="../../api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_Width">Width</a> and <a class="xref" href="../../api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_Height">Height</a> properties. The size does not change if the screen size changes. These properties are ignored if the boundary shape is not set to <code>Absolute</code>.</p>
+<h2 id="visualize-the-boundary">Visualize the boundary</h2>
+<p>You can visualize your current configuration at edit time and at runtime with the <a class="xref" href="../../api/TargetIndicators.TargetIndicatorBoundaryVisualizer.html">TargetIndicatorBoundaryVisualizer</a> component.</p>
+<p>The following sections describe how to use the <code>TargetIndicatorBoundaryVisualizer</code> to visualize the configured boundary.</p>
+<h3 id="add-visualizer">Add visualizer</h3>
+<p>Attach the <code>TargetIndicatorBoundaryVisualizer</code> component by clicking the <strong>Add Boundary Visualizer</strong> button on the bottom of the target indicator manager component.</p>
+<p><img src="../../images/add-visualizer-component.png" alt="The TargetIndicatorManager component attached to a GameObject."></p>
+<p>Once added, you can remove the visualizer by clicking the <strong>Remove Boundary Visualizer</strong>.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Not all boundary types can be visualized. Only <code>BoundaryType.Padded</code> and <code>BoundaryType.Absolute</code> can be visualized.</p>
+</div>
+<h3 id="edit-visualizer">Edit visualizer</h3>
+<p>Boundary line color and line width properties are available in the inspector to modify the boundary visualizer. This is useful if you have multiple target indicator managers and need to distinguish easily between them.</p>
+<p><img src="../../images/edit-visualizer-component.png" alt="The TargetIndicatorManager component attached to a GameObject."></p>
+<h2 id="api">API</h2>
+<p>The following sections describe how to use the target indicator manager API.</p>
+<h3 id="add-a-target">Add a target</h3>
+<p>To add a target to track use <a class="xref" href="../../api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_TryAddTarget_">TryAddTarget</a> as shown in the following code example:</p>
+<pre><code class="lang-cs" name="TryAddTarget">public void TryAddTargetExample(TargetIndicatorManager manager, Transform target)
+{
+    var wasAdded = manager.TryAddTarget(target, out var targetIndicator);
+
+    if (!wasAdded)
+    {
+        // Failed to add target because max limit of targets is reached.
+        // Handle error.
+        return;
+    }
+
+    // Successfully added target.
+}
+</code></pre>
+<p>The max number of targets that can be tracked at once is 100. <code>TryAddTarget</code> can only fail if you try to add more than 100 targets. To get the current number of tracked targets use <a class="xref" href="../../api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_TrackedTargetsCount">TrackedTargetsCount</a>. If you need more than 100 (god bless), you can use <a href="#using-multiple-target-indicator-managers">multiple target indicator managers</a>.</p>
+<p>Keep track of the returned <code>TargetIndicator.TrackedIndicatorId</code> in the <code>out</code> parameter to know which target indicator corresponds to a target.</p>
+<h3 id="remove-a-target">Remove a target</h3>
+<p>To remove a target from being tracked use <a class="xref" href="../../api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_TryRemoveTarget_TargetIndicators_TargetIndicatorId_">TryRemoveTarget</a> as shown in the following code example:</p>
+<pre><code class="lang-cs" name="TryRemoveTarget">public void TryRemoveTargetExample(TargetIndicatorManager manager, TargetIndicatorId id)
+{
+    var wasRemoved = manager.TryRemoveTarget(id);
+
+    if (!wasRemoved)
+    {
+        // Failed to remove target because the target indicator ID was invalid.
+        // Handle error.
+        return;
+    }
+
+    // Successfully removed target.
+}
+</code></pre>
+<p>Removing a target can only fail if you pass an invalid <code>TargetIndicatorId</code>.</p>
+<h3 id="remove-all-targets">Remove all targets</h3>
+<p>To remove all targets at once use <a class="xref" href="../../api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_RemoveAllTargets">RemoveAllTargets</a> as shown in the following code example:</p>
+<pre><code class="lang-cs" name="RemoveAllTarget">public void RemoveAllTargetsExample(TargetIndicatorManager manager)
+{
+    manager.RemoveAllTargets();
+
+    // Successfully removed all tracked targets.
+}
+</code></pre>
+<div class="TIP">
+<h5>Tip</h5>
+<p>If you just want to stop receiving updates you can disable the <code>TargetIndicatorManager</code> component. Re-enabling it will resume tracking targets.</p>
+</div>
+<h3 id="get-a-target">Get a target</h3>
+<p>To check if a target indicator is being tracked use <a class="xref" href="../../api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_TryGetTargetIndicator_">TryGetTargetIndicator</a> as shown in the following code example:</p>
+<pre><code class="lang-cs" name="GetATargetIndicator">public void GetATargetIndicatorExample(
+    TargetIndicatorManager manager, TargetIndicatorId id)
+{
+    var didGet = manager.TryGetTargetIndicator(id, out var targetIndicator);
+
+    if (!didGet)
+    {
+        // Failed to get target because target indicator ID was invalid.
+        // Handle error.
+        return;
+    }
+
+    // Successfully received target indicator.
+}
+</code></pre><h3 id="get-screen-pose">Get screen pose</h3>
+<p>If you want to get the screen pose of any world space position that adherers to you current boundary configuration, use <a class="xref" href="../../api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_GetScreenPose_">GetScreenPose</a>. This can be useful if you want to control your own life cycle, or if you only need a one time update, or you need infrequent updates for a targets screen pose.</p>
+<p>The following code example shows you how to use <code>GetScreenPose</code>:</p>
+<pre><code class="lang-cs" name="GetScreenPose">public void GetScreenPoseExample(
+    TargetIndicatorManager manager, Vector3 worldSpacePosition)
+{
+    var screenPose = manager.GetScreenPose(worldSpacePosition, out var isOutsideBounds);
+
+    // screenPose.position.x = horizontal axis coordinate in screen space (pixels).
+    // screenPose.position.y = vertical axis coordinate in screen space (pixels).
+    // screenPose.position.z = depth from the camera in world space (meters).
+
+    // screenPose.rotation = direction to target in screen space.
+
+    // isOutsideBounds = true if the screenPose.position is outside the configured bounds.
+    // The depth from the camera is ignored in this check.
+}
+</code></pre><h3 id="is-outside-boundary">Is outside boundary</h3>
+<p>Each <code>TargetIndicator</code> contains an <a href="xref:TargetIndicators.TargetIndicator.IsOutsideBoundary">IsOutsideBoundary</a> property that you can use to know if a target indicators is outside the bounds of the current configuration when the <code>TargetIndicator</code> was created. If you want to know if any <code>Vector3</code> position is outside the current boundary configuration use <a href="xref:TargetIndicators.TargetIndicatorManager.IsOutsideBoundary*">TargetIndicatorManager.IsOutsideBoundary</a> as shown in the following example:</p>
+<pre><code class="lang-cs" name="IsOutsideBoundary">public void IsOutsideBoundaryExample(
+    TargetIndicatorManager manager, Vector3 worldSpacePosition)
+{
+    var isOutsideBounds = manager.IsOutsideBounds(worldSpacePosition);
+
+    // isOutsideBounds = true if the screen pose coordinates are outside the
+    // configured bounds. The depth from the camera is ignored in this check.
+}
+</code></pre>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>For <code>BoundaryType.CompassTape</code> and <code>BoundaryType.Unbounded</code> the <code>IsOutsideBoundary</code> property will always be <code>false</code>. <code>BoundaryType.Compas</code> requires knowledge about your specific compass tape setup to determine if it's outside the boundary.sTape</p>
+<p>Refer to <a href="xref:TODO">samples</a> as a reference for how you can check if the target indicator is outside of the boundary.</p>
+</div>
+<h3 id="life-cycle-events">Life cycle events</h3>
+<p>While enabled, the <code>TargetIndicatorManager</code> component will check for changes every frame. If any anchors were added, updated, or removed, <code>TargetIndicatorManager</code> will invoke <a class="xref" href="../../api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_TargetIndicatorsAdded">TargetIndicatorsAdded</a>, <a class="xref" href="../../api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_TargetIndicatorsUpdated">TargetIndicatorsUpdated</a>, <a class="xref" href="../../api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_TargetIndicatorsRemoved">TargetIndicatorsRemoved</a> events respectively.</p>
+<p>Each event passes a <a href="https://learn.microsoft.com/en-us/dotnet/api/system.readonlyspan-1?view=net-9.0">ReadOnlySpan<targetindicator></targetindicator></a> that wraps around an underlying array. This avoids heap allocations and slices the array to the size of changes that occurred since the last time the events were invoked.</p>
+<p>The following code example shows how you can subscribe to these events and iterate over the spans they pass:</p>
+<pre><code class="lang-cs" name="LifeCycle">public void LifeCycleExample(TargetIndicatorManager manager)
+{
+    manager.TargetIndicatorsAdded += OnTargetIndicatorsAdded;
+    manager.TargetIndicatorsUpdated += OnTargetIndicatorsUpdated;
+    manager.TargetIndicatorsRemoved += OnTargetIndicatorsRemoved;
+}
+
+void OnTargetIndicatorsAdded(ReadOnlySpan&lt;TargetIndicator&gt; added)
+{
+    foreach (var targetIndicator in added)
+    {
+        var screenPose = targetIndicator.ScreenPose;
+    }
+}
+
+void OnTargetIndicatorsUpdated(ReadOnlySpan&lt;TargetIndicator&gt; updated)
+{
+    foreach (var targetIndicator in updated)
+    {
+        var updatedScreenPose = targetIndicator.ScreenPose;
+    }
+}
+
+void OnTargetIndicatorsRemoved(ReadOnlySpan&lt;TargetIndicatorId&gt; removed)
+{
+    foreach (var targetIndicatorId in removed)
+    {
+        // TargetIndicatorId was removed.
+    }
+}
+</code></pre>
+<p>You can disable the <code>TargetIndicatorManager</code> component to stop receiving life cycle events and control your own life cycle and rely on the <code>TargetIndicatorManager</code> exclusively for <a href="#get-screen-pose">pose</a> and <a href="#is-outside-boundary">boundary</a> checks.</p>
+<h3 id="using-multiple-target-indicator-managers">Using multiple target indicator managers</h3>
+<p>Some applications might require multiple boundary types or multiple configurations. You can have multiple <code>TargetIndicatorManager</code> components in your scene to get more complex designs. For example if you use <code>BoundaryType.CompassTape</code> you will only get indicators to display on the compass tape but might not know what target they correspond to.</p>
+<p>You can have a second <code>TargetIndicatorManager</code> that is configured to use <code>BoundaryType.Unbounded</code> that marks the same target with a matching icon as used in your compass tape visualizer to indicate which target represents which marker in your compass tape indicator. The <a href="xref:TODO">Samples</a> provides an example of how to configre multiple target indicator managers.</p>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/JakeManfre/waypoint-indicator/blob/docs-setup/Assets/Target Indicators/Documentation~/manual/guide/target-indicator-manager.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

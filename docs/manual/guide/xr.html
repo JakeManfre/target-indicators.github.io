@@ -5,19 +5,19 @@
   <head>
     <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Target Indicators | Target Indicators Documentation </title>
+      <title>Target indicators in XR | Target Indicators Documentation </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Target Indicators | Target Indicators Documentation ">
+      <meta name="title" content="Target indicators in XR | Target Indicators Documentation ">
     
     
-      <link rel="shortcut icon" href="../images/target_indicators_light_icon.png">
-      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
-      <link rel="stylesheet" href="../styles/docfx.css">
-      <link rel="stylesheet" href="../styles/main.css">
-      <meta property="docfx:navrel" content="../toc.html">
-      <meta property="docfx:tocrel" content="toc.html">
+      <link rel="shortcut icon" href="../../images/target_indicators_light_icon.png">
+      <link rel="stylesheet" href="../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../styles/docfx.css">
+      <link rel="stylesheet" href="../../styles/main.css">
+      <meta property="docfx:navrel" content="../../toc.html">
+      <meta property="docfx:tocrel" content="../toc.html">
     
-    <meta property="docfx:rel" content="../">
+    <meta property="docfx:rel" content="../../">
     
   </head>
   <body data-spy="scroll" data-target="#affix" data-offset="120">
@@ -34,8 +34,8 @@
                 <span class="icon-bar"></span>
               </button>
 
-              <a class="navbar-brand" href="../index.html">
-                <img id="logo" class="svg" src="../images/target_indicators_light_icon.png" alt="Target Indicators">
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/target_indicators_light_icon.png" alt="Target Indicators">
               </a>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
@@ -76,42 +76,17 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="target-indicators-manual">
-<h1 id="target-indicators">Target Indicators</h1>
+            <article class="content wrap" id="_content" data-uid="target-indicators-target-indicators-in-xr">
+<h1 id="target-indicators-in-xr">Target indicators in XR</h1>
 
-<p>Target Indicators is a Unity package that enables you to create visual indicators to track targets. Use target indicators to guide users to points of interest, waypoints, other players, or any other 3D point. Customize your indicators to your project's needs.</p>
-<p>Works with any UI system by providing an API to get the bounded screen pose of any target. Included are <a href="xref:TODO">Samples</a> that can be used as a drag and drop system for a low code solution or used as a reference for building your own UI indicators.</p>
-<div class="NOTE">
-<h5>Note</h5>
-<p><a href="xref:TODO">Get Target Indicators</a> on the Unity Asset Store.</p>
-</div>
-<p><img src="../images/sample-multi-target-indicators.png" alt="A screenshot from the sample's &quot;Multiple Target Indicator Categories Demo&quot; scene showing what target indicators are."></p>
-<h2 id="features">Features</h2>
-<p>Target indicators focuses on simplicity with high performance. The following features are what you can expect from this package:</p>
-<ul>
-<li>Works with any UI system*</li>
-<li>Highly configurable at edit and runtime</li>
-<li>No heap allocations after initialization</li>
-<li>Does not rely on <code>Object.Find</code> or any variations of scene searching at runtime</li>
-<li>Does not rely on <code>GetComponent</code></li>
-<li>Simple and minmal samples scenes</li>
-<li>Works with traditional displays and XR HMDs</li>
-</ul>
-<div class="NOTE">
-<h5>Note</h5>
-<p>*The package has a dependency on <code>com.unity.ugui</code> to support the samples and demo scenes.</p>
-</div>
-<h2 id="dependencies">Dependencies</h2>
-<p>The following dependencies are required for target indicators.</p>
-<h3 id="packages">Packages</h3>
-<ul>
-<li><code>com.unity.inputsystem 1.14.0</code> for samples</li>
-<li><code>com.unity.ugui 2.0.0</code> for samples</li>
-</ul>
-<h3 id="unity-version">Unity version</h3>
-<ul>
-<li>Unity <code>6000.0</code> or newer</li>
-</ul>
+<p>This page describes how to use target indicators in XR.</p>
+<p>A common problem in XR is showing users where to look to find an important item or location in your app. You can configure your target indicators manager to guide users to targets in their environment. The current solution is limited and requires a specific configuration and setup. The following steps demonstrate how to setup your scene for XR:</p>
+<ol>
+<li>Set your boundary type to <code>Absolute</code></li>
+<li>Edit the <code>Width</code> and <code>Height</code></li>
+<li>Display you target indicators on a Canvas set to <code>Screen Space Camera</code> or UI system of your choice</li>
+</ol>
+<p>The <a href="xref:">Samples</a> provides an example of how to use UGui for XR.</p>
 
 </article>
           </div>
@@ -121,7 +96,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/JakeManfre/waypoint-indicator/blob/docs-setup/Assets/Target Indicators/Documentation~/manual/index.md/#L1" class="contribution-link">Edit this page</a>
+                    <a href="https://github.com/JakeManfre/waypoint-indicator/blob/docs-setup/Assets/Target Indicators/Documentation~/manual/guide/xr.md/#L1" class="contribution-link">Edit this page</a>
                   </li>
                 </ul>
               </div>
@@ -148,8 +123,8 @@
       </footer>
     </div>
 
-    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
-    <script type="text/javascript" src="../styles/docfx.js"></script>
-    <script type="text/javascript" src="../styles/main.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
   </body>
 </html>

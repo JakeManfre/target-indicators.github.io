@@ -43,18 +43,18 @@ references:
   commentId: F:TargetIndicators.BoundaryType.CompassTape
   fullName: TargetIndicators.BoundaryType.CompassTape
   nameWithType: BoundaryType.CompassTape
-- uid: TargetIndicators.BoundaryType.None
-  name: None
-  href: api/TargetIndicators.BoundaryType.html#TargetIndicators_BoundaryType_None
-  commentId: F:TargetIndicators.BoundaryType.None
-  fullName: TargetIndicators.BoundaryType.None
-  nameWithType: BoundaryType.None
 - uid: TargetIndicators.BoundaryType.Padded
   name: Padded
   href: api/TargetIndicators.BoundaryType.html#TargetIndicators_BoundaryType_Padded
   commentId: F:TargetIndicators.BoundaryType.Padded
   fullName: TargetIndicators.BoundaryType.Padded
   nameWithType: BoundaryType.Padded
+- uid: TargetIndicators.BoundaryType.Unbounded
+  name: Unbounded
+  href: api/TargetIndicators.BoundaryType.html#TargetIndicators_BoundaryType_Unbounded
+  commentId: F:TargetIndicators.BoundaryType.Unbounded
+  fullName: TargetIndicators.BoundaryType.Unbounded
+  nameWithType: BoundaryType.Unbounded
 - uid: TargetIndicators.Ellipse
   name: Ellipse
   href: api/TargetIndicators.Ellipse.html
@@ -232,42 +232,6 @@ references:
   fullName.vb: TargetIndicators.TargetIndicatorBoundaryVisualizer.New
   nameWithType: TargetIndicatorBoundaryVisualizer.TargetIndicatorBoundaryVisualizer
   nameWithType.vb: TargetIndicatorBoundaryVisualizer.New
-- uid: TargetIndicators.TargetIndicatorBoundaryVisualizerEditor
-  name: TargetIndicatorBoundaryVisualizerEditor
-  href: api/TargetIndicators.TargetIndicatorBoundaryVisualizerEditor.html
-  commentId: T:TargetIndicators.TargetIndicatorBoundaryVisualizerEditor
-  fullName: TargetIndicators.TargetIndicatorBoundaryVisualizerEditor
-  nameWithType: TargetIndicatorBoundaryVisualizerEditor
-- uid: TargetIndicators.TargetIndicatorBoundaryVisualizerEditor.#ctor
-  name: TargetIndicatorBoundaryVisualizerEditor()
-  href: api/TargetIndicators.TargetIndicatorBoundaryVisualizerEditor.html#TargetIndicators_TargetIndicatorBoundaryVisualizerEditor__ctor
-  commentId: M:TargetIndicators.TargetIndicatorBoundaryVisualizerEditor.#ctor
-  name.vb: New()
-  fullName: TargetIndicators.TargetIndicatorBoundaryVisualizerEditor.TargetIndicatorBoundaryVisualizerEditor()
-  fullName.vb: TargetIndicators.TargetIndicatorBoundaryVisualizerEditor.New()
-  nameWithType: TargetIndicatorBoundaryVisualizerEditor.TargetIndicatorBoundaryVisualizerEditor()
-  nameWithType.vb: TargetIndicatorBoundaryVisualizerEditor.New()
-- uid: TargetIndicators.TargetIndicatorBoundaryVisualizerEditor.#ctor*
-  name: TargetIndicatorBoundaryVisualizerEditor
-  href: api/TargetIndicators.TargetIndicatorBoundaryVisualizerEditor.html#TargetIndicators_TargetIndicatorBoundaryVisualizerEditor__ctor_
-  commentId: Overload:TargetIndicators.TargetIndicatorBoundaryVisualizerEditor.#ctor
-  name.vb: New
-  fullName: TargetIndicators.TargetIndicatorBoundaryVisualizerEditor.TargetIndicatorBoundaryVisualizerEditor
-  fullName.vb: TargetIndicators.TargetIndicatorBoundaryVisualizerEditor.New
-  nameWithType: TargetIndicatorBoundaryVisualizerEditor.TargetIndicatorBoundaryVisualizerEditor
-  nameWithType.vb: TargetIndicatorBoundaryVisualizerEditor.New
-- uid: TargetIndicators.TargetIndicatorBoundaryVisualizerEditor.OnInspectorGUI
-  name: OnInspectorGUI()
-  href: api/TargetIndicators.TargetIndicatorBoundaryVisualizerEditor.html#TargetIndicators_TargetIndicatorBoundaryVisualizerEditor_OnInspectorGUI
-  commentId: M:TargetIndicators.TargetIndicatorBoundaryVisualizerEditor.OnInspectorGUI
-  fullName: TargetIndicators.TargetIndicatorBoundaryVisualizerEditor.OnInspectorGUI()
-  nameWithType: TargetIndicatorBoundaryVisualizerEditor.OnInspectorGUI()
-- uid: TargetIndicators.TargetIndicatorBoundaryVisualizerEditor.OnInspectorGUI*
-  name: OnInspectorGUI
-  href: api/TargetIndicators.TargetIndicatorBoundaryVisualizerEditor.html#TargetIndicators_TargetIndicatorBoundaryVisualizerEditor_OnInspectorGUI_
-  commentId: Overload:TargetIndicators.TargetIndicatorBoundaryVisualizerEditor.OnInspectorGUI
-  fullName: TargetIndicators.TargetIndicatorBoundaryVisualizerEditor.OnInspectorGUI
-  nameWithType: TargetIndicatorBoundaryVisualizerEditor.OnInspectorGUI
 - uid: TargetIndicators.TargetIndicatorId
   name: TargetIndicatorId
   href: api/TargetIndicators.TargetIndicatorId.html
@@ -799,60 +763,33 @@ references:
   commentId: Overload:TargetIndicators.TargetIndicatorManager.Width
   fullName: TargetIndicators.TargetIndicatorManager.Width
   nameWithType: TargetIndicatorManager.Width
-- uid: TargetIndicators.TargetIndicatorManagerEditor
-  name: TargetIndicatorManagerEditor
-  href: api/TargetIndicators.TargetIndicatorManagerEditor.html
-  commentId: T:TargetIndicators.TargetIndicatorManagerEditor
-  fullName: TargetIndicators.TargetIndicatorManagerEditor
-  nameWithType: TargetIndicatorManagerEditor
-- uid: TargetIndicators.TargetIndicatorManagerEditor.#ctor
-  name: TargetIndicatorManagerEditor()
-  href: api/TargetIndicators.TargetIndicatorManagerEditor.html#TargetIndicators_TargetIndicatorManagerEditor__ctor
-  commentId: M:TargetIndicators.TargetIndicatorManagerEditor.#ctor
-  name.vb: New()
-  fullName: TargetIndicators.TargetIndicatorManagerEditor.TargetIndicatorManagerEditor()
-  fullName.vb: TargetIndicators.TargetIndicatorManagerEditor.New()
-  nameWithType: TargetIndicatorManagerEditor.TargetIndicatorManagerEditor()
-  nameWithType.vb: TargetIndicatorManagerEditor.New()
-- uid: TargetIndicators.TargetIndicatorManagerEditor.#ctor*
-  name: TargetIndicatorManagerEditor
-  href: api/TargetIndicators.TargetIndicatorManagerEditor.html#TargetIndicators_TargetIndicatorManagerEditor__ctor_
-  commentId: Overload:TargetIndicators.TargetIndicatorManagerEditor.#ctor
-  name.vb: New
-  fullName: TargetIndicators.TargetIndicatorManagerEditor.TargetIndicatorManagerEditor
-  fullName.vb: TargetIndicators.TargetIndicatorManagerEditor.New
-  nameWithType: TargetIndicatorManagerEditor.TargetIndicatorManagerEditor
-  nameWithType.vb: TargetIndicatorManagerEditor.New
-- uid: TargetIndicators.TargetIndicatorManagerEditor.OnInspectorGUI
-  name: OnInspectorGUI()
-  href: api/TargetIndicators.TargetIndicatorManagerEditor.html#TargetIndicators_TargetIndicatorManagerEditor_OnInspectorGUI
-  commentId: M:TargetIndicators.TargetIndicatorManagerEditor.OnInspectorGUI
-  fullName: TargetIndicators.TargetIndicatorManagerEditor.OnInspectorGUI()
-  nameWithType: TargetIndicatorManagerEditor.OnInspectorGUI()
-- uid: TargetIndicators.TargetIndicatorManagerEditor.OnInspectorGUI*
-  name: OnInspectorGUI
-  href: api/TargetIndicators.TargetIndicatorManagerEditor.html#TargetIndicators_TargetIndicatorManagerEditor_OnInspectorGUI_
-  commentId: Overload:TargetIndicators.TargetIndicatorManagerEditor.OnInspectorGUI
-  fullName: TargetIndicators.TargetIndicatorManagerEditor.OnInspectorGUI
-  nameWithType: TargetIndicatorManagerEditor.OnInspectorGUI
 - uid: target-indicators-changelog
   name: Changelog
   href: CHANGELOG.html
-- uid: target-indicators-how-to-use
-  name: How to use target indicators
-  href: manual/how-to-use.html
 - uid: target-indicators-install-package
   name: Install package
   href: manual/install-package.html
 - uid: target-indicators-manual
   name: Target Indicators
   href: manual/index.html
+- uid: target-indicators-overview
+  name: Overview
+  href: manual/guide/overview.html
 - uid: target-indicators-samples
   name: Samples
   href: manual/samples/samples.html
-- uid: target-indicators-setup-part1
-  name: Part 1 Setup
-  href: manual/setup/setup-part1.html
-- uid: target-indicators-setup-part2
-  name: Part 2 Setup
-  href: manual/setup/setup-part2.html
+- uid: target-indicators-target-indicator
+  name: Target Indicator
+  href: manual/guide/target-indicator.html
+- uid: target-indicators-target-indicator-manager
+  name: Target Indicator Manager
+  href: manual/guide/target-indicator-manager.html
+- uid: target-indicators-target-indicators-in-xr
+  name: Target indicators in XR
+  href: manual/guide/xr.html
+- uid: target-indicators-unity-ui
+  name: Target indicators with uGUI (Unity UI)
+  href: manual/guide/ugui.html
+- uid: target-indicators-user-guide
+  name: User Guide
+  href: manual/user-guide.html

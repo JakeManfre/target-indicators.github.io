@@ -92,20 +92,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/TargetIndicators.TargetIndicatorBoundaryVisualizerEditor.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TargetIndicators.TargetIndicatorBoundaryVisualizerEditor.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "TargetIndicators.TargetIndicatorBoundaryVisualizerEditor",
-      "Summary": "<p sourcefile=\"api/TargetIndicators.TargetIndicatorBoundaryVisualizerEditor.yml\" sourcestartlinenumber=\"1\">A comment.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/TargetIndicators.TargetIndicatorId.yml",
       "output": {
         ".html": {
@@ -162,20 +148,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/TargetIndicators.TargetIndicatorManagerEditor.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TargetIndicators.TargetIndicatorManagerEditor.html"
-        }
-      },
-      "version": "",
-      "Uid": null,
-      "IsMRef": true,
-      "Title": "TargetIndicators.TargetIndicatorManagerEditor",
-      "Summary": "<p sourcefile=\"api/TargetIndicators.TargetIndicatorManagerEditor.yml\" sourcestartlinenumber=\"1\">A comment.</p>\n"
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/TargetIndicators.yml",
       "output": {
         ".html": {
@@ -212,51 +184,41 @@
       "version": ""
     },
     {
-      "type": "Conceptual",
-      "source_relative_path": "getting-started.md",
+      "type": "Resource",
+      "source_relative_path": "images/absolute-ellipse-boundary.png",
       "output": {
-        ".html": {
-          "relative_path": "getting-started.html"
+        "resource": {
+          "relative_path": "images/absolute-ellipse-boundary.png"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/absolute-ellipse-example.png",
+      "source_relative_path": "images/add-visualizer-component.png",
       "output": {
         "resource": {
-          "relative_path": "images/absolute-ellipse-example.png"
+          "relative_path": "images/add-visualizer-component.png"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/absolute-ellipse.png",
+      "source_relative_path": "images/compass-tape-boundary.png",
       "output": {
         "resource": {
-          "relative_path": "images/absolute-ellipse.png"
+          "relative_path": "images/compass-tape-boundary.png"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/absolute-rectangle-example.png",
+      "source_relative_path": "images/compass-tape-coordinate-explained.png",
       "output": {
         "resource": {
-          "relative_path": "images/absolute-rectangle-example.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "images/add-visualizer.png",
-      "output": {
-        "resource": {
-          "relative_path": "images/add-visualizer.png"
+          "relative_path": "images/compass-tape-coordinate-explained.png"
         }
       },
       "version": ""
@@ -273,130 +235,30 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/compass-tape.png",
+      "source_relative_path": "images/edit-visualizer-component.png",
       "output": {
         "resource": {
-          "relative_path": "images/compass-tape.png"
+          "relative_path": "images/edit-visualizer-component.png"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/ellipse-boundary.png",
+      "source_relative_path": "images/padded-ellipse-boundary.png",
       "output": {
         "resource": {
-          "relative_path": "images/ellipse-boundary.png"
+          "relative_path": "images/padded-ellipse-boundary.png"
         }
       },
       "version": ""
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/import-samples-starter-assets.png",
+      "source_relative_path": "images/padded-rectangle-boundary.png",
       "output": {
         "resource": {
-          "relative_path": "images/import-samples-starter-assets.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "images/locate-downloaded-package.png",
-      "output": {
-        "resource": {
-          "relative_path": "images/locate-downloaded-package.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "images/locating-imported-starter-assets.png",
-      "output": {
-        "resource": {
-          "relative_path": "images/locating-imported-starter-assets.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "images/multiple-boundaries-example.png",
-      "output": {
-        "resource": {
-          "relative_path": "images/multiple-boundaries-example.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "images/no-boundary-example.png",
-      "output": {
-        "resource": {
-          "relative_path": "images/no-boundary-example.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "images/no-boundary.png",
-      "output": {
-        "resource": {
-          "relative_path": "images/no-boundary.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "images/open-package-manager.png",
-      "output": {
-        "resource": {
-          "relative_path": "images/open-package-manager.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "images/padded-ellipse-example.png",
-      "output": {
-        "resource": {
-          "relative_path": "images/padded-ellipse-example.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "images/padded-rectangle-example.png",
-      "output": {
-        "resource": {
-          "relative_path": "images/padded-rectangle-example.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "images/padded-rectangle.png",
-      "output": {
-        "resource": {
-          "relative_path": "images/padded-rectangle.png"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "images/rectangle-boundary.png",
-      "output": {
-        "resource": {
-          "relative_path": "images/rectangle-boundary.png"
+          "relative_path": "images/padded-rectangle-boundary.png"
         }
       },
       "version": ""
@@ -413,6 +275,46 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/screen-coordinate-system.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/screen-coordinate-system.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/screen-pose-rotation.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/screen-pose-rotation.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/single-target-indicator-example.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/single-target-indicator-example.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/target-indicator-manager-component.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/target-indicator-manager-component.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/target_indicators_light_icon.png",
       "output": {
         "resource": {
@@ -423,10 +325,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/visualizer-options.png",
+      "source_relative_path": "images/unbounded.png",
       "output": {
         "resource": {
-          "relative_path": "images/visualizer-options.png"
+          "relative_path": "images/unbounded.png"
         }
       },
       "version": ""
@@ -453,10 +355,50 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "manual/how-to-use.md",
+      "source_relative_path": "manual/guide/overview.md",
       "output": {
         ".html": {
-          "relative_path": "manual/how-to-use.html"
+          "relative_path": "manual/guide/overview.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/guide/target-indicator-manager.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/guide/target-indicator-manager.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/guide/target-indicator.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/guide/target-indicator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/guide/ugui.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/guide/ugui.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/guide/xr.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/guide/xr.html"
         }
       },
       "version": ""
@@ -492,26 +434,6 @@
       "version": ""
     },
     {
-      "type": "Conceptual",
-      "source_relative_path": "manual/setup/setup-part1.md",
-      "output": {
-        ".html": {
-          "relative_path": "manual/setup/setup-part1.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "manual/setup/setup-part2.md",
-      "output": {
-        ".html": {
-          "relative_path": "manual/setup/setup-part2.html"
-        }
-      },
-      "version": ""
-    },
-    {
       "type": "Toc",
       "source_relative_path": "manual/toc.yml",
       "output": {
@@ -520,6 +442,16 @@
         },
         ".json": {
           "relative_path": "manual/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/user-guide.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/user-guide.html"
         }
       },
       "version": ""

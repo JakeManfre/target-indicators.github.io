@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Overview | Target Indicators Documentation </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Overview | Target Indicators Documentation ">
+    
+    
+      <link rel="shortcut icon" href="../../images/target_indicators_light_icon.png">
+      <link rel="stylesheet" href="../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../styles/docfx.css">
+      <link rel="stylesheet" href="../../styles/main.css">
+      <meta property="docfx:navrel" content="../../toc.html">
+      <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/target_indicators_light_icon.png" alt="Target Indicators">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="target-indicators-overview">
+<h1 id="overview">Overview</h1>
+
+<p>Target indicators are fundamentally screen coordintes in pixels that represent the projection of a 3D position in world space. Target indicators can be configured to be bound by the edges of the screen so that they are always visible and indicate the closest direction to a target. This is useful in games or apps where you want to show users where to go or where to look that is difficult to find or not in view of the camera.</p>
+<p>Target indicators also provides additional information that can provide more context of a target such as the rotation needed to point an arrow at a target or whether the target is outside a configured boundary of the screen. For example you can have a target indicator mark an important object and when the object moves off screen the indicator enables an arrow that rotates as the indicator stays bound to the screen to show exactly where the object is.</p>
+<p><img src="../../images/single-target-indicator-example.png" alt="An example of a target indicator"></p>
+<h2 id="main-components">Main components</h2>
+<p>The target indicator system is comprised of two main components.</p>
+<ol>
+<li><p><strong>Target Indicator Manager</strong></p>
+<p>The target indicator manager is responsible for managing all of the tracked targets and calculating the data necessary for displaying an indicator on the screen. It can manage its own life cycle events for you to be notified when indicators change or it can be used to get screen pose data for targets with your own life cycle control. The target indicator manager can be used with any UI system because it only manages the conversion between world space positions and screen space positions.</p>
+<p>There are configurable options offered by the target indicator manager to control what type of boundary you want, it's shape, and it's size so you can customize the boundary for your apps needs.</p>
+<p>To learn more about how to use the target indicator manager and it's capabilities refer to <a class="xref" href="target-indicator-manager.html">Target Indicator Manager</a>.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>The Target Indicators package offers <a href="xref:TODO">Samples</a> that provides prefabs using uGUI that you can customize for your project's needs if you don't want to build your own indicator visualizers.</p>
+</div>
+</li>
+<li><p><strong>Target Indicator</strong></p>
+<p>The data generated by the target indicator manager that represents the screen space information to visualize target indicators is known as a <a class="xref" href="../../api/TargetIndicators.TargetIndicator.html">TargetIndicator</a>. While referred to as a component in the context of the design, a target indicator is not a component in the Unity sense that it can be attached to GameObjects.</p>
+<p>A target indicator is a struct that contains relevent information about a tracked target such as the screen pose for the coordinates to place indicators in your UI.</p>
+<p>To learn more about how to use target indicators created by the target indicator manager, refer to <a class="xref" href="target-indicator.html">Target Indicator</a>.</p>
+</li>
+</ol>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/JakeManfre/waypoint-indicator/blob/docs-setup/Assets/Target Indicators/Documentation~/manual/guide/overview.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
