@@ -32,7 +32,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "TargetIndicators.BoundaryShape",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/TargetIndicators.BoundaryShape.yml\" sourcestartlinenumber=\"1\">The shape of the boundary for <xref href=\"TargetIndicators.BoundaryType.Padded\" data-throw-if-not-resolved=\"false\"></xref> or <xref href=\"TargetIndicators.BoundaryType.Absolute\" data-throw-if-not-resolved=\"false\"></xref> boundary types that target indicators will clamp to.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -46,7 +46,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "TargetIndicators.BoundaryType",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/TargetIndicators.BoundaryType.yml\" sourcestartlinenumber=\"1\">The type of boundary that target indicators will clamp to.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -60,7 +60,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "TargetIndicators.Ellipse",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/TargetIndicators.Ellipse.yml\" sourcestartlinenumber=\"1\">The data that defines the ellipse of the screen boundary.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -74,7 +74,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "TargetIndicators.TargetIndicator",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/TargetIndicators.TargetIndicator.yml\" sourcestartlinenumber=\"1\">The contextual data that defines a tracked target in screen space.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -88,7 +88,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "TargetIndicators.TargetIndicatorBoundaryVisualizer",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/TargetIndicators.TargetIndicatorBoundaryVisualizer.yml\" sourcestartlinenumber=\"1\">Visualizes the boundary configured in <xref href=\"TargetIndicators.TargetIndicatorBoundaryVisualizer._targetIndicatorManager\" data-throw-if-not-resolved=\"false\"></xref>. Note that\n<xref href=\"TargetIndicators.BoundaryType.CompassTape?text=BoundaryType.CompassTape\" data-throw-if-not-resolved=\"false\"></xref> and\n<xref href=\"TargetIndicators.BoundaryType.Unbounded?text=BoundaryType.Unbounded\" data-throw-if-not-resolved=\"false\"></xref> has no visualization.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -102,7 +102,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "TargetIndicators.TargetIndicatorId",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/TargetIndicators.TargetIndicatorId.yml\" sourcestartlinenumber=\"1\">The unique ID that represents a <code sourcefile=\"api/TargetIndicators.TargetIndicatorId.yml\" sourcestartlinenumber=\"1\">TargetIndicator</code>.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -116,7 +116,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "TargetIndicators.TargetIndicatorManager.TargetIndicatorsRemovedDelegate",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/TargetIndicators.TargetIndicatorManager.TargetIndicatorsRemovedDelegate.yml\" sourcestartlinenumber=\"1\">Delegate that passes a <code sourcefile=\"api/TargetIndicators.TargetIndicatorManager.TargetIndicatorsRemovedDelegate.yml\" sourcestartlinenumber=\"1\">ReadOnlySpan</code> of target indicators that were removed.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -130,7 +130,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "TargetIndicators.TargetIndicatorManager.TargetIndicatorsUpdatedDelegate",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/TargetIndicators.TargetIndicatorManager.TargetIndicatorsUpdatedDelegate.yml\" sourcestartlinenumber=\"1\">Delegate that passes a <code sourcefile=\"api/TargetIndicators.TargetIndicatorManager.TargetIndicatorsUpdatedDelegate.yml\" sourcestartlinenumber=\"1\">ReadOnlySpan</code> of target indicators that were added or updated.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -144,7 +144,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "TargetIndicators.TargetIndicatorManager",
-      "Summary": null
+      "Summary": "<p sourcefile=\"api/TargetIndicators.TargetIndicatorManager.yml\" sourcestartlinenumber=\"1\">Tracks targets and transforms world space positions into screen space coordinates for tracking targets with\nindicators. Useful for displaying to users which direction a target is relative to where they are looking.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -395,16 +395,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "introduction.md",
-      "output": {
-        ".html": {
-          "relative_path": "introduction.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "manual/index.md",
       "output": {
         ".html": {
@@ -542,16 +532,6 @@
       "output": {
         ".html": {
           "relative_path": "manual/user_guide/ugui-indicators.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "manual/user_guide/ugui.md",
-      "output": {
-        ".html": {
-          "relative_path": "manual/user_guide/ugui.html"
         }
       },
       "version": ""

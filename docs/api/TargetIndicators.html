@@ -86,32 +86,44 @@
 Classes
 </h3>
       <h4><a class="xref" href="TargetIndicators.TargetIndicatorBoundaryVisualizer.html">TargetIndicatorBoundaryVisualizer</a></h4>
-      <section></section>
+      <section><p>Visualizes the boundary configured in <span class="xref">TargetIndicators.TargetIndicatorBoundaryVisualizer._targetIndicatorManager</span>. Note that
+<a class="xref" href="TargetIndicators.BoundaryType.html#TargetIndicators_BoundaryType_CompassTape">BoundaryType.CompassTape</a> and
+<a class="xref" href="TargetIndicators.BoundaryType.html#TargetIndicators_BoundaryType_Unbounded">BoundaryType.Unbounded</a> has no visualization.</p>
+</section>
       <h4><a class="xref" href="TargetIndicators.TargetIndicatorManager.html">TargetIndicatorManager</a></h4>
-      <section></section>
+      <section><p>Tracks targets and transforms world space positions into screen space coordinates for tracking targets with
+indicators. Useful for displaying to users which direction a target is relative to where they are looking.</p>
+</section>
     <h3 id="structs">
 Structs
 </h3>
       <h4><a class="xref" href="TargetIndicators.Ellipse.html">Ellipse</a></h4>
-      <section></section>
+      <section><p>The data that defines the ellipse of the screen boundary.</p>
+</section>
       <h4><a class="xref" href="TargetIndicators.TargetIndicator.html">TargetIndicator</a></h4>
-      <section></section>
+      <section><p>The contextual data that defines a tracked target in screen space.</p>
+</section>
       <h4><a class="xref" href="TargetIndicators.TargetIndicatorId.html">TargetIndicatorId</a></h4>
-      <section></section>
+      <section><p>The unique ID that represents a <code>TargetIndicator</code>.</p>
+</section>
     <h3 id="enums">
 Enums
 </h3>
       <h4><a class="xref" href="TargetIndicators.BoundaryShape.html">BoundaryShape</a></h4>
-      <section></section>
+      <section><p>The shape of the boundary for <a class="xref" href="TargetIndicators.BoundaryType.html#TargetIndicators_BoundaryType_Padded">Padded</a> or <a class="xref" href="TargetIndicators.BoundaryType.html#TargetIndicators_BoundaryType_Absolute">Absolute</a> boundary types that target indicators will clamp to.</p>
+</section>
       <h4><a class="xref" href="TargetIndicators.BoundaryType.html">BoundaryType</a></h4>
-      <section></section>
+      <section><p>The type of boundary that target indicators will clamp to.</p>
+</section>
     <h3 id="delegates">
 Delegates
 </h3>
       <h4><a class="xref" href="TargetIndicators.TargetIndicatorManager.TargetIndicatorsRemovedDelegate.html">TargetIndicatorManager.TargetIndicatorsRemovedDelegate</a></h4>
-      <section></section>
+      <section><p>Delegate that passes a <code>ReadOnlySpan</code> of target indicators that were removed.</p>
+</section>
       <h4><a class="xref" href="TargetIndicators.TargetIndicatorManager.TargetIndicatorsUpdatedDelegate.html">TargetIndicatorManager.TargetIndicatorsUpdatedDelegate</a></h4>
-      <section></section>
+      <section><p>Delegate that passes a <code>ReadOnlySpan</code> of target indicators that were added or updated.</p>
+</section>
 
 
 </article>

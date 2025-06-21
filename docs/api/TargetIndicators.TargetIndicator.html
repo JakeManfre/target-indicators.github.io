@@ -9,7 +9,7 @@
       <meta name="viewport" content="width=device-width">
       <meta name="title" content="Struct TargetIndicator | Target Indicators Documentation ">
     
-    
+    <meta name="description" content="The contextual data that defines a tracked target in screen space.">
       <link rel="shortcut icon" href="../images/target_indicators_light_icon.png">
       <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
       <link rel="stylesheet" href="../styles/docfx.css">
@@ -81,7 +81,8 @@
 
 
   <h1 id="TargetIndicators_TargetIndicator" data-uid="TargetIndicators.TargetIndicator" class="text-break">Struct TargetIndicator</h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>The contextual data that defines a tracked target in screen space.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -116,7 +117,8 @@
 
   <a id="TargetIndicators_TargetIndicator__ctor_" data-uid="TargetIndicators.TargetIndicator.#ctor*"></a>
   <h4 id="TargetIndicators_TargetIndicator__ctor_TargetIndicators_TargetIndicatorId_UnityEngine_Transform_UnityEngine_Pose_System_Boolean_" data-uid="TargetIndicators.TargetIndicator.#ctor(TargetIndicators.TargetIndicatorId,UnityEngine.Transform,UnityEngine.Pose,System.Boolean)">TargetIndicator(TargetIndicatorId, Transform, Pose, bool)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Constructs a <code>TargetIndicator</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -135,22 +137,26 @@
       <tr>
         <td><a class="xref" href="TargetIndicators.TargetIndicatorId.html">TargetIndicatorId</a></td>
         <td><span class="parametername">id</span></td>
-        <td></td>
+        <td><p>The ID that defines the indicator.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">Transform</span></td>
         <td><span class="parametername">target</span></td>
-        <td></td>
+        <td><p>The target that is being tracked by the target indicator.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">Pose</span></td>
         <td><span class="parametername">screenPose</span></td>
-        <td></td>
+        <td><p>The screen space coordinates and rotation of the target.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td><span class="parametername">isOutsideBoundary</span></td>
-        <td></td>
+        <td><p>The current state of the target's screen pose if it's outside the boundary.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -158,7 +164,8 @@
 
   <a id="TargetIndicators_TargetIndicator__ctor_" data-uid="TargetIndicators.TargetIndicator.#ctor*"></a>
   <h4 id="TargetIndicators_TargetIndicator__ctor_TargetIndicators_TargetIndicatorId_UnityEngine_Transform_UnityEngine_Vector3_UnityEngine_Quaternion_System_Boolean_" data-uid="TargetIndicators.TargetIndicator.#ctor(TargetIndicators.TargetIndicatorId,UnityEngine.Transform,UnityEngine.Vector3,UnityEngine.Quaternion,System.Boolean)">TargetIndicator(TargetIndicatorId, Transform, Vector3, Quaternion, bool)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Constructs a <code>TargetIndicator</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -177,27 +184,32 @@
       <tr>
         <td><a class="xref" href="TargetIndicators.TargetIndicatorId.html">TargetIndicatorId</a></td>
         <td><span class="parametername">id</span></td>
-        <td></td>
+        <td><p>The ID that defines the indicator.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">Transform</span></td>
         <td><span class="parametername">target</span></td>
-        <td></td>
+        <td><p>The target that is being tracked by the target indicator.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">Vector3</span></td>
         <td><span class="parametername">screenPoint</span></td>
-        <td></td>
+        <td><p>The screen space coordinates of the target.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">Quaternion</span></td>
         <td><span class="parametername">rotation</span></td>
-        <td></td>
+        <td><p>The screen space rotation of the target.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
         <td><span class="parametername">isOutsideBoundary</span></td>
-        <td></td>
+        <td><p>The current state of the target's screen pose if it's outside the boundary.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -207,7 +219,9 @@
 
   <a id="TargetIndicators_TargetIndicator_Default_" data-uid="TargetIndicators.TargetIndicator.Default*"></a>
   <h4 id="TargetIndicators_TargetIndicator_Default" data-uid="TargetIndicators.TargetIndicator.Default">Default</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Gets a default-initialized <code>TargetIndicator</code>. This may be different from the zero-initialized version
+(for example, the pose is <code>Pose.identity</code> instead of zero initialized).</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -232,7 +246,8 @@
 
   <a id="TargetIndicators_TargetIndicator_Id_" data-uid="TargetIndicators.TargetIndicator.Id*"></a>
   <h4 id="TargetIndicators_TargetIndicator_Id" data-uid="TargetIndicators.TargetIndicator.Id">Id</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The ID that defines the target indicator.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -257,7 +272,9 @@
 
   <a id="TargetIndicators_TargetIndicator_IsOutsideBoundary_" data-uid="TargetIndicators.TargetIndicator.IsOutsideBoundary*"></a>
   <h4 id="TargetIndicators_TargetIndicator_IsOutsideBoundary" data-uid="TargetIndicators.TargetIndicator.IsOutsideBoundary">IsOutsideBoundary</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p><code>True</code> if the target's screen pose is outside the <a class="xref" href="TargetIndicators.TargetIndicatorManager.html">TargetIndicatorManager</a> configured boundary.
+Otherwise, <code>false</code>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -282,7 +299,15 @@
 
   <a id="TargetIndicators_TargetIndicator_ScreenPose_" data-uid="TargetIndicators.TargetIndicator.ScreenPose*"></a>
   <h4 id="TargetIndicators_TargetIndicator_ScreenPose" data-uid="TargetIndicators.TargetIndicator.ScreenPose">ScreenPose</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The screen space coordinates and rotation of the target.
+<code>ScreenPose.position.x</code> corresponds to the horizontal
+axis coordinate in pixels where 0 is the left end of the axis and <span class="xref">UnityEngine.Screen.width</span> is the right end of the axis.
+<code>ScreenPose.position.y</code> corresponds to the vertical axis coordinate in pixels where 0 is the bottom end of the axis and
+<span class="xref">UnityEngine.Screen.height</span> is the top end of the axis.
+<code>ScreenPose.position.z</code> corresponds to the depth from the camera in world space in meters.
+<code>ScreenPose.rotation</code> corresponds to the rotation in screen space relative to the right vector to rotate
+the indicator to point at the target.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
@@ -307,7 +332,8 @@
 
   <a id="TargetIndicators_TargetIndicator_Target_" data-uid="TargetIndicators.TargetIndicator.Target*"></a>
   <h4 id="TargetIndicators_TargetIndicator_Target" data-uid="TargetIndicators.TargetIndicator.Target">Target</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The target that is being tracked by the target indicator.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">

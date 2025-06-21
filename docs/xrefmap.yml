@@ -256,18 +256,6 @@ references:
   fullName.vb: TargetIndicators.TargetIndicatorId.New
   nameWithType: TargetIndicatorId.TargetIndicatorId
   nameWithType.vb: TargetIndicatorId.New
-- uid: TargetIndicators.TargetIndicatorId.Default
-  name: Default
-  href: api/TargetIndicators.TargetIndicatorId.html#TargetIndicators_TargetIndicatorId_Default
-  commentId: P:TargetIndicators.TargetIndicatorId.Default
-  fullName: TargetIndicators.TargetIndicatorId.Default
-  nameWithType: TargetIndicatorId.Default
-- uid: TargetIndicators.TargetIndicatorId.Default*
-  name: Default
-  href: api/TargetIndicators.TargetIndicatorId.html#TargetIndicators_TargetIndicatorId_Default_
-  commentId: Overload:TargetIndicators.TargetIndicatorId.Default
-  fullName: TargetIndicators.TargetIndicatorId.Default
-  nameWithType: TargetIndicatorId.Default
 - uid: TargetIndicators.TargetIndicatorId.Equals(System.Object)
   name: Equals(object)
   href: api/TargetIndicators.TargetIndicatorId.html#TargetIndicators_TargetIndicatorId_Equals_System_Object_
@@ -460,21 +448,21 @@ references:
   commentId: Overload:TargetIndicators.TargetIndicatorManager.Height
   fullName: TargetIndicators.TargetIndicatorManager.Height
   nameWithType: TargetIndicatorManager.Height
-- uid: TargetIndicators.TargetIndicatorManager.IsOutsideBounds(UnityEngine.Vector3@)
-  name: IsOutsideBounds(in Vector3)
-  href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_IsOutsideBounds_UnityEngine_Vector3__
-  commentId: M:TargetIndicators.TargetIndicatorManager.IsOutsideBounds(UnityEngine.Vector3@)
-  name.vb: IsOutsideBounds(Vector3)
-  fullName: TargetIndicators.TargetIndicatorManager.IsOutsideBounds(in UnityEngine.Vector3)
-  fullName.vb: TargetIndicators.TargetIndicatorManager.IsOutsideBounds(UnityEngine.Vector3)
-  nameWithType: TargetIndicatorManager.IsOutsideBounds(in Vector3)
-  nameWithType.vb: TargetIndicatorManager.IsOutsideBounds(Vector3)
-- uid: TargetIndicators.TargetIndicatorManager.IsOutsideBounds*
-  name: IsOutsideBounds
-  href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_IsOutsideBounds_
-  commentId: Overload:TargetIndicators.TargetIndicatorManager.IsOutsideBounds
-  fullName: TargetIndicators.TargetIndicatorManager.IsOutsideBounds
-  nameWithType: TargetIndicatorManager.IsOutsideBounds
+- uid: TargetIndicators.TargetIndicatorManager.IsOutsideBoundary(UnityEngine.Vector3@)
+  name: IsOutsideBoundary(in Vector3)
+  href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_IsOutsideBoundary_UnityEngine_Vector3__
+  commentId: M:TargetIndicators.TargetIndicatorManager.IsOutsideBoundary(UnityEngine.Vector3@)
+  name.vb: IsOutsideBoundary(Vector3)
+  fullName: TargetIndicators.TargetIndicatorManager.IsOutsideBoundary(in UnityEngine.Vector3)
+  fullName.vb: TargetIndicators.TargetIndicatorManager.IsOutsideBoundary(UnityEngine.Vector3)
+  nameWithType: TargetIndicatorManager.IsOutsideBoundary(in Vector3)
+  nameWithType.vb: TargetIndicatorManager.IsOutsideBoundary(Vector3)
+- uid: TargetIndicators.TargetIndicatorManager.IsOutsideBoundary*
+  name: IsOutsideBoundary
+  href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_IsOutsideBoundary_
+  commentId: Overload:TargetIndicators.TargetIndicatorManager.IsOutsideBoundary
+  fullName: TargetIndicators.TargetIndicatorManager.IsOutsideBoundary
+  nameWithType: TargetIndicatorManager.IsOutsideBoundary
 - uid: TargetIndicators.TargetIndicatorManager.LeftPadding
   name: LeftPadding
   href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_LeftPadding
@@ -794,9 +782,6 @@ references:
   name: Target Indicator Manager
   href: manual/user_guide/target-indicator-manager.html
 - uid: target-indicators-ugui-indicators
-  name: uGUI indicators
-  href: manual/user_guide/ugui.html
-- uid: target-indicators-unity-ui
   name: uGUI indicators
   href: manual/user_guide/ugui-indicators.html
 - uid: target-indicators-user-guide
