@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Sample scenes | Target Indicators Documentation </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Sample scenes | Target Indicators Documentation ">
+    
+    
+      <link rel="shortcut icon" href="../../images/target_indicators_light_icon.png">
+      <link rel="stylesheet" href="../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../styles/docfx.css">
+      <link rel="stylesheet" href="../../styles/main.css">
+      <meta property="docfx:navrel" content="../../toc.html">
+      <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/target_indicators_light_icon.png" alt="Target Indicators">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="target-indicators-sample-scenes">
+<h1 id="sample-scenes">Sample scenes</h1>
+
+<p>The sample scenes are located in <code>Assets/Samples/Target Indicators/[version]/StarterAssets/Example Assets/Scenes</code>. The structure of each scene includes a group of helper scene objects that are unrelated to target indicators but required for the samples scene to work, such as the environment objects, directional light, event system, etc.</p>
+<p>The target indicators related scripts are located under the <code>--- Target Indicator Managers ---</code> GameObject in the hiearchy. This is where you can find how target indicators are setup in the scene and the targets that are being tracked.</p>
+<p>The visual indicators that get instantiated for the UI uses uGUI (Unity UI) and are parented under the Canvas beneath the <code>--- UI ---</code> GameObject in the hiearchy.</p>
+<h2 id="scene-interactions">Scene interactions</h2>
+<p>Each scene has a simple first person controller script attached the to scenes Camera GameObject. To enable input while in play mode, press the <code>Escape</code> key on the keyboard to enable focus.</p>
+<p>A visual indicator of the current focus state can be found in the top right of the Game window and looks like a gray square. The indicator will be white when focused and gray when unfocused. While focused, click the mouse anywhere in the Game window to hide the cursor. Pressing <code>Escape</code> will unfocus the game and reveal the cursor.</p>
+<p>Focus and unfocus the game to edit the target indicator manager settings and experiement without having to exit play mode.</p>
+<p>When the game is focused you can move around with <code>WASD</code> and look around with the mouse.</p>
+<h2 id="scenes">Scenes</h2>
+<p>There are three scenes to demonstrate a few variations of using target indiecators. The following sections describes each scene in more detail.</p>
+<h3 id="simple-target-indicators-demo">Simple Target Indicators Demo</h3>
+<p><img src="../../images/simple-target-indicators-demo-scene.png" alt="An image of the simple target indicators demo scene"></p>
+<p>This scene demonstrates a minimal version of target indicators and is a good starting point. It uses only one <a href="xref:TODO">visual indicator manager</a> and one <a href="xref:TODO">indicator visualizer prefab</a>.</p>
+<p>The assigned default visual indicator prefab assigned in the visual indicator manager is what indicators get instantiated in the scene. They are parented to the Canvas under the <strong>Target Indicators Content</strong> GameObject.</p>
+<p>The <strong>Simple Targets Indicators Setup Example</strong> GameObject contains a script <code>SimpleTargetIndicatorSetupExample</code> that shows a minimal code example for assigning targets to the target indicator manager on <code>Start</code>.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Changing the target indicator manager's boundary type to compass tape will stop the target indicators from updating. Compass tape boundary types require special configuration. Refer to <a class="xref" href="visual-indicator-manager-component.html#compass-tape-visual-indicator-manager">compass tape visual indicator manager</a> to learn how to work with a compass tape target indicator.</p>
+</div>
+<h3 id="compass-tape-target-indicators-demo">Compass Tape Target Indicators Demo</h3>
+<p><img src="../../images/compass-tape-target-indicators-demo-scene.png" alt="An image of the compass tape target indicators demo scene"></p>
+<p>This scene demonstrates how to setup a compass tape target indicator. The target indicator manager's <code>BoundaryType</code> is set to <code>CompassTape</code> and uses the <code>CompassTapeVisualIndicator</code> on the <strong>Compass Tape Visual Indicator Manager</strong> GameObject.</p>
+<p>The default visual indicator prefab uses the <code>CompassTapeVisualIndicator</code> prefab. The compass tape visual indicators are instantiated and parented to the <strong>UI Compass Tape Indicators Content</strong> GameObject under the Canvas.</p>
+<p>The <strong>Compass Tape Target Indicators Setup Example</strong> GameObject contains a script <code>CompassTapeTargetIndicatorsSetupExample</code> that shows a minimal code example for assigning targets to the compass target visual indicator manager on <code>Start</code>.</p>
+<h3 id="multiple-target-indicator-categories-demo">Multiple Target Indicator Categories Demo</h3>
+<p><img src="../../images/multiple-target-indicator-categories-demo-scene.png" alt="An image of the multiple target indicator categories demo scene"></p>
+<p>This scene demonstrates using multiple target indicator managers for different visual indicator categories. There are two target indecator managers that both use padded boundary type but with different padding values.</p>
+<p>The reason is because one of the visual indicators, the <strong>Enemy Target Indicator</strong> found in the <strong>Example Assets</strong> prefabs folder, has an offset raised by 10 pixels. Therefore it uses a target indicator manager with an adjusted boundary so it aligns with the other visual indicators on the screen.</p>
+<p>The <strong>Multiple Target Categories Setup Example</strong> GameObject contains a script <code>MultipleTargetIndicatorCategoriesExample</code> that shows a minimal code example for assigning targets with different visual indicators to two different visual indicator managers on <code>Start</code>.</p>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/JakeManfre/waypoint-indicator/blob/docs-setup/Assets/Target Indicators/Documentation~/manual/samples/sample-scenes.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

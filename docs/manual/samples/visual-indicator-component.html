@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Visual indicator component | Target Indicators Documentation </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Visual indicator component | Target Indicators Documentation ">
+    
+    
+      <link rel="shortcut icon" href="../../images/target_indicators_light_icon.png">
+      <link rel="stylesheet" href="../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../styles/docfx.css">
+      <link rel="stylesheet" href="../../styles/main.css">
+      <meta property="docfx:navrel" content="../../toc.html">
+      <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/target_indicators_light_icon.png" alt="Target Indicators">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="target-indicators-visual-indicator-component">
+<h1 id="visual-indicator-component">Visual indicator component</h1>
+
+<p>The visual indicator component is instantiated by the <a href="xref:">VisualIndicatorManager</a> and controls each instance of a visual indicator prefab.</p>
+<h2 id="references-and-settings">References and settings</h2>
+<p>The following sections describes each references and settings of the component:</p>
+<h3 id="indicator-content">Indicator content</h3>
+<p>This is the root content that will be visible in the UI. Any imagery or text that is part of the core visual indicator should be parented to this transform.</p>
+<h3 id="rotation-content">Rotation content</h3>
+<p>This is the root content for image or text that will be rotated to point at the target the visual indicator is tracking. Any arrows or other imagery should be parented to this transform.</p>
+<h3 id="indicator-visibility">Indicator visibility</h3>
+<p>This determines how the indicator content will be visibile for a given state. This property does not affect the rotation content visibility. Refer to <a href="xref:indicator-visibility">Indicator visibility</a> to learn more about the options.</p>
+<h3 id="rotation-content-visibility">Rotation content visibility</h3>
+<p>This determines how the indicator's rotation content will be visible for a given state. This property does not affect the indicator visibility.  Refer to <a href="xref:indicator-visibility">Indicator visibility</a> to learn more about the options.</p>
+<h2 id="indicator-visibility-1">Indicator visibility</h2>
+<p>There are four types of indicator visibility that determines how visual indicator's content and their rotation content will be visible for any given state:</p>
+<ol>
+<li><p><strong>Never</strong></p>
+<p>The content is never visible. This is typically only useful for rotation content where you don't want to show an arrow or any additional content that rotates to point at a target.</p>
+</li>
+<li><p><strong>Always</strong></p>
+<p>The content is always visible.</p>
+</li>
+<li><p><strong>Outside boundary</strong></p>
+<p>The content is only visible when the target is outside the boundary. This is typically used for the rotation content when you want an arrow to point at the target when it is outside the boundary.</p>
+</li>
+<li><p><strong>Inside boundary</strong></p>
+<p>The content is only visible when the taret is inside the boundary. This is typically used for compass tape visual indicators where you only want the indicator visible when inside the bounds of the compass tape.</p>
+</li>
+</ol>
+<h2 id="set-up-a-prefab">Set up a prefab</h2>
+<p>The visual indicator prefabs provided in in <code>Assets/Samples/Target Indicators/[version]/StarterAssets/Core Assets/Prefabs</code> is a good reference for building your own indicators. Create a prefab variant to use it as a template or make a new one from scratch.</p>
+<h3 id="visual-indicator">Visual indicator</h3>
+<p>The following image labels the key components of a visual indicator.</p>
+<p><img src="../../images/visual-indicator-prefab.png" alt="An image of the visual indicator prefab."></p>
+<ol type="A">
+    <li>The core indicator content. Notice in the hiearchy all the images representing the visualizer are parented to a single <b>Content</b> GameObject that is reference in the <code>IndicatorContent</code> field of the <code>VisualIndicator</code> inspector.</li>
+    <li>The arrow image that is parented to the <b>Rotation Content</b> GameObject in the hiearchy.</li>
+    <li>The <code>VisualIndicator</code> component and it's assigned references and settings.</li>
+</ol>
+<h3 id="compass-tape-visual-indicator">Compass tape visual indicator</h3>
+<p>The <code>CompassTapeVisualIndicator</code> inherits from the base <code>VisualIndicator</code>. Like the base visual indicator, the compass tape visual indicator has the same configuration. The reason for a special <code>CompassTapeVisualIndicator</code> component is to handle the unique <a class="xref" href="../user_guide/target-indicator.html#interpret-the-screen-pose">interpreting of screen pose</a> values for compass tape target indicators.</p>
+<p><img src="../../images/compass-tape-visual-indicator-prefab.png" alt="An image of the compass tape visual indicator prefab."></p>
+<ol type="A">
+    <li>The core indicator content. Notice in the hiearchy the images representing the visualizer are parented to a single <b>Content</b> GameObject that is reference in the <code>IndicatorContent</code> field of the <code>CompassTapeVisualIndicator</code> inspector.</li>
+    <li>The <code>CompassTapeVisualIndicator</code> component and it's assigned references and settings. Typically the <code>RotationContentVisibility</code> is unused and set to <code>Never</code>.</li>
+</ol>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/JakeManfre/waypoint-indicator/blob/docs-setup/Assets/Target Indicators/Documentation~/manual/samples/visual-indicator-component.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

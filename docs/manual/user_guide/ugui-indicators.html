@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Samples | Target Indicators Documentation </title>
+      <title>uGUI indicators | Target Indicators Documentation </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Samples | Target Indicators Documentation ">
+      <meta name="title" content="uGUI indicators | Target Indicators Documentation ">
     
     
       <link rel="shortcut icon" href="../../images/target_indicators_light_icon.png">
@@ -76,36 +76,26 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="target-indicators-samples">
-<h1 id="samples">Samples</h1>
+            <article class="content wrap" id="_content" data-uid="target-indicators-unity-ui">
+<h1 id="ugui-indicators">uGUI indicators</h1>
 
-<p>Refer to the following topics to understand the samples and how to use them:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;"><strong>Topic</strong></th>
-<th style="text-align: left;"><strong>Description</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><a class="xref" href="samples-overview.html">Samples Overview</a></td>
-<td style="text-align: left;">Understand how the samples work.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a class="xref" href="visual-indicator-manager-component.html">Visual indicator manager component</a></td>
-<td style="text-align: left;">Understand how to setup and use the visual indicator manager component.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a class="xref" href="visual-indicator-component.html">Visual indicator component</a></td>
-<td style="text-align: left;">Understand how to setup and use the visual indicator component with prefabs.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a class="xref" href="sample-scenes.html">Sample scenes</a></td>
-<td style="text-align: left;">Understand the different sample scenes.</td>
-</tr>
-</tbody>
-</table>
+<p>A <a class="xref" href="target-indicator.html">TargetIndicator</a> is a C# struct containing screen-space data, not a visual element. To display this data, you must create your own visual indicator.</p>
+<p>Building visual indicators with <a href="https://docs.unity3d.com/Packages/com.unity.ugui@2.0/manual/index.html">Unity UI</a> requires understanding the <code>RectTransform</code> system, specifically the relationship between a visual indicator's <code>RectTransform</code> and its parent's <code>RectTransform</code>.</p>
+<h2 id="visual-indicator-parent-recttransform">Visual Indicator Parent RectTransform</h2>
+<p>The <code>RectTransform</code> of a visual indicator's parent significantly influences how indicators are positioned on the screen, particularly due to its anchors, size, and pivot.</p>
+<p>To ensure a target's <code>ScreenPose.position</code> directly corresponds to the <code>anchoredPosition</code> of a child visual indicator, the parent <code>RectTransform</code> should have its <code>anchorMin</code> set to (0, 0) and its <code>anchorMax</code> set to (1, 1). This configuration ensures the visual indicators reposition correctly regardless of the parent's pivot or size, and adapts to screen size changes.</p>
+<h2 id="visual-indicator-recttransform">Visual Indicator RectTransform</h2>
+<p>To position a visual indicator's <code>RectTransform</code> at a target's screen pose, assign the <code>TargetIndicator.ScreenPose.position</code> value to <code>RectTransform.anchoredPosition</code>.</p>
+<p>For the visual indicator to be perfectly centered on the target's screen pose, set its <code>anchorMin</code>, <code>anchorMax</code>, and <code>pivot</code> properties to (0.5, 0.5).</p>
+<p>If you need to offset a visual indicator from the target's precise screen pose, for example to place an arrow tip at the coordinate, create a child GameObject for the offset and parent the visual content to it. By applying the <code>TargetIndicator.ScreenPose.position</code> directly to the main visual indicator <code>RectTransform</code>, the desired offset will be maintained through the GameObject hierarchy.</p>
+<h2 id="canvas-render-mode">Canvas render mode</h2>
+<p>For consistent and reliable results, use the <code>Screen Space - Overlay</code> Canvas Render Mode. This ensures visual indicators are always drawn on top of the 3D environment, preventing occlusion.</p>
+<p>If you use <code>Screen Space - Camera</code> and assign a camera, visual indicators can be occluded by scene geometry. This occurs if the Canvas's plane distance places it behind objects in the camera's view.</p>
+<div class="IMPORTANT">
+<h5>Important</h5>
+<p>Changing the <a href="https://docs.unity3d.com/Packages/com.unity.ugui@2.0/manual/script-CanvasScaler.html">CanvasScaler.uiScaleMode</a> can alter the Canvas's scale, which affects how screen coordinates are interpreted.</p>
+<p>When applying <code>TargetIndicator</code> screen poses to your visual indicators, ensure you account for the Canvas's current scale. For instance, if the Canvas's scale factor is 0.5, you must double the <code>TargetIndicator</code> screen pose values to achieve correct placement.</p>
+</div>
 
 </article>
           </div>
@@ -115,7 +105,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/JakeManfre/waypoint-indicator/blob/docs-setup/Assets/Target Indicators/Documentation~/manual/samples/samples.md/#L1" class="contribution-link">Edit this page</a>
+                    <a href="https://github.com/JakeManfre/waypoint-indicator/blob/docs-setup/Assets/Target Indicators/Documentation~/manual/user_guide/ugui-indicators.md/#L1" class="contribution-link">Edit this page</a>
                   </li>
                 </ul>
               </div>

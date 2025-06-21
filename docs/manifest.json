@@ -235,10 +235,40 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/compass-tape-target-indicators-demo-scene.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/compass-tape-target-indicators-demo-scene.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/compass-tape-visual-indicator-prefab.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/compass-tape-visual-indicator-prefab.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/edit-visualizer-component.png",
       "output": {
         "resource": {
           "relative_path": "images/edit-visualizer-component.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/multiple-target-indicator-categories-demo-scene.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/multiple-target-indicator-categories-demo-scene.png"
         }
       },
       "version": ""
@@ -295,6 +325,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/simple-target-indicators-demo-scene.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/simple-target-indicators-demo-scene.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/single-target-indicator-example.png",
       "output": {
         "resource": {
@@ -334,6 +374,16 @@
       "version": ""
     },
     {
+      "type": "Resource",
+      "source_relative_path": "images/visual-indicator-prefab.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/visual-indicator-prefab.png"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "Redirection",
       "source_relative_path": "index.md",
       "output": {
@@ -349,56 +399,6 @@
       "output": {
         ".html": {
           "relative_path": "introduction.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "manual/guide/overview.md",
-      "output": {
-        ".html": {
-          "relative_path": "manual/guide/overview.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "manual/guide/target-indicator-manager.md",
-      "output": {
-        ".html": {
-          "relative_path": "manual/guide/target-indicator-manager.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "manual/guide/target-indicator.md",
-      "output": {
-        ".html": {
-          "relative_path": "manual/guide/target-indicator.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "manual/guide/ugui.md",
-      "output": {
-        ".html": {
-          "relative_path": "manual/guide/ugui.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "manual/guide/xr.md",
-      "output": {
-        ".html": {
-          "relative_path": "manual/guide/xr.html"
         }
       },
       "version": ""
@@ -425,10 +425,60 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "manual/samples/sample-scenes.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/samples/sample-scenes.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/samples/samples-overview.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/samples/samples-overview.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "manual/samples/samples.md",
       "output": {
         ".html": {
           "relative_path": "manual/samples/samples.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/samples/visual-indicator-component.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/samples/visual-indicator-component.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/samples/visual-indicator-manager-component.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/samples/visual-indicator-manager-component.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/support-and-feedback.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/support-and-feedback.html"
         }
       },
       "version": ""
@@ -452,6 +502,66 @@
       "output": {
         ".html": {
           "relative_path": "manual/user-guide.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/user_guide/overview.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/user_guide/overview.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/user_guide/target-indicator-manager.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/user_guide/target-indicator-manager.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/user_guide/target-indicator.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/user_guide/target-indicator.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/user_guide/ugui-indicators.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/user_guide/ugui-indicators.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/user_guide/ugui.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/user_guide/ugui.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/user_guide/xr-indicators.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/user_guide/xr-indicators.html"
         }
       },
       "version": ""

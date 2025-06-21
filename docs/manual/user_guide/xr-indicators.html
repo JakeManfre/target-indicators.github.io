@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-      <title>Samples | Target Indicators Documentation </title>
+      <title>XR indicators | Target Indicators Documentation </title>
       <meta name="viewport" content="width=device-width">
-      <meta name="title" content="Samples | Target Indicators Documentation ">
+      <meta name="title" content="XR indicators | Target Indicators Documentation ">
     
     
       <link rel="shortcut icon" href="../../images/target_indicators_light_icon.png">
@@ -76,36 +76,31 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="target-indicators-samples">
-<h1 id="samples">Samples</h1>
+            <article class="content wrap" id="_content" data-uid="target-indicators-xr-indicators">
+<h1 id="xr-indicators">XR indicators</h1>
 
-<p>Refer to the following topics to understand the samples and how to use them:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;"><strong>Topic</strong></th>
-<th style="text-align: left;"><strong>Description</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><a class="xref" href="samples-overview.html">Samples Overview</a></td>
-<td style="text-align: left;">Understand how the samples work.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a class="xref" href="visual-indicator-manager-component.html">Visual indicator manager component</a></td>
-<td style="text-align: left;">Understand how to setup and use the visual indicator manager component.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a class="xref" href="visual-indicator-component.html">Visual indicator component</a></td>
-<td style="text-align: left;">Understand how to setup and use the visual indicator component with prefabs.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><a class="xref" href="sample-scenes.html">Sample scenes</a></td>
-<td style="text-align: left;">Understand the different sample scenes.</td>
-</tr>
-</tbody>
-</table>
+<p>A common challenge in XR applications is effectively guiding users to important off-screen items or locations within their virtual environment. Target Indicators can provide this guidance by directing users towards targets in their environment.</p>
+<p>This specific approach for XR has particular configuration requirements.</p>
+<h2 id="configure-target-indicators-for-xr">Configure target indicators for XR</h2>
+<p>The following steps outline how to set up your scene:</p>
+<ol>
+<li>Set your <a class="xref" href="../../api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_BoundaryType">BoundaryType</a> to <code>Absolute</code>.</li>
+<li>Adjust the <a class="xref" href="../../api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_Width">Width</a> and <a class="xref" href="../../api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_Height">Height</a> properties to define your boundary size.</li>
+<li>Display your visual indicators on a Canvas configured to <code>Screen Space - Camera</code> render mode.</li>
+</ol>
+<div class="TIP">
+<h5>Tip</h5>
+<p>When using <code>Screen Space - Camera</code>, visual indicators can be occluded by scene geometry. To minimize this, adjust the Canvas's Plane Distance to be closer to the camera, or consider using an overlay shader that forces the UI to draw on top of all scene geometry.</p>
+</div>
+<h2 id="current-limitations">Current limitations</h2>
+<p>While usable, the current screen-space solution for XR has some limitations:</p>
+<ul>
+<li><p><strong>Screen Space UI</strong> - The package currently relies on screen-space UI. While <code>Screen Space - Camera</code> is used, true world-space UI, which is generally recommended for XR applications to provide a more immersive and stable experience, is not directly supported.</p>
+</li>
+<li><p><strong>Jitter and Shaking</strong>: Due to the nature of converting world-space targets to screen space, visual indicators may appear shaky or jittery on the display, particularly during small head movements or vibrations of the XR headset. This can detract from user comfort and visual stability.</p>
+</li>
+</ul>
+<p>I'm open to developing a more robust, XR-centric solution if there is sufficient demand from the community. Please reach out if this is a feature you would like to see improved.</p>
 
 </article>
           </div>
@@ -115,7 +110,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/JakeManfre/waypoint-indicator/blob/docs-setup/Assets/Target Indicators/Documentation~/manual/samples/samples.md/#L1" class="contribution-link">Edit this page</a>
+                    <a href="https://github.com/JakeManfre/waypoint-indicator/blob/docs-setup/Assets/Target Indicators/Documentation~/manual/user_guide/xr-indicators.md/#L1" class="contribution-link">Edit this page</a>
                   </li>
                 </ul>
               </div>

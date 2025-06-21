@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Visual indicator manager component | Target Indicators Documentation </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Visual indicator manager component | Target Indicators Documentation ">
+    
+    
+      <link rel="shortcut icon" href="../../images/target_indicators_light_icon.png">
+      <link rel="stylesheet" href="../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../styles/docfx.css">
+      <link rel="stylesheet" href="../../styles/main.css">
+      <meta property="docfx:navrel" content="../../toc.html">
+      <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/target_indicators_light_icon.png" alt="Target Indicators">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="target-indicators-visual-indicator-manager-component">
+<h1 id="visual-indicator-manager-component">Visual indicator manager component</h1>
+
+<p>The visual indicator manager component works with the <a href="xref:">TargetIndicatorManager</a> and instantiates visual indicator prefabs and updates their state. There are several properties to configure for the component to work.</p>
+<h2 id="references-and-settings">References and settings</h2>
+<p>The following sections describes each reference and settings of the component:</p>
+<h3 id="default-visual-indicator-prefab">Default visual indicator prefab</h3>
+<p>This is a reference to the visual indicator prefab that will be instantiated in the UI by default when a target is added. You can assign this in the inspector or change it at runtime by assigning the <code>DefaultVisualIndicatorPrefab</code>.</p>
+<h3 id="target-indicator-manager">Target indicator manager</h3>
+<p>This is a reference to the <code>TargetIndicatorManager</code> component in the scene that you want this visual indicator manager to interact with and respond to.</p>
+<h3 id="content">Content</h3>
+<p>This is the <code>RectTransform</code> in the Canvas you want to instantiate your visual indicators and parent them to.</p>
+<h3 id="add-indicator-mode">Add indicator mode</h3>
+<p>This property controls whether visual indicators should automatically be created when the <code>TargetIndicatorManager</code> adds targets. If set to manual, it will only instantiate visual indicators when you call <code>TargetIndicatorManager.AddTargetIndicator</code>.</p>
+<h2 id="api">API</h2>
+<p>The visual indicator manager offers several APIs for you to have more control over what visual indicators get instantiated and when.</p>
+<h3 id="add-target-indicator">Add target indicator</h3>
+<p>If you want the visual indicator manager to track every target that is added to the target indicator manager you can add targets directly to the <code>TargetIndicatorManager</code> and leave the <code>AddIndicatorMode</code> to <code>Auto</code>. This way the visual indicator manager will automatically instantiate and update visual indicators.</p>
+<p>If you want the visual indicator manager to track specific targets from the target indicator manager, set the <code>AddIndicatorMode</code> to <code>Manual</code> and use one of the following APIs:</p>
+<ol>
+<li><p><strong>AddTargetIndicator(Transform target)</strong></p>
+<p>This API takes a transform of a target to track and adds it to the target indicator manager. It instantiates the default visual indicator prefab.</p>
+</li>
+<li><p><strong>AddTargetIndicator(Transform target, VisualIndicator indicatorPrefab)</strong></p>
+<p>This API takes a transform of a target to track and adds it to the target indicator manager. It instantiates a new instance from the <code>indicatorPrefab</code> passed in as the second argument. Use this when you want a specific visual indicator for a target.</p>
+</li>
+</ol>
+<h3 id="hide-a-visual-indicator">Hide a visual Indicator</h3>
+<p><code>VisualIndicator.HideVisualIndicator</code> will hide the content and rotation content of a visual indicator without disabling the component at the root. Use this to temporarily hide a visual indicator if you don't want to destroy it.</p>
+<h3 id="show-a-visual-indicator">Show a visual Indicator</h3>
+<p><code>VisualIndicator.ShowVisualIndicator</code> This API shows the content and rotation content of a visual indicator that was previously hidden. Use this to show hidden indicators from <code>HideVisualIndicator</code>. Visual indicators are shown when first instantiated.</p>
+<h3 id="removetargetindicator">RemoveTargetIndicator</h3>
+<p><code>VisualIndicator.RemoveTargetIndicator</code> removes a target from the target indicator manager. Use this when you are done tracking a target and want to destroy the visual indicator.</p>
+<h2 id="compass-tape-visual-indicator-manager">Compass tape visual indicator manager</h2>
+<p>The <code>CompassTapeVisualIndicatorManager</code> inhertis from <code>VisualIndicatorManager</code> and is specialized for handling target indicator managers with a <code>CompassTape</code> boundary type. It follows the same setup pattern. Use this class as an example to inherit the base visual indicator manager overriding the functionality with custom behavior.</p>
+<p>It requires a special implementation of <code>CompassTapeVisualIndicator</code> prefab for its <code>DefaultVisualIndicatorPrefab</code>. Refer to <a class="xref" href="visual-indicator-component.html#compass-tape-visual-indicator">compass tape visual indicator</a> for more information.</p>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/JakeManfre/waypoint-indicator/blob/docs-setup/Assets/Target Indicators/Documentation~/manual/samples/visual-indicator-manager-component.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

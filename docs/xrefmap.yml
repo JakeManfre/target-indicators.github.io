@@ -774,22 +774,40 @@ references:
   href: manual/index.html
 - uid: target-indicators-overview
   name: Overview
-  href: manual/guide/overview.html
+  href: manual/user_guide/overview.html
+- uid: target-indicators-sample-scenes
+  name: Sample scenes
+  href: manual/samples/sample-scenes.html
 - uid: target-indicators-samples
   name: Samples
   href: manual/samples/samples.html
+- uid: target-indicators-samples-overview
+  name: Samples Overview
+  href: manual/samples/samples-overview.html
+- uid: target-indicators-support-and-feedback
+  name: Support and Feedback
+  href: manual/support-and-feedback.html
 - uid: target-indicators-target-indicator
   name: Target Indicator
-  href: manual/guide/target-indicator.html
+  href: manual/user_guide/target-indicator.html
 - uid: target-indicators-target-indicator-manager
   name: Target Indicator Manager
-  href: manual/guide/target-indicator-manager.html
-- uid: target-indicators-target-indicators-in-xr
-  name: Target indicators in XR
-  href: manual/guide/xr.html
+  href: manual/user_guide/target-indicator-manager.html
+- uid: target-indicators-ugui-indicators
+  name: uGUI indicators
+  href: manual/user_guide/ugui.html
 - uid: target-indicators-unity-ui
-  name: Target indicators with uGUI (Unity UI)
-  href: manual/guide/ugui.html
+  name: uGUI indicators
+  href: manual/user_guide/ugui-indicators.html
 - uid: target-indicators-user-guide
   name: User Guide
   href: manual/user-guide.html
+- uid: target-indicators-visual-indicator-component
+  name: Visual indicator component
+  href: manual/samples/visual-indicator-component.html
+- uid: target-indicators-visual-indicator-manager-component
+  name: Visual indicator manager component
+  href: manual/samples/visual-indicator-manager-component.html
+- uid: target-indicators-xr-indicators
+  name: XR indicators
+  href: manual/user_guide/xr-indicators.html
