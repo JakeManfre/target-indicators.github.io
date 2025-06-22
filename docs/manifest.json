@@ -88,7 +88,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "TargetIndicators.TargetIndicatorBoundaryVisualizer",
-      "Summary": "<p sourcefile=\"api/TargetIndicators.TargetIndicatorBoundaryVisualizer.yml\" sourcestartlinenumber=\"1\">Visualizes the boundary configured in <xref href=\"TargetIndicators.TargetIndicatorBoundaryVisualizer._targetIndicatorManager\" data-throw-if-not-resolved=\"false\"></xref>. Note that\n<xref href=\"TargetIndicators.BoundaryType.CompassTape?text=BoundaryType.CompassTape\" data-throw-if-not-resolved=\"false\"></xref> and\n<xref href=\"TargetIndicators.BoundaryType.Unbounded?text=BoundaryType.Unbounded\" data-throw-if-not-resolved=\"false\"></xref> has no visualization.</p>\n"
+      "Summary": "<p sourcefile=\"api/TargetIndicators.TargetIndicatorBoundaryVisualizer.yml\" sourcestartlinenumber=\"1\">Visualizes the boundary configured in a <code sourcefile=\"api/TargetIndicators.TargetIndicatorBoundaryVisualizer.yml\" sourcestartlinenumber=\"1\">TargetIndicatorManager</code>. Note that\n<xref href=\"TargetIndicators.BoundaryType.CompassTape?text=BoundaryType.CompassTape\" data-throw-if-not-resolved=\"false\"></xref> and\n<xref href=\"TargetIndicators.BoundaryType.Unbounded?text=BoundaryType.Unbounded\" data-throw-if-not-resolved=\"false\"></xref> has no visualization.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -144,7 +144,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "TargetIndicators.TargetIndicatorManager",
-      "Summary": "<p sourcefile=\"api/TargetIndicators.TargetIndicatorManager.yml\" sourcestartlinenumber=\"1\">Tracks targets and transforms world space positions into screen space coordinates for tracking targets with\nindicators. Useful for displaying to users which direction a target is relative to where they are looking.</p>\n"
+      "Summary": "<p sourcefile=\"api/TargetIndicators.TargetIndicatorManager.yml\" sourcestartlinenumber=\"1\">Tracks targets and transforms their world space positions into screen space coordinates with options to clamp to\nthe screen edges, absolute size, or a compass tape. Useful for displaying directions to targets and other\npositions in the environment.</p>\n"
     },
     {
       "type": "ManagedReference",
