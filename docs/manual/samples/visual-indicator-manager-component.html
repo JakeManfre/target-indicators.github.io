@@ -112,6 +112,9 @@
 <h2 id="compass-tape-visual-indicator-manager">Compass tape visual indicator manager</h2>
 <p>The <code>CompassTapeVisualIndicatorManager</code> inhertis from <code>VisualIndicatorManager</code> and is specialized for handling target indicator managers with a <code>CompassTape</code> boundary type. It follows the same setup pattern. Use this class as an example to inherit the base visual indicator manager overriding the functionality with custom behavior.</p>
 <p>It requires a special implementation of <code>CompassTapeVisualIndicator</code> prefab for its <code>DefaultVisualIndicatorPrefab</code>. Refer to <a class="xref" href="visual-indicator-component.html#compass-tape-visual-indicator">compass tape visual indicator</a> for more information.</p>
+<h3 id="full-tape-to-visible-tape-ratio">Full tape to visible tape ratio</h3>
+<p>This is a unique property on the <code>CompassTapeVisualIndicatorManager</code> that is used for calculating the position on the compass tape's <code>RectTransform</code> to place the visual indicator. The value represents the ratio between the full tape and the visible tape. For example, if the full tape is twice the length of the visible tape this value would be 2.</p>
+<p>Refer to <a class="xref" href="../user_guide/target-indicator.html#compass-tape-boundary-type">compass tape boundary type</a> to learn more about how compass tapes work.</p>
 
 </article>
           </div>
