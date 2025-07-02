@@ -86,12 +86,36 @@
 <p><a href="xref:https://assetstore.unity.com/packages/slug/324272">Get Target Indicators</a> on the Unity Asset Store.</p>
 </div>
 <p><img src="../images/sample-multi-target-indicators.png" alt="A screenshot from the sample's &quot;Multiple Target Indicator Categories Demo&quot; scene showing what target indicators are."></p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ZyOROfm22xU?si=rvkbdNidFjdmFd-7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-</iframe>
+<div id="responsive-youtube-container">
+    <iframe id="responsive-youtube-iframe" width="100%" src="https://www.youtube.com/embed/ZyOROfm22xU?si=rvkbdNidFjdmFd-7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+    </iframe>
+</div>
+<script>
+    function resizeYoutubeIframe() {
+        var container = document.getElementById('responsive-youtube-container');
+        var iframe = document.getElementById('responsive-youtube-iframe');
+        if (container && iframe) {
+            var width = container.offsetWidth; // Get current width of the container
+            var aspectRatio = 9 / 16; // For 16:9 aspect ratio (height / width)
+            var newHeight = width * aspectRatio;
+            iframe.style.height = newHeight + 'px';
+        }
+    }
+
+    // Initial resize
+    resizeYoutubeIframe();
+
+    // Add event listener for window resize
+    window.addEventListener('resize', resizeYoutubeIframe);
+</script>
 <h2 id="highlights">Highlights</h2>
 <p>Target indicators focuses on simplicity and high performance. The following highlights are what you can expect from this package:</p>
 <ul>
-<li>Works with any UI system*</li>
+<li>Supports rectangle and ellipse screen bounds clamping</li>
+<li>Supports rectangle and ellipse absolute size clamping</li>
+<li>Supports compass tape clamping</li>
+<li>Supports unbounded clamping
+Works with any UI system*</li>
 <li>Highly configurable at edit and runtime</li>
 <li>No heap allocations after initialization</li>
 <li>Does not rely on <code>Object.Find</code> or any variations of scene searching at runtime</li>

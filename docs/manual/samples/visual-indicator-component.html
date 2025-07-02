@@ -123,6 +123,21 @@
     <li>The core indicator content. Notice in the hiearchy the images representing the visualizer are parented to a single <b>Content</b> GameObject that is reference in the <code>IndicatorContent</code> field of the <code>CompassTapeVisualIndicator</code> inspector.</li>
     <li>The <code>CompassTapeVisualIndicator</code> component and it's assigned references and settings. Typically the <code>RotationContentVisibility</code> is unused and set to <code>Never</code>.</li>
 </ol>
+<h2 id="compass-tape-boundary-check">Compass tape boundary check</h2>
+<p>Due to the special nature of compass tape target indicators, you are responsible for checking if the indicator is outside of the compass tape boundary. The provided samples handles this in <code>CompassTapeVisualIndicator.UpdateVisualIndicator</code>.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Refer to <a class="xref" href="../user_guide/target-indicator.html#compass-tape-boundary-type">Compass tape boundary type</a> to remind yourself how compass tapes work.</p>
+</div>
+<p>Calculate the ratio between the full tape and visible tape by dividing the length of the UI element for the visible tape by the length of the UI element for the full tape. For example if the full tape length is 1000 pixels long and the visible tape is 500 pixels, the ratio would be <code>500 ÷ 1000 = 0.5</code>.</p>
+<p>If the visible tape is centered on the full tape you can calculate the relative boundary points of the visible tape on the full tape with the following steps:</p>
+<ol>
+<li>Subtract the result of the ratio between the visible and full tape length from 1: <code>1 - 0.5 = 0.5</code></li>
+<li>Divide the remainder by 2: <code>0.5 ÷ 2 = 0.25</code></li>
+<li>The beginning of the visible tape is positioned at <code>0.25</code>, or 25% from the beginning of the full tape.</li>
+<li>The end of the visible tape is positioned at 1 minus the result from step 2: <code>1 - 0.25 = 0.75</code> or 75% from the beginning of the full tape.</li>
+</ol>
+<p>Therefore with the noramlized positions calculated, we know that if the value of the target indicator is smaller than the start point from step 3 or greater than the end point from step 4 then it is outside of the boundary.</p>
 
 </article>
           </div>

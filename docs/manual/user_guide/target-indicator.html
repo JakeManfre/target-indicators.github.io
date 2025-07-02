@@ -88,11 +88,11 @@
 <h3 id="screen-pose">Screen pose</h3>
 <p>The <a class="xref" href="../../api/TargetIndicators.TargetIndicator.html#TargetIndicators_TargetIndicator_ScreenPose">ScreenPose</a> property is a <a href="https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Pose.html">Pose</a> that contains the position and rotation of the target indicator for placement of a visual indicator. The values stored in the position and rotation of the pose differ between the boundary type when the target indicator was created. Refer to <a href="#interpret-the-screen-pose">interpret the screen pose</a> to learn how to use the respective pose values.</p>
 <h3 id="is-outside-boundary">Is outside boundary</h3>
-<p>The <a class="xref" href="../../api/TargetIndicators.TargetIndicator.html#TargetIndicators_TargetIndicator_IsOutsideBoundary">IsOutsideBoundary</a> property indicates if the screen pose of the target is outside of the boundary configured by the target indicator manager when the target indicator was created. The <code>IsOutsideBoundary</code> property will not update on existing target indicators structs if the boundary changes. You should wait for an updated target indicator an <a class="xref" href="target-indicator-manager.html#life-cycle-events">update</a> to get the updated state or use <a class="xref" href="target-indicator-manager.html#is-outside-boundary">TargetIndicatorManager.IsOutsideBoundary</a>.</p>
+<p>The <a class="xref" href="../../api/TargetIndicators.TargetIndicator.html#TargetIndicators_TargetIndicator_IsOutsideBoundary">IsOutsideBoundary</a> property indicates if the screen pose of the target is outside of the boundary configured by the target indicator manager when the target indicator was created. The <code>IsOutsideBoundary</code> property will not update on existing target indicators structs if the boundary changes. You should wait for an updated target indicator via the <a class="xref" href="target-indicator-manager.html#life-cycle-events">life cycle events</a> to get the updated state or use <a class="xref" href="target-indicator-manager.html#is-outside-boundary">TargetIndicatorManager.IsOutsideBoundary</a>.</p>
 <div class="IMPORTANT">
 <h5>Important</h5>
 <p>For <code>BoundaryType.CompassTape</code> and <code>BoundaryType.Unbounded</code> the <code>IsOutsideBoundary</code> property will always be <code>false</code>. <code>BoundaryType.Compass</code> requires knowledge about your specific compass tape setup to determine if it's outside the boundary.sTape</p>
-<p>Refer to <a class="xref" href="../samples/sample-scenes.html#compass-tape-target-indicators-demo">samples</a> as a reference for how you can check if the target indicator is outside of the boundary.</p>
+<p>Refer to <a class="xref" href="../samples/visual-indicator-component.html#compass-tape-boundary-check">Compass tape boundary check</a> to learn how you can check if the target indicator is outside of your compass tape boundary.</p>
 </div>
 <h2 id="screen-coordinates">Screen coordinates</h2>
 <p>Target indicators uses screen coordinates in pixels to describe the placement of a target indicator. The bottom left of the screen corresponds to coordinate (0, 0) and the top right of the screen corresponds to (<a href="https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Screen-width.html">Screen.width</a>, <a href="https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Screen-height.html">Screen.height</a>).</p>
@@ -124,7 +124,7 @@
 <p>Compass tapes are broken up into two parts:</p>
 <ol>
 <li><p><strong>Full tape</strong></p>
-<p>Full tape is the part of the compass tape that reprsents the full spectrum of cardinal directions north, east, south, and west. It is the distance for one full rotation. The full tape is not always visible as it requires a texture to scroll and wrap around the tape as the user makes a full rotation.</p>
+<p>Full tape is the part of the compass tape that reprsents the full spectrum of cardinal directions north, east, south, and west. It is the length of the UI element, or distance to scroll the compass texture for one full rotation. The full tape is not always visible as it requires a texture to scroll and wrap around the tape as the user makes a full rotation.</p>
 </li>
 <li><p><strong>Visible tape</strong></p>
 <p>Visible tape refers to the part of the compass tape that is visible at any given time and is shorter than the full tape length. Often the visible tape is half the length of the full tape.</p>
