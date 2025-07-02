@@ -117,7 +117,7 @@
 <h3 id="absolute-boundary-type">Absolute boundary type</h3>
 <p>Like the padded boundary type, the absolute boundary uses the <code>ScreenPose.position</code> and <code>ScreenPose.rotation</code> the same.</p>
 <h3 id="compass-tape-boundary-type">Compass tape boundary type</h3>
-<p>Unlike the <code>Padded</code> and <code>Absolute</code> boundary types, the <code>CompassTape</code> boundary type does not provide direct pixel screen coordinates. Instead, <code>TargetIndicator.ScreenPose.x</code> contains a normalized value between 0 and 1, representing the target's horizontal position on the tape. All other <code>ScreenPose</code> components will be 0. The screen pose rotation will be <code>Quaternion.identity</code>.</p>
+<p>Unlike the <code>Padded</code> and <code>Absolute</code> boundary types, the <code>CompassTape</code> boundary type does not provide direct pixel screen coordinates. Instead, <code>TargetIndicator.ScreenPose.x</code> contains a normalized value between 0 and 1, representing the target's horizontal position on the tape. A value of 0.5 represents directly in front of the user while a value of 0.25 represents to the left, 0.75 represents to the right, and both 0 and 1 represent directly behind the user. All other <code>ScreenPose</code> components will be 0. The screen pose rotation will be <code>Quaternion.identity</code>.</p>
 <p><strong>Compass tape primer</strong></p>
 <p>Compass tapes are compasses that are displayed as a horizontal strip with a scrolling texture as the user turns around the Y, or up, axis and the middle of the compass always corresponds to the direction the user is facing.</p>
 <p><img src="../../images/compass-tape-example.png" alt="An image of a compass tape in Apex Legends"></p>
