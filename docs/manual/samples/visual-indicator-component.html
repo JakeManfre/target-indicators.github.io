@@ -150,15 +150,15 @@
 </li>
 </ol>
 <p>Refer to the following code example to understand how these steps are implemented:</p>
-<pre><code class="lang-cs" name="CompassTapeBoundaryCheck">
-float _fullTapeToVisibleTapeRatio = 2f;
+<pre><code class="lang-cs" name="CompassTapeBoundaryCheck">float _fullTapeToVisibleTapeRatio = 2f;
 float _visibleTapeLength = 500f;
 
 public bool IsScreenPointOutsideBoundary(Pose screenPose)
 {
     screenPose.position.x %= 1f;
 
-    var positionOnFullTape = screenPose.position.x * (_fullTapeToVisibleTapeRatio * _visibleTapeLength);
+    var fullTapeLength = _fullTapeToVisibleTapeRatio * _visibleTapeLength;
+    var positionOnFullTape = screenPose.position.x * fullTapeLength;
     var middleOfFullTape = (_fullTapeToVisibleTapeRatio * _visibleTapeLength) * 0.5f;
     var middleToPositionOnFullTape = positionOnFullTape - middleOfFullTape;
     var middleOfVisibleTape = _visibleTapeLength * 0.5f;
