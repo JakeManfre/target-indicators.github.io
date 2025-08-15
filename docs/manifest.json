@@ -375,6 +375,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/visual-indicator-manager-component.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/visual-indicator-manager-component.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/visual-indicator-prefab.png",
       "output": {
         "resource": {
