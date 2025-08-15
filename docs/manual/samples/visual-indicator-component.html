@@ -139,14 +139,14 @@
 <p>Remember that the target indicator manager returns a normalized value between 0 and 1 representing the target's cardinal direction relative to the user's forward direction. Take the <code>screenPose.position.x</code> received from the target indicator manager and multiply it with the full tape to visible tape ratio from the previous step. Finally multiply the product by the length of the visible tape.</p>
 <p>For example, if the target indicator manager returns <code>0.25</code> for the X position of the target and the visible tape length is 500 pixels long as described in the previous step, the position on the full tape would be <code>0.25 * 2 * 500 = 250</code>.</p>
 </li>
-<li><p><strong>Calculate the distance from the point on the full tape to the middle of the full tape</strong></p>
+<li><p><strong>Calculate the distance from the position on the full tape to the middle of the full tape</strong></p>
 <p>Take the result from step <strong>2</strong> and subtract half of the full tape length. <code>250 - (1000 * 0.5) = -250</code></p>
 </li>
-<li><p><strong>Calculate the point on the visible tape</strong></p>
+<li><p><strong>Calculate the position on the visible tape</strong></p>
 <p>Add half of the visible tape to the result from step <strong>3</strong>. <code>(500 * 0.5) + (-250) = 0</code></p>
 </li>
-<li><p>Check if the point is outside the boundary</p>
-<p>If the result from step 5 is less than 0 or greater than the length of the visible tape then we know it is outside of the boundary. In our example the result is 0 indicating its at the very begininning point on the visible tape.</p>
+<li><p><strong>Check if the position is outside the boundary</strong></p>
+<p>If the result from step 5 is less than 0 or greater than the length of the visible tape then we know it is outside of the boundary. In our example the result is 0 indicating its at the very begininning position on the visible tape.</p>
 </li>
 </ol>
 <p>Refer to the following code example to understand how these steps are implemented:</p>
