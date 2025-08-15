@@ -245,6 +245,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/compass-tape-visual-indicator-manager-component.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/compass-tape-visual-indicator-manager-component.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/compass-tape-visual-indicator-prefab.png",
       "output": {
         "resource": {
@@ -369,6 +379,16 @@
       "output": {
         "resource": {
           "relative_path": "images/unbounded.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/visual-indicator-component.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/visual-indicator-component.png"
         }
       },
       "version": ""
