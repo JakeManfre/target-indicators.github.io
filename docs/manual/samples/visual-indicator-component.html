@@ -130,7 +130,7 @@
 <h5>Note</h5>
 <p>Refer to <a class="xref" href="../user_guide/target-indicator.html#compass-tape-boundary-type">Compass tape boundary type</a> to remind yourself how compass tapes work.</p>
 </div>
-<p>The target indicator manager returns a normalized value between 0 and 1 representing the target's cardinal direction on the tape. To calculate if this value is outside the bounds of the visible tape, use the following steps:</p>
+<p>To calculate if the target indicator screen position is outside the boundary of the visible tape, use the following steps:</p>
 <ol>
 <li><p><strong>Calculate the full tape to visible tape ratio</strong></p>
 <p>Calculate the ratio between the length of the full tape and the length of the visible tape by dividing the length of the UI element for the full tape by the length of the UI element for the visible tape. For example, if the full tape length is 1000 pixels long and the visible tape is 500 pixels long, the ratio would be <code>1000 ÷ 500 = 2</code> meaning the full tape length is twice the length of the visible tape.</p>
