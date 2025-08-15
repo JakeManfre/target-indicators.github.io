@@ -113,33 +113,60 @@
 <p>The following image labels the key components of a visual indicator.</p>
 <p><img src="../../images/visual-indicator-prefab.png" alt="An image of the visual indicator prefab."></p>
 <ol type="A">
-    <li>The core indicator content. Notice in the hiearchy all the images representing the visualizer are parented to a single <b>Content</b> GameObject that is reference in the <code>IndicatorContent</code> field of the <code>VisualIndicator</code> inspector.</li>
-    <li>The arrow image that is parented to the <b>Rotation Content</b> GameObject in the hiearchy.</li>
+    <li>The core visual indicator content that is parented to the <b>Core Content</b> in the hiearchy.</li>
+    <li>The visual indicator rotation content that is parented to the <b>Rotation Content</b> in the hiearchy.</li>
     <li>The <code>VisualIndicator</code> component and it's assigned references and settings.</li>
 </ol>
 <h3 id="compass-tape-visual-indicator">Compass tape visual indicator</h3>
 <p>The <code>CompassTapeVisualIndicator</code> inherits from the base <code>VisualIndicator</code>. Like the base visual indicator, the compass tape visual indicator has the same configuration. The reason for a special <code>CompassTapeVisualIndicator</code> component is to handle the unique <a class="xref" href="../user_guide/target-indicator.html#interpret-the-screen-pose">interpreting of screen pose</a> values for compass tape target indicators.</p>
 <p><img src="../../images/compass-tape-visual-indicator-prefab.png" alt="An image of the compass tape visual indicator prefab."></p>
 <ol type="A">
-    <li>The core indicator content. Notice in the hiearchy the images representing the visualizer are parented to a single <b>Content</b> GameObject that is reference in the <code>IndicatorContent</code> field of the <code>CompassTapeVisualIndicator</code> inspector.</li>
-    <li>The <code>CompassTapeVisualIndicator</code> component and it's assigned references and settings. Typically the <code>RotationContentVisibility</code> is unused and set to <code>Never</code>.</li>
+    <li>The core visual indicator content that is parented to the <b>Core Content</b> in the hiearchy.</li>
+    <li>The <code>CompassTapeVisualIndicator</code> component and its assigned references and settings. Typically the <code>RotationContentVisibility</code> is unused for compass tapes and set to <code>Never</code>.</li>
 </ol>
 <h2 id="compass-tape-boundary-check">Compass tape boundary check</h2>
-<p>Due to the special nature of compass tape target indicators, you are responsible for checking if the indicator is outside of the compass tape boundary. The provided samples handles this in <code>CompassTapeVisualIndicator.UpdateVisualIndicator</code>.</p>
+<p>Due to the special nature of compass tape target indicators, you are responsible for checking if the indicator is outside of the compass tape boundary. The provided samples handles this in <code>CompassTapeVisualIndicator.UpdateVisualIndicator(Pose, bool)</code>.</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>Refer to <a class="xref" href="../user_guide/target-indicator.html#compass-tape-boundary-type">Compass tape boundary type</a> to remind yourself how compass tapes work.</p>
 </div>
-<p>Calculate the ratio between the full tape and visible tape by dividing the length of the UI element for the visible tape by the length of the UI element for the full tape. For example if the full tape length is 1000 pixels long and the visible tape is 500 pixels, the ratio would be <code>500 ÷ 1000 = 0.5</code>.</p>
-<p>If the visible tape is centered on the full tape you can calculate the relative boundary points of the visible tape on the full tape with the following steps:</p>
+<p>The target indicator manager returns a normalized value between 0 and 1 representing the target's cardinal direction on the tape. To calculate if this value is outside the bounds of the visible tape, use the following steps:</p>
 <ol>
-<li>Subtract the result of the ratio between the visible and full tape length from 1: <code>1 - 0.5 = 0.5</code></li>
-<li>Divide the remainder by 2: <code>0.5 ÷ 2 = 0.25</code></li>
-<li>The beginning of the visible tape is positioned at <code>0.25</code>, or 25% from the beginning of the full tape.</li>
-<li>The end of the visible tape is positioned at 1 minus the result from step 2: <code>1 - 0.25 = 0.75</code> or 75% from the beginning of the full tape.</li>
+<li><p><strong>Calculate the full tape to visible tape ratio</strong></p>
+<p>Calculate the ratio between the length of the full tape and the length of the visible tape by dividing the length of the UI element for the full tape by the length of the UI element for the visible tape. For example, if the full tape length is 1000 pixels long and the visible tape is 500 pixels long, the ratio would be <code>1000 ÷ 500 = 2</code> meaning the full tape length is twice the length of the visible tape.</p>
+</li>
+<li><p><strong>Calculate the target position on the full tape</strong></p>
+<p>Remember that the target indicator manager returns a normalized value between 0 and 1 representing the target's cardinal direction relative to the user's forward direction. Take the <code>screenPose.position.x</code> received from the target indicator manager and multiply it with the full tape to visible tape ratio from the previous step. Finally multiply the product by the length of the visible tape.</p>
+<p>For example, if the target indicator manager returns <code>0.25</code> for the X position of the target and the visible tape length is 500 pixels long as described in the previous step, the position on the full tape would be <code>0.25 * 2 * 500 = 250</code>.</p>
+</li>
+<li><p><strong>Calculate the distance from the point on the full tape to the middle of the full tape</strong></p>
+<p>Take the result from step <strong>2</strong> and subtract half of the full tape length. <code>250 - (1000 * 0.5) = -250</code></p>
+</li>
+<li><p><strong>Calculate the point on the visible tape</strong></p>
+<p>Add half of the visible tape to the result from step <strong>3</strong>. <code>(500 * 0.5) + (-250) = 0</code></p>
+</li>
+<li><p>Check if the point is outside the boundary</p>
+<p>If the result from step 5 is less than 0 or greater than the length of the visible tape then we know it is outside of the boundary. In our example the result is 0 indicating its at the very begininning point on the visible tape.</p>
+</li>
 </ol>
-<p>Therefore with the noramlized positions calculated, we know that if the value of the target indicator is smaller than the start point from step 3 or greater than the end point from step 4 then it is outside of the boundary.</p>
+<p>Refer to the following code example to understand how these steps are implemented:</p>
+<pre><code class="lang-cs" name="CompassTapeBoundaryCheck">
+float _fullTapeToVisibleTapeRatio = 2f;
+float _visibleTapeLength = 500f;
 
+public bool IsScreenPointOutsideBoundary(Pose screenPose)
+{
+    screenPose.position.x %= 1f;
+
+    var positionOnFullTape = screenPose.position.x * (_fullTapeToVisibleTapeRatio * _visibleTapeLength);
+    var middleOfFullTape = (_fullTapeToVisibleTapeRatio * _visibleTapeLength) * 0.5f;
+    var middleToPositionOnFullTape = positionOnFullTape - middleOfFullTape;
+    var middleOfVisibleTape = _visibleTapeLength * 0.5f;
+    var pointOnVisibleTape = middleOfVisibleTape + middleToPositionOnFullTape;
+
+    return pointOnVisibleTape &lt; 0 || pointOnVisibleTape &gt; _visibleTapeLength;
+}
+</code></pre>
 </article>
           </div>
 
