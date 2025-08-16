@@ -156,7 +156,7 @@
 <h2 id="api">API</h2>
 <p>The following sections describe how to use the target indicator manager API.</p>
 <h3 id="add-a-target">Add a target</h3>
-<p>Add targets to track and receive updates for target indicators The max number of targets that can be tracked at once is 100. <code>TryAddTarget</code> can only fail if you try to add more than 100 targets. To get the current number of tracked targets use <a class="xref" href="../../api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_TrackedTargetsCount">TrackedTargetsCount</a>. If you need more than 100 (god bless), you can use <a href="#using-multiple-target-indicator-managers">multiple target indicator managers</a>.</p>
+<p>Add targets to track and receive updates for target indicators The max number of targets that can be tracked at once is 100. <code>TryAddTarget</code> can only fail if you try to add more than 100 targets or try to add a <code>null</code> target. To get the current number of tracked targets use <a class="xref" href="../../api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_TrackedTargetsCount">TrackedTargetsCount</a>. If you need more than 100 (god bless), you can use <a href="#using-multiple-target-indicator-managers">multiple target indicator managers</a>.</p>
 <p>To add a target to track use <a class="xref" href="../../api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_TryAddTarget_">TryAddTarget</a> as shown in the following code example:</p>
 <pre><code class="lang-cs" name="TryAddTarget">public void TryAddTargetExample(TargetIndicatorManager manager, Transform target)
 {
