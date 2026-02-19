@@ -116,7 +116,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "TargetIndicators.TargetIndicatorManager.TargetIndicatorsRemovedDelegate",
-      "Summary": "<p sourcefile=\"api/TargetIndicators.TargetIndicatorManager.TargetIndicatorsRemovedDelegate.yml\" sourcestartlinenumber=\"1\">Delegate that passes a <code sourcefile=\"api/TargetIndicators.TargetIndicatorManager.TargetIndicatorsRemovedDelegate.yml\" sourcestartlinenumber=\"1\">ReadOnlySpan</code> of target indicators that were removed.</p>\n"
+      "Summary": "<p sourcefile=\"api/TargetIndicators.TargetIndicatorManager.TargetIndicatorsRemovedDelegate.yml\" sourcestartlinenumber=\"1\">Delegate that passes a <xref href=\"System.ReadOnlySpan%601\" data-throw-if-not-resolved=\"false\"></xref> of target indicators that were removed.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -130,7 +130,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "TargetIndicators.TargetIndicatorManager.TargetIndicatorsUpdatedDelegate",
-      "Summary": "<p sourcefile=\"api/TargetIndicators.TargetIndicatorManager.TargetIndicatorsUpdatedDelegate.yml\" sourcestartlinenumber=\"1\">Delegate that passes a <code sourcefile=\"api/TargetIndicators.TargetIndicatorManager.TargetIndicatorsUpdatedDelegate.yml\" sourcestartlinenumber=\"1\">ReadOnlySpan</code> of target indicators that were added or updated.</p>\n"
+      "Summary": "<p sourcefile=\"api/TargetIndicators.TargetIndicatorManager.TargetIndicatorsUpdatedDelegate.yml\" sourcestartlinenumber=\"1\">Delegate that passes a <xref href=\"System.ReadOnlySpan%601\" data-throw-if-not-resolved=\"false\"></xref> of target indicators that were added or updated.</p>\n"
     },
     {
       "type": "ManagedReference",

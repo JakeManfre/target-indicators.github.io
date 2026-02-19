@@ -448,15 +448,12 @@ references:
   commentId: Overload:TargetIndicators.TargetIndicatorManager.Height
   fullName: TargetIndicators.TargetIndicatorManager.Height
   nameWithType: TargetIndicatorManager.Height
-- uid: TargetIndicators.TargetIndicatorManager.IsOutsideBoundary(UnityEngine.Vector3@)
-  name: IsOutsideBoundary(in Vector3)
-  href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_IsOutsideBoundary_UnityEngine_Vector3__
-  commentId: M:TargetIndicators.TargetIndicatorManager.IsOutsideBoundary(UnityEngine.Vector3@)
-  name.vb: IsOutsideBoundary(Vector3)
-  fullName: TargetIndicators.TargetIndicatorManager.IsOutsideBoundary(in UnityEngine.Vector3)
-  fullName.vb: TargetIndicators.TargetIndicatorManager.IsOutsideBoundary(UnityEngine.Vector3)
-  nameWithType: TargetIndicatorManager.IsOutsideBoundary(in Vector3)
-  nameWithType.vb: TargetIndicatorManager.IsOutsideBoundary(Vector3)
+- uid: TargetIndicators.TargetIndicatorManager.IsOutsideBoundary(UnityEngine.Vector3)
+  name: IsOutsideBoundary(Vector3)
+  href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_IsOutsideBoundary_UnityEngine_Vector3_
+  commentId: M:TargetIndicators.TargetIndicatorManager.IsOutsideBoundary(UnityEngine.Vector3)
+  fullName: TargetIndicators.TargetIndicatorManager.IsOutsideBoundary(UnityEngine.Vector3)
+  nameWithType: TargetIndicatorManager.IsOutsideBoundary(Vector3)
 - uid: TargetIndicators.TargetIndicatorManager.IsOutsideBoundary*
   name: IsOutsideBoundary
   href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_IsOutsideBoundary_
