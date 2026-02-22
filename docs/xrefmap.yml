@@ -760,9 +760,6 @@ references:
   commentId: Overload:TargetIndicators.TargetIndicatorManager.Width
   fullName: TargetIndicators.TargetIndicatorManager.Width
   nameWithType: TargetIndicatorManager.Width
-- uid: target-indicators-changelog
-  name: Changelog
-  href: CHANGELOG.html
 - uid: target-indicators-install-package
   name: Install package
   href: manual/install-package.html

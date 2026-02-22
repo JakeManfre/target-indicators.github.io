@@ -1,9 +1,4 @@
 {
-  "CHANGELOG.html": {
-    "href": "CHANGELOG.html",
-    "title": "Changelog | Target Indicators Documentation",
-    "summary": "Changelog All notable changes to this project will be documented in this file. The format is based on Keep a Changelog, and this project adheres to Semantic Versioning."
-  },
   "api/TargetIndicators.BoundaryShape.html": {
     "href": "api/TargetIndicators.BoundaryShape.html",
     "title": "Enum BoundaryShape | Target Indicators Documentation",
@@ -53,6 +48,11 @@
     "href": "api/TargetIndicators.html",
     "title": "Namespace TargetIndicators | Target Indicators Documentation",
     "summary": "Namespace TargetIndicators Classes TargetIndicatorBoundaryVisualizer Visualizes the boundary configured in a TargetIndicatorManager. Note that BoundaryType.CompassTape and BoundaryType.Unbounded has no visualization. TargetIndicatorManager Tracks targets and transforms their world space positions into screen space coordinates with options to clamp to the screen edges, absolute size, or a compass tape. Useful for displaying directions to targets and other positions in the environment. Structs Ellipse The data that defines the ellipse of the screen boundary. TargetIndicator The contextual data that defines a tracked target in screen space. TargetIndicatorId The unique ID that represents a TargetIndicator. Enums BoundaryShape The shape of the boundary for Padded or Absolute boundary types that target indicators will clamp to. BoundaryType The type of boundary that target indicators will clamp to. Delegates TargetIndicatorManager.TargetIndicatorsRemovedDelegate Delegate that passes a ReadOnlySpan<T> of target indicators that were removed. TargetIndicatorManager.TargetIndicatorsUpdatedDelegate Delegate that passes a ReadOnlySpan<T> of target indicators that were added or updated."
+  },
+  "changelog-wrapper.html": {
+    "href": "changelog-wrapper.html",
+    "title": "Changelog | Target Indicators Documentation",
+    "summary": "Changelog All notable changes to this project will be documented in this file. The format is based on Keep a Changelog, and this project adheres to Semantic Versioning. [1.1.0] Added Added TargetIndicatorManager.GetChanges API to allow for manual synchronization of world-to-screen transformations and explicit dispatching of indicator events outside of the standard Unity Update loop. Fixed Fixed an issue where adding targets could cause heap allocations due to dictionary resizing. Internal collections are now strictly pre-allocated during initialization to maintain zero allocations. Fixed an issue where calling TargetIndicatorManager.RemoveAllTargets failed to invoke the TargetIndicatorsRemoved event. Fixed an issue where adding and removing a target within the exact same frame would erroneously trigger both the added and removed events. Fixed a MissingReferenceException that would be thrown if a tracked target's GameObject was destroyed by an external script before being explicitly unregistered from the manager. Fixed an issue where adding the same target multiple times would create redundant tracking entries. Fixed an issue where TargetIndicatorManager.IsOutsideBoundary would incorrectly return true when the boundary type was set to CompassTape and the passed in screen point's Z value was negative. Refer to Compass tape boundary check in the documentation for more information. [1.0.1] Changed Updated sample scene names to remove redundant \"Target Indicators\" name. Updated parameters using in keyword for several APIs for improved performance with Vector3 and Quaternion."
   },
   "get-target-indicators.html": {
     "href": "get-target-indicators.html",
