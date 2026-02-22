@@ -109,7 +109,7 @@
   <h6><strong>Assembly</strong>: TargetIndicators.dll</h6>
   <h5 id="TargetIndicators_TargetIndicator_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct TargetIndicator</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly struct TargetIndicator</code></pre>
   </div>
   <h3 id="constructors">Constructors
 </h3>
@@ -243,7 +243,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly TargetIndicatorId Id { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public TargetIndicatorId Id { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-condensed">
@@ -268,7 +268,7 @@ Otherwise, <code>false</code>.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly bool IsOutsideBoundary { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool IsOutsideBoundary { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-condensed">
@@ -299,7 +299,7 @@ the indicator to point at the target.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly Pose ScreenPose { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Pose ScreenPose { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-condensed">
@@ -323,7 +323,7 @@ the indicator to point at the target.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public readonly Transform Target { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Transform Target { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-condensed">

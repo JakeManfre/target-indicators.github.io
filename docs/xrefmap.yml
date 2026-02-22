@@ -421,6 +421,18 @@ references:
   commentId: Overload:TargetIndicators.TargetIndicatorManager.Ellipse
   fullName: TargetIndicators.TargetIndicatorManager.Ellipse
   nameWithType: TargetIndicatorManager.Ellipse
+- uid: TargetIndicators.TargetIndicatorManager.GetChanges
+  name: GetChanges()
+  href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_GetChanges
+  commentId: M:TargetIndicators.TargetIndicatorManager.GetChanges
+  fullName: TargetIndicators.TargetIndicatorManager.GetChanges()
+  nameWithType: TargetIndicatorManager.GetChanges()
+- uid: TargetIndicators.TargetIndicatorManager.GetChanges*
+  name: GetChanges
+  href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_GetChanges_
+  commentId: Overload:TargetIndicators.TargetIndicatorManager.GetChanges
+  fullName: TargetIndicators.TargetIndicatorManager.GetChanges
+  nameWithType: TargetIndicatorManager.GetChanges
 - uid: TargetIndicators.TargetIndicatorManager.GetScreenPose(UnityEngine.Vector3@,System.Boolean@)
   name: GetScreenPose(in Vector3, out bool)
   href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_GetScreenPose_UnityEngine_Vector3__System_Boolean__
