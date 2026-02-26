@@ -75,8 +75,13 @@
 <p>All notable changes to this project will be documented in this file.</p>
 <p>The format is based on <a href="https://keepachangelog.com/en/1.1.0/">Keep a Changelog</a>,
 and this project adheres to <a href="https://semver.org/spec/v2.0.0.html">Semantic Versioning</a>.</p>
-<h2 id="113">[1.1.3]</h2>
+<h2 id="114">[1.1.4]</h2>
 <h3 id="changed">Changed</h3>
+<ul>
+<li>Updated and corrected API docs for <code>TargetIndicatorManager</code>, <code>VisualIndicatormanager</code>, <code>CompassTapeVisualIndicatorManager</code>, <code>VisualIndicator</code>, and <code>AddIndicatorMode</code>.</li>
+</ul>
+<h2 id="113">[1.1.3]</h2>
+<h3 id="changed-1">Changed</h3>
 <ul>
 <li>Updated released package from Unity <code>6000.3</code> to <code>6000.0</code> to allow older projects to download the package. If you already have the package this should not impact your ability to use Target Indicators.</li>
 <li>Updated the package name from <code>com.companyname.targetindicators</code> to <code>com.jakemanfre.targetindicators</code> to avoid name collisions. If you were using the Target Indicators package as a local package and getting errors after this update, you will need to remove it from your project's manifest and reimport the package.</li>
@@ -88,7 +93,7 @@ and this project adheres to <a href="https://semver.org/spec/v2.0.0.html">Semant
 <li>Removed <code>TMPEssentialsChecker</code> that would check for Text Mesh Pro Essentials in the users project. This would run every domain reload potentially spamming the user with popups if Text Mesh Pro Essentials was not present in the project and the user didn't want it in their project.</li>
 </ul>
 <h2 id="111">[1.1.1]</h2>
-<h3 id="changed-1">Changed</h3>
+<h3 id="changed-2">Changed</h3>
 <ul>
 <li>Changed the samples use of the <code>Inter</code> font to now use <code>LiberationSans</code> that is provided in the Unity editor.</li>
 </ul>
@@ -112,7 +117,7 @@ and this project adheres to <a href="https://semver.org/spec/v2.0.0.html">Semant
 <li>Fixed an issue where <code>TargetIndicatorManager.IsOutsideBoundary</code> would incorrectly return <code>true</code> when the boundary type was set to <code>CompassTape</code> and the passed in screen point's <code>Z</code> value was negative. Refer to <a href="https://jakemanfre.github.io/target-indicators.github.io/manual/samples/visual-indicator-component.html#compass-tape-boundary-check">Compass tape boundary check</a> in the documentation for more information.</li>
 </ul>
 <h2 id="101">[1.0.1]</h2>
-<h3 id="changed-2">Changed</h3>
+<h3 id="changed-3">Changed</h3>
 <ul>
 <li>Updated sample scene names to remove redundant &quot;Target Indicators&quot; name.</li>
 <li>Updated parameters using <code>in</code> keyword for several APIs for improved performance with Vector3 and Quaternion.</li>
