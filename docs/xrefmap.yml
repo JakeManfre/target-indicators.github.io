@@ -433,14 +433,14 @@ references:
   commentId: Overload:TargetIndicators.TargetIndicatorManager.GetChanges
   fullName: TargetIndicators.TargetIndicatorManager.GetChanges
   nameWithType: TargetIndicatorManager.GetChanges
-- uid: TargetIndicators.TargetIndicatorManager.GetScreenPose(UnityEngine.Vector3@,System.Boolean@)
-  name: GetScreenPose(in Vector3, out bool)
-  href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_GetScreenPose_UnityEngine_Vector3__System_Boolean__
-  commentId: M:TargetIndicators.TargetIndicatorManager.GetScreenPose(UnityEngine.Vector3@,System.Boolean@)
+- uid: TargetIndicators.TargetIndicatorManager.GetScreenPose(UnityEngine.Vector3,System.Boolean@)
+  name: GetScreenPose(Vector3, out bool)
+  href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_GetScreenPose_UnityEngine_Vector3_System_Boolean__
+  commentId: M:TargetIndicators.TargetIndicatorManager.GetScreenPose(UnityEngine.Vector3,System.Boolean@)
   name.vb: GetScreenPose(Vector3, Boolean)
-  fullName: TargetIndicators.TargetIndicatorManager.GetScreenPose(in UnityEngine.Vector3, out bool)
+  fullName: TargetIndicators.TargetIndicatorManager.GetScreenPose(UnityEngine.Vector3, out bool)
   fullName.vb: TargetIndicators.TargetIndicatorManager.GetScreenPose(UnityEngine.Vector3, Boolean)
-  nameWithType: TargetIndicatorManager.GetScreenPose(in Vector3, out bool)
+  nameWithType: TargetIndicatorManager.GetScreenPose(Vector3, out bool)
   nameWithType.vb: TargetIndicatorManager.GetScreenPose(Vector3, Boolean)
 - uid: TargetIndicators.TargetIndicatorManager.GetScreenPose*
   name: GetScreenPose
