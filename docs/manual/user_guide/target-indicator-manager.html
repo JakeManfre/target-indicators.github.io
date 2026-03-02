@@ -173,6 +173,10 @@
 }
 </code></pre>
 <p>Keep track of the returned <code>TargetIndicator.TrackedIndicatorId</code> in the <code>out</code> parameter to know which target indicator corresponds to a target.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p><strong>Using prebuilt UI?</strong> If you are using the <a class="xref" href="../samples/visual-indicator-manager-component.html">Visual indicator manager</a> to display uGUI, you can let it handle adding targets for you. By setting the manager to <code>Manual</code> mode, calling <code>VisualIndicatorManager.AddTargetIndicator(Transform)</code> will automatically register the target here and spawn the required UI prefab in one step.</p>
+</div>
 <h3 id="remove-a-target">Remove a target</h3>
 <p>Remove targets to have the target indicator manager stop tracking and sending updates for a target. Removing a target can only fail if you pass an invalid <code>TargetIndicatorId</code>.</p>
 <p>To remove a target from being tracked use <a class="xref" href="../../api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_TryRemoveTarget_TargetIndicators_TargetIndicatorId_">TryRemoveTarget</a> as shown in the following code example:</p>

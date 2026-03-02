@@ -79,7 +79,7 @@
             <article class="content wrap" id="_content" data-uid="target-indicators-visual-indicator-component">
 <h1 id="visual-indicator-component">Visual indicator component</h1>
 
-<p>The visual indicator component is instantiated by the <a class="xref" href="visual-indicator-manager-component.html">VisualIndicatorManager</a> and controls each instance of a visual indicator prefab.</p>
+<p>The visual indicator component is instantiated and strictly managed by the <a class="xref" href="visual-indicator-manager-component.html">VisualIndicatorManager</a>. It controls each instance of a visual indicator prefab. You generally do not need to call methods on this component directly; instead, route visibility and lifecycle commands through the <code>VisualIndicatorManager</code>.</p>
 <p><img src="../../images/visual-indicator-component.png" alt="An image of the visual indicator component."></p>
 <h2 id="serializedfields-and-properties">SerializedFields and properties</h2>
 <p>The following sections describes each references and settings of the component:</p>

@@ -97,7 +97,7 @@
 <p><img src="../../images/simple-target-indicators-demo-scene.png" alt="An image of the simple target indicators demo scene"></p>
 <p>This scene demonstrates a minimal version of target indicators and is a good starting point. It uses only one <a class="xref" href="visual-indicator-manager-component.html">visual indicator manager</a> and one <a class="xref" href="visual-indicator-component.html">visual indicator</a> prefab.</p>
 <p>The assigned default visual indicator prefab assigned in the visual indicator manager is what indicators get instantiated in the scene. They are parented to the Canvas under the <strong>Target Indicators Content</strong> GameObject.</p>
-<p>The <strong>Simple Targets Indicators Setup Example</strong> GameObject contains a script <code>SimpleTargetIndicatorSetupExample</code> that shows a minimal code example for assigning targets to the target indicator manager on <code>Start</code>.</p>
+<p>The <strong>Simple Targets Indicators Setup Example</strong> GameObject contains the <code>SimpleTargetIndicatorSetupExample</code> script. This demonstrates the standard <a class="xref" href="visual-indicator-manager-component.html#auto-mode">Auto</a> mode workflow, where targets are added directly to the <code>TargetIndicatorManager</code> and the UI responds automatically.</p>
 <div class="NOTE">
 <h5>Note</h5>
 <p>Changing the target indicator manager's boundary type to compass tape will stop the target indicators from updating. Compass tape boundary types require special configuration. Refer to <a class="xref" href="visual-indicator-manager-component.html#compass-tape-visual-indicator-manager">compass tape visual indicator manager</a> to learn how to work with a compass tape target indicator.</p>
@@ -111,7 +111,7 @@
 <p><img src="../../images/multiple-target-indicator-categories-demo-scene.png" alt="An image of the multiple target indicator categories demo scene"></p>
 <p>This scene demonstrates using multiple target indicator managers for different visual indicator categories. There are two target indicator managers that both use padded boundary type but with different padding values.</p>
 <p>The reason is because one of the visual indicators, the <strong>Enemy Target Indicator</strong> found in the <strong>Example Assets</strong> prefabs folder, has an offset raised by 10 pixels. Therefore it uses a target indicator manager with an adjusted boundary so it aligns with the other visual indicators on the screen.</p>
-<p>The <strong>Multiple Target Categories Setup Example</strong> GameObject contains a script <code>MultipleTargetIndicatorCategoriesExample</code> that shows a minimal code example for assigning targets with different visual indicators to two different visual indicator managers on <code>Start</code>.</p>
+<p>The <strong>Multiple Target Categories Setup Example</strong> GameObject contains the <code>MultipleTargetIndicatorCategoriesExample</code> script. This demonstrates the <a class="xref" href="visual-indicator-manager-component.html#manual-mode">Manual</a> mode workflow, where targets are added directly to the <code>VisualIndicatorManager</code> using specific prefabs, giving you exact control over which UI elements are spawned for different target types.</p>
 
 </article>
           </div>

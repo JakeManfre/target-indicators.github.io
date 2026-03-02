@@ -92,33 +92,120 @@
 <h3 id="content">Content</h3>
 <p>This is the <code>RectTransform</code> in the Canvas you want to instantiate your visual indicators and parent them to.</p>
 <h3 id="add-indicator-mode">Add indicator mode</h3>
-<p>This property controls whether visual indicators should automatically be created when the <code>TargetIndicatorManager</code> adds targets. If set to manual, it will only instantiate visual indicators when you call <code>TargetIndicatorManager.AddTargetIndicator</code>.</p>
-<h2 id="api">API</h2>
-<p>The visual indicator manager offers several APIs for you to have more control over what visual indicators get instantiated and when.</p>
-<h3 id="add-target-indicator">Add target indicator</h3>
-<p>If you want the visual indicator manager to track every target that is added to the target indicator manager you can add targets directly to the <code>TargetIndicatorManager</code> and leave the <code>AddIndicatorMode</code> to <code>Auto</code>. This way the visual indicator manager will automatically instantiate and update visual indicators.</p>
-<p>If you want the visual indicator manager to track specific targets from the target indicator manager, set the <code>AddIndicatorMode</code> to <code>Manual</code> and use one of the following APIs:</p>
+<p>This property controls the architectural flow for how visual indicators are instantiated. It dictates whether the <code>VisualIndicatorManager</code> acts as an event-driven listener or a direct orchestrator.</p>
+<p>There are two modes:</p>
 <ol>
-<li><p><strong>AddTargetIndicator(Transform target)</strong></p>
-<p>This API takes a transform of a target to track and adds it to the target indicator manager. It instantiates the default visual indicator prefab.</p>
+<li><strong>Auto:</strong> The manager listens to the <code>TargetIndicatorManager</code>'s lifecycle events. When a target is added directly to the <code>TargetIndicatorManager</code>, this component automatically instantiates the default visual indicator prefab.</li>
+<li><strong>Manual:</strong> The <code>VisualIndicatorManager</code> ignores <code>TargetIndicatorManager</code> lifecycle events for creation. You must explicitly call <code>VisualIndicatorManager.AddTargetIndicator</code> to register the target and create the UI.</li>
+</ol>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If <code>AddIndicatorMode</code> is set to <strong>Auto</strong>, calling <code>VisualIndicatorManager.AddTargetIndicator</code> will do nothing.</p>
+</div>
+<h2 id="manage-visual-indicators">Manage visual indicators</h2>
+<p>The <code>VisualIndicatorManager</code> is designed to streamline UI creation so you do not have to manually handle prefab instantiation and UI parenting. How you interact with the API depends on your <code>AddIndicatorMode</code>.</p>
+<p><a id="auto-mode"></a></p>
+<h3 id="auto">Auto</h3>
+<p>When set to <code>AddIndicatorMode.Auto</code>, you interact exclusively with the <code>TargetIndicatorManager</code> for adding targets. The <code>VisualIndicatorManager</code> will automatically catch the <code>TargetIndicatorsAdded</code> event and generate the UI.</p>
+<pre><code class="lang-cs" name="AddVisualTargetInAutoModeExample">
+[SerializeField]
+VisualIndicator _defaultVisualIndicatorPrefab;
+
+public void AddVisualTargetInAutoModeExample(
+    TargetIndicatorManager targetIndicatorManager,
+    VisualIndicatorManager visualIndicatorManager,
+    Transform target)
+{
+    // Set `AddIndicatorMode` to auto if it's not set in inspector
+    visualIndicatorManager.AddIndicatorMode = AddIndicatorMode.Auto;
+
+    // Set the default prefab if it's not set in the inspector
+    visualIndicatorManager.DefaultVisualIndicatorPrefab =
+        _defaultVisualIndicatorPrefab;
+
+    // Add the target directly to `TargetIndicatorManager` without
+    // adding it to the `VisualIndicatorManager`.
+    // The `VisualIndicatorManager` will automatically respond to
+    // the added target and instantiate the default prefab.
+    var wasAdded = targetIndicatorManager.TryAddTarget(
+            target, out var targetIndicator);
+}
+</code></pre>
+<div class="TIP">
+<h5>Tip</h5>
+<p><strong>Want to see Auto mode in action?</strong>
+If you learn best by looking at a working project, check out the &quot;Simple Demo&quot; in the <a class="xref" href="sample-scenes.html">Sample Scenes</a>. It includes a complete script demonstrating this exact event-driven workflow.</p>
+</div>
+<p><a id="manual-mode"></a></p>
+<h3 id="manual">Manual</h3>
+<p>When set to <code>AddIndicatorMode.Manual</code>, you interact with the <code>VisualIndicatorManager</code> API directly. This automatically registers the target with the underlying <code>TargetIndicatorManager</code> and immediately instantiates the visual indicator.</p>
+<p>There are two methods for adding a target indicator in this mode:</p>
+<ol>
+<li><p><strong>Add a target with the default prefab</strong>
+Use <code>AddTargetIndicator(Transform target)</code> to register the target with the <code>TargetIndicatorManager</code> and instantiate the <code>DefaultVisualIndicatorPrefab</code>.</p>
 </li>
-<li><p><strong>AddTargetIndicator(Transform target, VisualIndicator indicatorPrefab)</strong></p>
-<p>This API takes a transform of a target to track and adds it to the target indicator manager. It instantiates a new instance from the <code>indicatorPrefab</code> passed in as the second argument. Use this when you want a specific visual indicator for a target.</p>
+<li><p><strong>Add a target with a custom prefab</strong>
+Use <code>AddTargetIndicator(Transform target, VisualIndicator indicatorPrefab)</code> to register the target and instantiate the specific <code>indicatorPrefab</code> passed as the second argument. Ideal for assigning unique icons per target.</p>
 </li>
 </ol>
-<h3 id="hide-a-visual-indicator">Hide a visual Indicator</h3>
-<p><code>VisualIndicator.HideVisualIndicator</code> will hide the content and rotation content of a visual indicator without disabling the component at the root. Use this to temporarily hide a visual indicator if you don't want to destroy it.</p>
-<h3 id="show-a-visual-indicator">Show a visual Indicator</h3>
-<p><code>VisualIndicator.ShowVisualIndicator</code> This API shows the content and rotation content of a visual indicator that was previously hidden. Use this to show hidden indicators from <code>HideVisualIndicator</code>. Visual indicators are shown when first instantiated.</p>
-<h3 id="removetargetindicator">RemoveTargetIndicator</h3>
-<p><code>VisualIndicator.RemoveTargetIndicator</code> removes a target from the target indicator manager. Use this when you are done tracking a target and want to destroy the visual indicator.</p>
+<p>Use this approach if you need tight control over exactly when UI elements are created, or if you need to spawn different prefabs for different targets.</p>
+<pre><code class="lang-cs" name="AddVisualTargetInManualModeExample">
+[SerializeField]
+VisualIndicator _customVisualIndicatorPrefab;
+
+public void AddVisualTargetInManualModeExample(
+    VisualIndicatorManager visualIndicatorManager,
+    Transform target)
+{
+    // Set `AddIndicatorMode` to manual if it's not set in inspector
+    visualIndicatorManager.AddIndicatorMode = AddIndicatorMode.Manual;
+
+    // Add the target directly to `VisualIndicatorManager` without
+    // adding it to the `TargetIndicatorManager`.
+    // The `VisualIndicatorManager` will automatically add the
+    // target to the `TargetIndicatorManager` and instantiate
+    // the custom prefab for that target.
+    visualIndicatorManager.AddTargetIndicator(
+        target, _customVisualIndicatorPrefab);
+}
+</code></pre>
+<div class="TIP">
+<h5>Tip</h5>
+<p><strong>Want to see Manual mode in action?</strong>
+Check out the &quot;Multiple Categories Demo&quot; in the <a class="xref" href="sample-scenes.html">Sample Scenes</a>. It includes a complete script demonstrating how to use this mode to explicitly assign custom prefabs to different target categories.</p>
+</div>
+<h2 id="additional-useful-apis">Additional useful APIs</h2>
+<p>When managing the visibility or lifecycle of existing indicators, use the following APIs. Each of these methods requires the <code>TargetIndicatorId</code> associated with the target.</p>
+<h3 id="hide-a-visual-indicator">Hide a visual indicator</h3>
+<p>Use <code>VisualIndicatorManager.HideVisualIndicator(TargetIndicatorId id)</code> to hide the core and rotation content of a visual indicator without disabling the component at the root. Use this to temporarily hide a visual indicator if you don't want to destroy it.</p>
+<h3 id="show-a-visual-indicator">Show a visual indicator</h3>
+<p>Use <code>VisualIndicatorManager.ShowVisualIndicator(TargetIndicatorId id)</code> to show the core and rotation content of a visual indicator that was previously hidden. Use this to reveal hidden indicators from <code>HideVisualIndicator</code>. Visual indicators are shown by default when first instantiated.</p>
+<h3 id="remove-a-target-indicator">Remove a target indicator</h3>
+<p>Use <code>VisualIndicatorManager.RemoveTargetIndicator(TargetIndicatorId id)</code> to completely remove a target from the target indicator manager and destroy its UI GameObject. Use this when you are entirely done tracking a target.</p>
 <h2 id="compass-tape-visual-indicator-manager">Compass tape visual indicator manager</h2>
-<p>The <code>CompassTapeVisualIndicatorManager</code> inhertis from <code>VisualIndicatorManager</code> and is specialized for handling target indicator managers with a <code>CompassTape</code> boundary type. It follows the same setup pattern. Use this class as an example to inherit the base visual indicator manager overriding the functionality with custom behavior.</p>
+<p>The <code>CompassTapeVisualIndicatorManager</code> inherits from <code>VisualIndicatorManager</code> and is specialized for handling target indicator managers with a <code>CompassTape</code> boundary type. It follows the same setup pattern. Use this class as an example to inherit the base visual indicator manager overriding the functionality with custom behavior.</p>
 <p>It requires a special implementation of <code>CompassTapeVisualIndicator</code> prefab for its <code>DefaultVisualIndicatorPrefab</code>. Refer to <a class="xref" href="visual-indicator-component.html#compass-tape-visual-indicator">compass tape visual indicator</a> for more information.</p>
 <p><img src="../../images/compass-tape-visual-indicator-manager-component.png" alt="An image of the Compass Tape Visual Indicator Manager component"></p>
 <h3 id="full-tape-to-visible-tape-ratio">Full tape to visible tape ratio</h3>
 <p>This is a unique property on the <code>CompassTapeVisualIndicatorManager</code> that is used for calculating the position on the compass tape's <code>RectTransform</code> to place the visual indicator. The value represents the ratio between the full tape and the visible tape. For example, if the full tape is twice the length of the visible tape this value would be 2.</p>
 <p>Refer to <a class="xref" href="../user_guide/target-indicator.html#compass-tape-boundary-type">compass tape boundary type</a> to learn more about how compass tapes work.</p>
+<h2 id="performance-considerations-and-limitations">Performance considerations and limitations</h2>
+<p>The <code>VisualIndicatorManager</code> and its associated components are provided as a prebuilt, general-purpose solution to get target indicators rendering on screen with minimal setup. It serves as an excellent jumping-off point for prototypes, straightforward use cases, or developers who want a simple, out-of-the-box UI system.</p>
+<p>However, unlike the underlying <code>TargetIndicatorManager</code>, it has architectural limitations that you should consider for performance-critical applications:</p>
+<ul>
+<li><strong>Garbage Collection (GC):</strong> The manager relies on standard <code>Instantiate()</code> and <code>Destroy()</code> calls to manage the UI lifecycle. In highly dynamic games where targets are frequently added and removed, this will create GC pressure and memory fragmentation.</li>
+<li><strong>No Built-in Pooling:</strong> It does not utilize object pooling by default, meaning every new target incurs the overhead of crossing the C#/C++ bridge to spawn a new GameObject.</li>
+</ul>
+<h2 id="building-custom-visual-indicators">Building custom visual indicators</h2>
+<p>The core <code>TargetIndicatorManager</code> is designed to be highly performant and completely allocation-free during its update loops, passing memory-safe buffers via <code>ReadOnlySpan&lt;T&gt;</code>.</p>
+<p>If your project requires strict zero-allocation in hot paths, or if you need highly specialized visual logic, such as UI Toolkit integration, visual effects or animations, it's highly recommend building your own custom UI manager directly on top of the <code>TargetIndicatorManager</code>.</p>
+<p>To leverage the high-performance data layer in a custom, production-ready visual system:</p>
+<ol>
+<li><strong>Implement Object Pooling:</strong> Instead of instantiating and destroying UI prefabs, pre-allocate a pool of visual indicator GameObjects (or UI Toolkit visual elements) during initialization.</li>
+<li><strong>Listen to Lifecycle Events:</strong> Subscribe your custom manager to the <code>TargetIndicatorsAdded</code>, <code>TargetIndicatorsUpdated</code>, and <code>TargetIndicatorsRemoved</code> events.</li>
+<li><strong>Process Spans:</strong> Iterate over the zero-allocation <code>ReadOnlySpan&lt;TargetIndicator&gt;</code> provided by those events. Grab inactive elements from your pool when targets are added, update their screen poses using the span data, and return them to the pool when targets are removed.</li>
+</ol>
+<p>You can use the source code of <code>VisualIndicatorManager.cs</code> as a reference for how to interface with the core API while swapping out the standard instantiation logic for your own robust, low-GC architecture.</p>
 
 </article>
           </div>
