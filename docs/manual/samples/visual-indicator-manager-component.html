@@ -96,11 +96,11 @@
 <p>There are two modes:</p>
 <ol>
 <li><strong>Auto:</strong> The manager listens to the <code>TargetIndicatorManager</code>'s lifecycle events. When a target is added directly to the <code>TargetIndicatorManager</code>, this component automatically instantiates the default visual indicator prefab.</li>
-<li><strong>Manual:</strong> The <code>VisualIndicatorManager</code> ignores <code>TargetIndicatorManager</code> lifecycle events for creation. You must explicitly call <code>VisualIndicatorManager.AddTargetIndicator</code> to register the target and create the UI.</li>
+<li><strong>Manual:</strong> The <code>VisualIndicatorManager</code> ignores <code>TargetIndicatorManager</code> lifecycle events for creation. You must explicitly call <code>VisualIndicatorManager.TryAddVisualIndicator</code> to register the target and create the UI.</li>
 </ol>
 <div class="NOTE">
 <h5>Note</h5>
-<p>If <code>AddIndicatorMode</code> is set to <strong>Auto</strong>, calling <code>VisualIndicatorManager.AddTargetIndicator</code> will do nothing.</p>
+<p>If <code>AddIndicatorMode</code> is set to <strong>Auto</strong>, calling <code>VisualIndicatorManager.TryAddVisualIndicator</code> will safely abort, return <code>false</code>, and log a warning to the console to prevent double-instantiation.</p>
 </div>
 <h2 id="manage-visual-indicators">Manage visual indicators</h2>
 <p>The <code>VisualIndicatorManager</code> is designed to streamline UI creation so you do not have to manually handle prefab instantiation and UI parenting. How you interact with the API depends on your <code>AddIndicatorMode</code>.</p>
@@ -139,13 +139,13 @@ If you learn best by looking at a working project, check out the &quot;Simple De
 <p><a id="manual-mode"></a></p>
 <h3 id="manual">Manual</h3>
 <p>When set to <code>AddIndicatorMode.Manual</code>, you interact with the <code>VisualIndicatorManager</code> API directly. This automatically registers the target with the underlying <code>TargetIndicatorManager</code> and immediately instantiates the visual indicator.</p>
-<p>There are two methods for adding a target indicator in this mode:</p>
+<p>There are two methods for adding a target indicator in this mode. Both use a safe Try-Get pattern that returns <code>true</code> if successful and outputs the generated <code>TargetIndicatorId</code>:</p>
 <ol>
 <li><p><strong>Add a target with the default prefab</strong>
-Use <code>AddTargetIndicator(Transform target)</code> to register the target with the <code>TargetIndicatorManager</code> and instantiate the <code>DefaultVisualIndicatorPrefab</code>.</p>
+Use <code>TryAddVisualIndicator(Transform target, out TargetIndicatorId id)</code> to register the target with the <code>TargetIndicatorManager</code> and instantiate the <code>DefaultVisualIndicatorPrefab</code>.</p>
 </li>
 <li><p><strong>Add a target with a custom prefab</strong>
-Use <code>AddTargetIndicator(Transform target, VisualIndicator indicatorPrefab)</code> to register the target and instantiate the specific <code>indicatorPrefab</code> passed as the second argument. Ideal for assigning unique icons per target.</p>
+Use <code>TryAddVisualIndicator(Transform target, VisualIndicator indicatorPrefab, out TargetIndicatorId id)</code> to register the target and instantiate the specific <code>indicatorPrefab</code> passed as the second argument. This will strictly validate that the prefab matches the required type for the manager. Ideal for assigning unique icons per target.</p>
 </li>
 </ol>
 <p>Use this approach if you need tight control over exactly when UI elements are created, or if you need to spawn different prefabs for different targets.</p>
@@ -165,8 +165,8 @@ public void AddVisualTargetInManualModeExample(
     // The `VisualIndicatorManager` will automatically add the
     // target to the `TargetIndicatorManager` and instantiate
     // the custom prefab for that target.
-    visualIndicatorManager.AddTargetIndicator(
-        target, _customVisualIndicatorPrefab);
+    var wasAdded = visualIndicatorManager.TryAddVisualIndicator(
+        target, _customVisualIndicatorPrefab, out var id);
 }
 </code></pre>
 <div class="TIP">

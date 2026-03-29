@@ -75,13 +75,29 @@
 <p>All notable changes to this project will be documented in this file.</p>
 <p>The format is based on <a href="https://keepachangelog.com/en/1.1.0/">Keep a Changelog</a>,
 and this project adheres to <a href="https://semver.org/spec/v2.0.0.html">Semantic Versioning</a>.</p>
-<h2 id="121---02282026">[1.2.1] - 02/28/2026</h2>
+<h2 id="130---03292026">[1.3.0] - 03/29/2026</h2>
+<h3 id="added">Added</h3>
+<ul>
+<li>Added new API <code>VisualIndicatorManager.TryAddVisualIndicator</code> and <code>CompassTapeVisualIndicatorManager.TryAddVisualIndicator</code>. This new Try-Get pattern returns a boolean for explicit success/failure states and outputs the generated <code>TargetIndicatorId</code> to allow easier indicator management when using the provided samples visual indicator managers.</li>
+</ul>
+<h3 id="deprecated">Deprecated</h3>
+<ul>
+<li>Deprecated <code>VisualIndicatorManager.AddTargetIndicator(Transform)</code> and <code>CompassTapeVisualIndicatorManager.AddTargetIndicator(Transform, VisualIndicator)</code> in favor of the safer <code>TryAddVisualIndicator</code> API. These are marked <code>[Obsolete]</code> meaning they will still function but will log a warning for you to migrate to the new API.</li>
+</ul>
 <h3 id="fixed">Fixed</h3>
+<ul>
+<li>Fixed a bug so that the <code>VisualIndicatorManager.RemoveTargetIndicator</code> correctly removes both the UI <code>VisualIndicator</code> and the tracked target from the <code>TargetIndicatorManager</code>.</li>
+<li>Minor performance improvements with <code>VisualIndicatorManager</code> and <code>CompassTapeVisualIndicatorManager</code>.</li>
+<li>Fixed an issue where <code>CompassTapeVisualIndicatorManager</code> would silently fail to use invalid prefabs for visual indicators. The prefab for a visual indicator now require <code>CompassTapeVisualIndicator</code> components on them.</li>
+<li>Fixed an issue where the <code>VisualIndicatorManager</code> and <code>CompassTapeVisualIndicatorManager</code> would spam the console every frame instead of logging a single warning when trying to use the <code>TryAddVisualIndicator</code> and <code>TryRemoveVisualIndicator</code> APIs with the <code>AddIndicatorMode</code> set to <code>Auto</code>.</li>
+</ul>
+<h2 id="121---02282026">[1.2.1] - 02/28/2026</h2>
+<h3 id="fixed-1">Fixed</h3>
 <ul>
 <li>Fixed an issue where <code>NullReferenceExceptions</code> would be thrown from the <code>BoundaryVisualizer</code> if the <code>TargetIndicatorManager.Camera</code> was <code>null</code>.</li>
 </ul>
 <h2 id="120">[1.2.0]</h2>
-<h3 id="added">Added</h3>
+<h3 id="added-1">Added</h3>
 <ul>
 <li>Added a console warning to the <code>Camera</code> property setter to alert developers if the tracked camera is explicitly set to <code>null</code> at runtime.</li>
 </ul>
@@ -90,7 +106,7 @@ and this project adheres to <a href="https://semver.org/spec/v2.0.0.html">Semant
 <li><code>TargetIndicatorManager</code> no longer disables itself in <code>Awake</code> if a camera cannot be found. It now logs a warning and remains enabled, waiting for a valid camera to be set.</li>
 <li>Optimizations for calculation screen poses for targets when using <code>BoundaryType.Ellipse</code> and <code>BoundaryType.CompassTape</code>.</li>
 </ul>
-<h3 id="fixed-1">Fixed</h3>
+<h3 id="fixed-2">Fixed</h3>
 <ul>
 <li>Fixed <code>NullReferenceException</code>s that occurred when tracking active targets, or when calling <code>TryAddTarget</code>, <code>TryGetTargetIndicator</code>, <code>GetScreenPose</code>, and <code>IsOutsideBoundary</code> with a null <code>Camera</code>. The <code>TargetIndicatorManager</code> now safely returns default indicator data (<code>Pose.identity</code> and <code>false</code>) instead of throwing exceptions.</li>
 <li>Fixed a potential <code>DivideByZeroException</code> in <code>RectangleScreenPose.ProjectOnRectangle</code> that could occur if a tracked target was perfectly aligned vertically with the center of the screen.</li>
@@ -124,11 +140,11 @@ and this project adheres to <a href="https://semver.org/spec/v2.0.0.html">Semant
 <li>Removed the <code>Documentation~</code> folder that included the source docs pages used to generate the docFX. This reduces the files needed to download when adding the package to your project. You can find the docs web page at <a href="https://jakemanfre.github.io/target-indicators.github.io/manual/index.html">https://jakemanfre.github.io/target-indicators.github.io/manual/index.html</a></li>
 </ul>
 <h2 id="110">[1.1.0]</h2>
-<h3 id="added-1">Added</h3>
+<h3 id="added-2">Added</h3>
 <ul>
 <li>Added <a class="xref" href="api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_GetChanges">TargetIndicatorManager.GetChanges</a> API to allow for manual synchronization of world-to-screen transformations and explicit dispatching of indicator events outside of the standard Unity Update loop.</li>
 </ul>
-<h3 id="fixed-2">Fixed</h3>
+<h3 id="fixed-3">Fixed</h3>
 <ul>
 <li>Fixed an issue where adding targets could cause heap allocations due to dictionary resizing. Internal collections are now strictly pre-allocated during initialization to maintain zero allocations.</li>
 <li>Fixed an issue where calling <code>TargetIndicatorManager.RemoveAllTargets</code> failed to invoke the <code>TargetIndicatorsRemoved</code> event.</li>

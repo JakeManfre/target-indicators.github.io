@@ -106,7 +106,7 @@
 <p><img src="../../images/compass-tape-target-indicators-demo-scene.png" alt="An image of the compass tape target indicators demo scene"></p>
 <p>This scene demonstrates how to setup a compass tape target indicator. The target indicator manager's <code>BoundaryType</code> is set to <code>CompassTape</code> and uses the <code>CompassTapeVisualIndicator</code> on the <strong>Compass Tape Visual Indicator Manager</strong> GameObject.</p>
 <p>The default visual indicator prefab uses the <code>CompassTapeVisualIndicator</code> prefab. The compass tape visual indicators are instantiated and parented to the <strong>UI Compass Tape Indicators Content</strong> GameObject under the Canvas.</p>
-<p>The <strong>Compass Tape Target Indicators Setup Example</strong> GameObject contains a script <code>CompassTapeTargetIndicatorsSetupExample</code> that shows a minimal code example for assigning targets to the compass target visual indicator manager on <code>Start</code>.</p>
+<p>The <strong>Compass Tape Target Indicators Setup Example</strong> GameObject contains a script <code>CompassTapeTargetIndicatorsSetupExample</code> that shows a minimal code example for assigning targets to the compass target visual indicator manager in <code>OnEnable</code> and removes them in <code>OnDisable</code>.</p>
 <h3 id="multiple-categories-demo">Multiple Categories Demo</h3>
 <p><img src="../../images/multiple-target-indicator-categories-demo-scene.png" alt="An image of the multiple target indicator categories demo scene"></p>
 <p>This scene demonstrates using multiple target indicator managers for different visual indicator categories. There are two target indicator managers that both use padded boundary type but with different padding values.</p>
