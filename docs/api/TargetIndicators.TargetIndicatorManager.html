@@ -181,6 +181,32 @@ positions in the environment.</p>
       </tr>
     </tbody>
   </table>
+  <a id="TargetIndicators_TargetIndicatorManager_CalculateLookAtDot_" data-uid="TargetIndicators.TargetIndicatorManager.CalculateLookAtDot*"></a>
+  <h4 id="TargetIndicators_TargetIndicatorManager_CalculateLookAtDot" data-uid="TargetIndicators.TargetIndicatorManager.CalculateLookAtDot">CalculateLookAtDot</h4>
+  <div class="markdown level1 summary"><p>Gets or sets whether to calculate the dot product between the reference forward vector and the direction to
+the target. Enable this to use <a class="xref" href="TargetIndicators.TargetIndicator.html#TargetIndicators_TargetIndicator_LookAtDot">LookAtDot</a> for advanced UI mechanics.
+Disable for a minor performance gain.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CalculateLookAtDot { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <a id="TargetIndicators_TargetIndicatorManager_Camera_" data-uid="TargetIndicators.TargetIndicatorManager.Camera*"></a>
   <h4 id="TargetIndicators_TargetIndicatorManager_Camera" data-uid="TargetIndicators.TargetIndicatorManager.Camera">Camera</h4>
   <div class="markdown level1 summary"><p>The scene camera that is used to calculate the screen pose of tracked targets.
@@ -202,6 +228,32 @@ If this is null or destroyed, the manager will safely output default pose data f
     <tbody>
       <tr>
         <td><span class="xref">Camera</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="TargetIndicators_TargetIndicatorManager_CompassForwardReferenceOverride_" data-uid="TargetIndicators.TargetIndicatorManager.CompassForwardReferenceOverride*"></a>
+  <h4 id="TargetIndicators_TargetIndicatorManager_CompassForwardReferenceOverride" data-uid="TargetIndicators.TargetIndicatorManager.CompassForwardReferenceOverride">CompassForwardReferenceOverride</h4>
+  <div class="markdown level1 summary"><p>An optional transform used to override the forward reference vector when the <a class="xref" href="TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_BoundaryType">BoundaryType</a>
+is set to <a class="xref" href="TargetIndicators.BoundaryType.html#TargetIndicators_BoundaryType_CompassTape">CompassTape</a>. Useful for tracking targets relative to an independent
+object (like a vehicle hull) rather than a free-look camera.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Transform CompassForwardReferenceOverride { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Transform</span></td>
         <td></td>
       </tr>
     </tbody>

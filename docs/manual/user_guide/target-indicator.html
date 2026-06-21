@@ -94,6 +94,10 @@
 <p>For <code>BoundaryType.CompassTape</code> and <code>BoundaryType.Unbounded</code> the <code>IsOutsideBoundary</code> property will always be <code>false</code>. <code>BoundaryType.Compass</code> requires knowledge about your specific compass tape setup to determine if it's outside the boundary.sTape</p>
 <p>Refer to <a class="xref" href="../samples/visual-indicator-component.html#compass-tape-boundary-check">Compass tape boundary check</a> to learn how you can check if the target indicator is outside of your compass tape boundary.</p>
 </div>
+<h3 id="distance">Distance</h3>
+<p>The <a class="xref" href="../../api/TargetIndicators.TargetIndicator.html#TargetIndicators_TargetIndicator_Distance">Distance</a> property indicates the distance in world space from the reference point ((xref:TargetIndicators.TargetIndicatorManager.Camera) or <a class="xref" href="../../api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_CompassForwardReferenceOverride">TargetIndicatorManager.CompassForwardReferenceOverride</a>) to the target.</p>
+<h3 id="look-at-dot">Look at dot</h3>
+<p>The <a class="xref" href="../../api/TargetIndicators.TargetIndicator.html#TargetIndicators_TargetIndicator_LookAtDot">LookAtDot</a> property is the dot product of the reference forward vector and the direction to the target. The values range from 1 (looking directly at the target) to -1 (looking directly away from the target). To understand what the dot product is, refer to <a href="#understand-the-dot-product">Understand the dot product</a>.</p>
 <h2 id="screen-coordinates">Screen coordinates</h2>
 <p>Target indicators uses screen coordinates in pixels to describe the placement of a target indicator. The bottom left of the screen corresponds to coordinate (0, 0) and the top right of the screen corresponds to (<a href="https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Screen-width.html">Screen.width</a>, <a href="https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Screen-height.html">Screen.height</a>).</p>
 <p><img src="../../images/screen-coordinate-system.png" alt="An image showing the screen space coordinate system."></p>
@@ -131,14 +135,14 @@
 </li>
 </ol>
 <p>Refer to the image below to understand how the screen pose for a compass tape is mapped to a compass tape.</p>
-<p><img src="../../images/compass-tape-coordinate-explained.png" alt="An image that describes how the screen pose x coordinate maps to a compass tape."></p>
+<p><img src="../../images/compass-tape-coordinate-explained.png" alt="A top-down diagram mapping a tracked target's rotational angle on the XZ plane to a linear compass tape UI."></p>
 <p>This image represents looking down onto a player on the XZ plane of the world.</p>
 <ol type="A">
-    <li>The point where the user is standing facing the positive Z axis.</li>
+    <li>The point where the user is standing facing the positive Z-axis.</li>
     <li>The point directly behind the player that corresponds to 0, or the left end of the full tape. The values increase around the circle in a clockwise rotation.</li>
-    <li>The point directly in front of the player that corresponds to 0.5, or half way across the full tape.</li>
-    <li>The point also directly behind the player that corresponds to 1, or the right end of the full tape. This is the highest value on the compass tape and rotating clockwise beyond this point will wrap the value back to 0.</li>
-    <li>The point of a tracked target in front of and to the left of the player. The value will be ≈ 0.3, or about one third from the left end of the full tape represented by the matching green circles.</li>
+    <li>The point directly in front of the player that corresponds to 0.5, or halfway across the full tape.</li>
+    <li>The point also directly behind the player that corresponds to 1, or the right end of the full tape. This is the highest value on the compass tape, and rotating clockwise beyond this point will wrap the value back to 0.</li>
+    <li>The point of a tracked target in front of and to the left of the player. The value will be ≈ 0.3, or about one-third from the left end of the full tape, represented by the matching target dot on the tape above.</li>
     <li>The left end of the full tape.</li>
     <li>The left end of the visible tape.</li>
     <li>The right end of the visible tape.</li>
@@ -149,6 +153,27 @@
 <h3 id="unbounded-boundary-type">Unbounded boundary type</h3>
 <p>Similar to <code>Padded</code> and <code>Absolute</code> boundary types, <code>Unbounded</code> uses direct pixel screen coordinates. However, when a target moves outside the camera's field of view, its corresponding visual indicator will also move off-screen, as it is not clamped to the screen edges.</p>
 <p>When a target rotates behind the player, resulting in <code>TargetIndicator.ScreenPose.position.z</code> becoming less than 0, the system sets <code>TargetIndicator.ScreenPose.position.x</code> to <code>float.MaxValue</code>. This ensures visual indicators do not incorrectly appear on screen when their target is behind the player.</p>
+<h2 id="understand-the-dot-product">Understand the dot product</h2>
+<p>The dot product is a mathematical operation that compares two vectors and returns a single float value representing how aligned they are. In 3D space, the mathematical formula for the dot product of two vectors (<code>A</code> and <code>B</code>) is the sum of the products of their corresponding components:</p>
+<p><code>A · B = (A.x * B.x) + (A.y * B.y) + (A.z * B.z)</code></p>
+<p>For example, if Vector <code>A</code> is <code>(1, 0, 0)</code> and Vector <code>B</code> is <code>(0.8, 0.6, 0)</code>, the math is as follows:</p>
+<p><code>A · B = (1 * 0.8) + (0 * 0.6) + (0 * 0) = 0.8</code></p>
+<div class="WARNING">
+<h5>Warning</h5>
+<p><strong>Normalization is critical.</strong> For the dot product to accurately represent directional alignment, both vectors must be normalized (meaning their length, or magnitude, is exactly <code>1</code>). If you pass unnormalized vectors, the resulting dot product will be scaled by the lengths of the vectors, rendering threshold checks useless.</p>
+</div>
+<p>When both vectors are normalized, the resulting dot product is mathematically equivalent to the cosine of the angle (<code>θ</code>) between them:</p>
+<p><code>A · B = cos(θ)</code></p>
+<p>While the result equals the cosine of the angle, the performance benefit of the dot product is that we never actually calculate angles or use expensive trigonometric functions. Instead, we get the exact same alignment value using only pure multiplication and addition, making it incredibly cheap to calculate every frame for many of targets.</p>
+<p><img src="../../images/dot-product-angles.png" alt="A image showing four vectors labeled A, B, C, and D originating from a center point along a blue Z-axis and red X-axis to demonstrate dot product projections."></p>
+<p>This image visualizes the dot product by projecting different normalized target directions onto a reference forward vector. In this top-down view of the XZ plane, the white circle in the center represents the player (or reference point) facing along the positive Z-axis.</p>
+<ol type="A">
+    <li>A target direction perfectly aligned with the player's forward vector. It points in the exact same direction the player is facing with a dot product of <b>1.0</b>. This means the player is looking directly at the target.</li>
+    <li>A target direction at a 45-degree angle to the player's forward vector. The dotted line shows its projection onto the Z-axis. The dot product is the length of this projection, resulting in a value of approximately <b>0.707</b> (cos(45°)).</li>
+    <li>A target direction perfectly perpendicular to the player's forward vector (lying exactly on the peripheral X-axis). It has zero projection along the forward Z-axis, resulting in a dot product of exactly <b>0.0</b>. This means the target is at a 90-degree angle to the right of the player.</li>
+    <li>A target direction pointing in the exact opposite direction of the player's forward vector. It's dot product is exactly <b>-1.0</b>. This means the target is directly behind the player.</li>
+</ol>
+<p>By checking if the <code>LookAtDot</code> is greater than a specific threshold (for example, <code>LookAtDot &gt;= 0.95f</code>), you can easily trigger UI elements, such as fading in a distance label, only when the player is actively looking within a tight cone around the target. To see an example of this applied to target indicators, refer to the <a class="xref" href="../samples/sample-scenes.html#simple-demo">Samples</a>.</p>
 
 </article>
           </div>

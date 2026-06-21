@@ -93,6 +93,8 @@
 <h3 id="camera">Camera</h3>
 <p>The camera is used for calculating the screen space coordinates of each target. By default, when the <code>TargetIndicatorManager</code> component is added or reset it will assign the camera in your scene with the <code>MainCamera</code> tag. If no camera has the <code>MainCamera</code> tag it will fallback to using the first camera in the scene. Assign the camera that you will be using to display target indicators.</p>
 <p>To assign the camera reference at runtime, use <a class="xref" href="../../api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_Camera">TargetIndicatorManager.Camera</a>.</p>
+<h3 id="compass-forward-reference-override">Compass forward reference override</h3>
+<p>The <a class="xref" href="../../api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_CompassForwardReferenceOverride">CompassForwardReferenceOverride</a> is an optional transform used to override the forward reference vector when the <a href="#boundary-type">Boundary Type</a> is set to <code>CompassTape</code>. This is useful for tracking targets relative to an independent object (like a vehicle hull) rather than a free-look camera.</p>
 <h3 id="boundary-type">Boundary type</h3>
 <p>The <a class="xref" href="../../api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_BoundaryType">BoundaryType</a> property controls how visual indicators are bounded. For example indicators can be bounded by the screen edges or have no boundary at all.</p>
 <p>There are four boundary types:</p>
@@ -136,6 +138,8 @@
 <h3 id="width-and-height">Width and Height</h3>
 <p>When <code>BoundaryType</code> is set to <code>Absolute</code>, the boundary's dimensions are defined by the <a class="xref" href="../../api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_Width">Width</a> and <a class="xref" href="../../api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_Height">Height</a> properties.</p>
 <p>Unlike other boundary types, this size remains fixed and does not adapt to changes in screen size. These properties are ignored if <code>BoundaryType</code> is not <code>Absolute</code>.</p>
+<h3 id="calculate-look-at-dot">Calculate look at dot</h3>
+<p>This flag determines if the dot product should be calculated between the reference forward vector (Camera or compass forward reference override) and the direction to the target. This is useful for advanced UI mechanics such as displaying the the distance to the target with the visual indicator only when looking within a cone of the target as demonstrated in the <a class="xref" href="../samples/sample-scenes.html#simple-demo">Samples</a>. Disable this if not needed for minor performance gain. To understand more about dot products and how they work, refer to <a class="xref" href="target-indicator.html#understand-the-dot-product">Understand the dot product</a>.</p>
 <h2 id="visualize-the-boundary">Visualize the boundary</h2>
 <p>You can visualize your current configuration at edit time and at runtime with the <a class="xref" href="../../api/TargetIndicators.TargetIndicatorBoundaryVisualizer.html">TargetIndicatorBoundaryVisualizer</a> component.</p>
 <p>The following sections describe how to use the <code>TargetIndicatorBoundaryVisualizer</code> to visualize the configured boundary.</p>

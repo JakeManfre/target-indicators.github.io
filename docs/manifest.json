@@ -185,6 +185,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/Target_Indicators_Thumbnail_3.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/Target_Indicators_Thumbnail_3.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/absolute-ellipse-boundary.png",
       "output": {
         "resource": {
@@ -259,6 +269,16 @@
       "output": {
         "resource": {
           "relative_path": "images/compass-tape-visual-indicator-prefab.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/dot-product-angles.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/dot-product-angles.png"
         }
       },
       "version": ""

@@ -114,13 +114,13 @@
   <h3 id="constructors">Constructors
 </h3>
   <a id="TargetIndicators_TargetIndicator__ctor_" data-uid="TargetIndicators.TargetIndicator.#ctor*"></a>
-  <h4 id="TargetIndicators_TargetIndicator__ctor_TargetIndicators_TargetIndicatorId_UnityEngine_Transform_UnityEngine_Pose_System_Boolean_" data-uid="TargetIndicators.TargetIndicator.#ctor(TargetIndicators.TargetIndicatorId,UnityEngine.Transform,UnityEngine.Pose,System.Boolean)">TargetIndicator(TargetIndicatorId, Transform, Pose, bool)</h4>
+  <h4 id="TargetIndicators_TargetIndicator__ctor_TargetIndicators_TargetIndicatorId_UnityEngine_Transform_UnityEngine_Pose_System_Boolean_System_Single_System_Single_" data-uid="TargetIndicators.TargetIndicator.#ctor(TargetIndicators.TargetIndicatorId,UnityEngine.Transform,UnityEngine.Pose,System.Boolean,System.Single,System.Single)">TargetIndicator(TargetIndicatorId, Transform, Pose, bool, float, float)</h4>
   <div class="markdown level1 summary"><p>Constructs a <code>TargetIndicator</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TargetIndicator(TargetIndicatorId id, Transform target, Pose screenPose, bool isOutsideBoundary)</code></pre>
+    <pre><code class="lang-csharp hljs">public TargetIndicator(TargetIndicatorId id, Transform target, Pose screenPose, bool isOutsideBoundary, float distance, float lookAtDot)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -156,16 +156,28 @@
         <td><p>The current state of the target's screen pose if it's outside the boundary.</p>
 </td>
       </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></td>
+        <td><span class="parametername">distance</span></td>
+        <td><p>The world space distance to the target.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></td>
+        <td><span class="parametername">lookAtDot</span></td>
+        <td><p>The dot product of the reference forward vector and the direction to the target.</p>
+</td>
+      </tr>
     </tbody>
   </table>
   <a id="TargetIndicators_TargetIndicator__ctor_" data-uid="TargetIndicators.TargetIndicator.#ctor*"></a>
-  <h4 id="TargetIndicators_TargetIndicator__ctor_TargetIndicators_TargetIndicatorId_UnityEngine_Transform_UnityEngine_Vector3_UnityEngine_Quaternion_System_Boolean_" data-uid="TargetIndicators.TargetIndicator.#ctor(TargetIndicators.TargetIndicatorId,UnityEngine.Transform,UnityEngine.Vector3,UnityEngine.Quaternion,System.Boolean)">TargetIndicator(TargetIndicatorId, Transform, Vector3, Quaternion, bool)</h4>
+  <h4 id="TargetIndicators_TargetIndicator__ctor_TargetIndicators_TargetIndicatorId_UnityEngine_Transform_UnityEngine_Vector3_UnityEngine_Quaternion_System_Boolean_System_Single_System_Single_" data-uid="TargetIndicators.TargetIndicator.#ctor(TargetIndicators.TargetIndicatorId,UnityEngine.Transform,UnityEngine.Vector3,UnityEngine.Quaternion,System.Boolean,System.Single,System.Single)">TargetIndicator(TargetIndicatorId, Transform, Vector3, Quaternion, bool, float, float)</h4>
   <div class="markdown level1 summary"><p>Constructs a <code>TargetIndicator</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TargetIndicator(TargetIndicatorId id, Transform target, Vector3 screenPoint, Quaternion rotation, bool isOutsideBoundary)</code></pre>
+    <pre><code class="lang-csharp hljs">public TargetIndicator(TargetIndicatorId id, Transform target, Vector3 screenPoint, Quaternion rotation, bool isOutsideBoundary, float distance, float lookAtDot)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -207,6 +219,18 @@
         <td><p>The current state of the target's screen pose if it's outside the boundary.</p>
 </td>
       </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></td>
+        <td><span class="parametername">distance</span></td>
+        <td><p>The world space distance to the target.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></td>
+        <td><span class="parametername">lookAtDot</span></td>
+        <td><p>The dot product of the reference forward vector and the direction to the target.</p>
+</td>
+      </tr>
     </tbody>
   </table>
   <h3 id="properties">Properties
@@ -232,6 +256,30 @@
     <tbody>
       <tr>
         <td><a class="xref" href="TargetIndicators.TargetIndicator.html">TargetIndicator</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="TargetIndicators_TargetIndicator_Distance_" data-uid="TargetIndicators.TargetIndicator.Distance*"></a>
+  <h4 id="TargetIndicators_TargetIndicator_Distance" data-uid="TargetIndicators.TargetIndicator.Distance">Distance</h4>
+  <div class="markdown level1 summary"><p>The distance in world space from the reference point (Camera or Compass Override) to the target.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float Distance { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -281,6 +329,31 @@ Otherwise, <code>false</code>.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="TargetIndicators_TargetIndicator_LookAtDot_" data-uid="TargetIndicators.TargetIndicator.LookAtDot*"></a>
+  <h4 id="TargetIndicators_TargetIndicator_LookAtDot" data-uid="TargetIndicators.TargetIndicator.LookAtDot">LookAtDot</h4>
+  <div class="markdown level1 summary"><p>The dot product of the reference forward vector and the direction to the target.
+Ranges from 1 (looking directly at) to -1 (looking directly away).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float LookAtDot { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></td>
         <td></td>
       </tr>
     </tbody>

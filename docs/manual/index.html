@@ -87,7 +87,7 @@
 </div>
 <p><img src="../images/sample-multi-target-indicators.png" alt="A screenshot from the sample's &quot;Multiple Target Indicator Categories Demo&quot; scene showing what target indicators are."></p>
 <div id="responsive-youtube-container">
-    <iframe id="responsive-youtube-iframe" width="100%" src="https://www.youtube.com/embed/ZyOROfm22xU?si=rvkbdNidFjdmFd-7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+    <iframe id="responsive-youtube-iframe" width="100%" src="https://www.youtube.com/embed/ISJ5l4kmcM4?si=GkkipIpCsWV0bNHy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
     </iframe>
 </div>
 <script>
@@ -108,26 +108,36 @@
     // Add event listener for window resize
     window.addEventListener('resize', resizeYoutubeIframe);
 </script>
-<h2 id="highlights">Highlights</h2>
+<h2 id="key-features">Key features</h2>
 <p>Target indicators focuses on simplicity and high performance. The following highlights are what you can expect from this package:</p>
 <ul>
-<li>Supports rectangle and ellipse screen bounds clamping</li>
-<li>Supports rectangle and ellipse absolute size clamping</li>
-<li>Supports compass tape clamping</li>
-<li>Supports unbounded clamping</li>
-<li>Works with any UI system*</li>
-<li>Highly configurable at edit and runtime</li>
-<li>No heap allocations after initialization</li>
-<li>Does not rely on <code>Object.Find</code> or any variations of scene searching at runtime</li>
-<li>Does not rely on <code>GetComponent</code></li>
-<li>Supports fast enter play mode (no domain reload when entering Play Mode)</li>
-<li>Simple and minimal sample scenes</li>
-<li>Works with traditional displays and XR HMDs</li>
+<li><strong>Zero Garbage Collection</strong>: No heap allocations after initialization. Passes memory-safe buffers via ReadOnlySpan<t> to completely avoid garbage collection overhead in hot paths.</t></li>
+<li><strong>Highly Configurable</strong>: Includes multiple boundary types (Padded, Absolute, Unbounded, Compass Tape), configurable clamping shapes (Rectangle, Ellipse), and target distances.</li>
+<li><strong>Smart &quot;Look-At&quot; Thresholds</strong>: Dynamically trigger UI elements, like fading distance labels when the player looks directly at a target.</li>
+<li><strong>In-Editor Boundary Visualizers</strong>: See exactly where your UI boundaries will clamp directly in the Scene view for fast, visual iteration.</li>
+<li><strong>Multi-Layered Boundaries</strong>: Run multiple boundary systems simultaneously. Clamp enemy indicators to an elliptical boundary, quest markers to a padded rectangle, and waypoints to a compass tape with completely independent settings.</li>
+<li><strong>Instant Iteration</strong>: Fully supports Unity's Fast Enter Play Mode (No Domain Reload on Enter Play).</li>
+<li><strong>Blazing Fast</strong>: Does not use Object.Find or GetComponent at runtime.</li>
+<li><strong>Render Pipeline Agnostic</strong>: Works perfectly with URP, HDRP, and Built-in.</li>
+<li><strong>UI Agnostic</strong>: Completely decoupled from the rendering method. Use standard Unity UI, UI Toolkit, or any third-party UI solution.</li>
+<li><strong>XR Ready</strong>: Full support for VR/AR Head Mounted Displays.</li>
 </ul>
 <div class="NOTE">
 <h5>Note</h5>
 <p>*The package has a dependency on <code>com.unity.ugui</code> to support the sample scenes but you are not required to use uGUI to work with target indicators.</p>
 </div>
+<h2 id="technical-details">Technical details</h2>
+<ul>
+<li><strong>Performance</strong>: Strict zero-allocation update loops. Passes memory-safe buffers via <code>ReadOnlySpan&lt;T&gt;</code> to eliminate GC pressure.</li>
+<li><strong>Optimization</strong>: Zero reliance on <code>Object.Find</code>, <code>FindObjectsOfType</code>, or <code>GetComponent</code> at runtime.</li>
+<li><strong>Architecture</strong>: Event-driven design with completely decoupled math and rendering logic. Uses lightweight structs for all data payloads.</li>
+<li><strong>UI Compatibility</strong>: Agnostic architecture; works natively with standard uGUI, UI Toolkit, or custom third-party UI solutions.</li>
+<li><strong>Render Pipelines</strong>: Fully compatible with Built-in, URP, and HDRP.</li>
+<li><strong>Platform Support</strong>: Supports traditional displays and XR Head Mounted Displays (XR).</li>
+<li><strong>Workflow</strong>: Fully supports Unity's Fast Enter Play Mode (Domain Reloading disabled) for rapid iteration.</li>
+<li><strong>Configuration</strong>: All settings including boundary shapes, padding sizes, &quot;Look-At&quot; thresholds and more are fully configurable at both edit and runtime.</li>
+<li><strong>Starter</strong>: Includes clean, minimal sample scenes and drag-and-drop prefabs to demonstrate implementation without project bloat.</li>
+</ul>
 <h2 id="dependencies">Dependencies</h2>
 <p>The following dependencies are required for target indicators.</p>
 <h3 id="unity-version">Unity version</h3>

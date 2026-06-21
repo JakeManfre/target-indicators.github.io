@@ -88,11 +88,22 @@
 <h3 id="rotation-content">Rotation content</h3>
 <p>This is the root content for image or text that will be rotated to point at the target the visual indicator is tracking. Any arrows or other imagery should be parented to this transform.</p>
 <h3 id="core-indicator-visibility">Core Indicator visibility</h3>
-<p>This determines how the indicator content will be visibile for a given state. This property does not affect the rotation content visibility. Refer to <a href="#indicator-visibility">Indicator visibility</a> to learn more about the options.</p>
+<p>This determines how the indicator content will be visible for a given state. This property does not affect the rotation content visibility. Refer to <a href="#indicator-visibility">Indicator visibility</a> to learn more about the options.</p>
 <h3 id="rotation-content-visibility">Rotation content visibility</h3>
 <p>This determines how the indicator's rotation content will be visible for a given state. This property does not affect the indicator visibility.  Refer to <a href="#indicator-visibility">Indicator visibility</a> to learn more about the options.</p>
+<h3 id="distance-label-visibility">Distance label visibility</h3>
+<p>This determines the condition for when the distance text label should be visible on the indicator.</p>
+<ul>
+<li><strong>Never:</strong> The distance label is never visible.</li>
+<li><strong>Always:</strong> The distance label is always visible.</li>
+<li><strong>Look At:</strong> The distance label is visible only when the player is looking  within a specific viewing cone defined by the <a href="#look-at-dot-threshold">LookAtDotThreshold</a>.</li>
+</ul>
+<h3 id="look-at-dot-threshold">Look at dot threshold</h3>
+<p>This property is only used when <strong>Distance label visibility</strong> is set to <code>LookAt</code>. It defines how close to the center of the screen the target must be for the distance label to appear. It evaluates against the <a class="xref" href="../user_guide/target-indicator.html#look-at-dot">TargetIndicator.LookAtDot</a> property. A value of <code>1</code> means the camera must look exactly at the target, while a value of <code>0</code> allows a wide viewing cone with a 90-degree radius. To understand the math and performance benefits behind this property, refer to <a class="xref" href="../user_guide/target-indicator.html#understand-the-dot-product">Understand the dot product</a>.</p>
+<h3 id="distance-label-fade-time">Distance label fade time</h3>
+<p>The duration, in seconds, it takes for the distance label to smoothly transition its opacity to fully visible or fully hidden. This is evaluated dynamically when a target enters or exits the <strong>Look at dot threshold</strong> to prevent jarring UI pop-in.</p>
 <h2 id="indicator-visibility">Indicator visibility</h2>
-<p>There are four types of indicator visibility that determines how visual indicator's content and their rotation content will be visible for any given state:</p>
+<p>There are four types of indicator visibility that determines how visual indicator's core content and their rotation content will be visible for any given state:</p>
 <ol>
 <li><p><strong>Never</strong></p>
 <p>The content is never visible. This is typically only useful for rotation content where you don't want to show an arrow or any additional content that rotates to point at a target.</p>
@@ -104,11 +115,11 @@
 <p>The content is only visible when the target is outside the boundary. This is typically used for the rotation content when you want an arrow to point at the target when it is outside the boundary.</p>
 </li>
 <li><p><strong>Inside boundary</strong></p>
-<p>The content is only visible when the taret is inside the boundary. This is typically used for compass tape visual indicators where you only want the indicator visible when inside the bounds of the compass tape.</p>
+<p>The content is only visible when the target is inside the boundary. This is typically used for compass tape visual indicators where you only want the indicator visible when inside the bounds of the compass tape.</p>
 </li>
 </ol>
 <h2 id="set-up-a-prefab">Set up a prefab</h2>
-<p>The visual indicator prefabs provided in in <code>Assets/Target Indicators/Samples/Core Assets/Prefabs</code> is a good reference for building your own indicators. Create a prefab variant to use it as a template or make a new one from scratch.</p>
+<p>The visual indicator prefabs provided in <code>Assets/Target Indicators/Samples/Core Assets/Prefabs</code> is a good reference for building your own indicators. Create a prefab variant to use it as a template or make a new one from scratch.</p>
 <h3 id="visual-indicator">Visual indicator</h3>
 <p>The following image labels the key components of a visual indicator.</p>
 <p><img src="../../images/visual-indicator-prefab.png" alt="An image of the visual indicator prefab."></p>

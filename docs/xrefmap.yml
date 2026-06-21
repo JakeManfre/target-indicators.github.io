@@ -121,24 +121,24 @@ references:
   commentId: T:TargetIndicators.TargetIndicator
   fullName: TargetIndicators.TargetIndicator
   nameWithType: TargetIndicator
-- uid: TargetIndicators.TargetIndicator.#ctor(TargetIndicators.TargetIndicatorId,UnityEngine.Transform,UnityEngine.Pose,System.Boolean)
-  name: TargetIndicator(TargetIndicatorId, Transform, Pose, bool)
-  href: api/TargetIndicators.TargetIndicator.html#TargetIndicators_TargetIndicator__ctor_TargetIndicators_TargetIndicatorId_UnityEngine_Transform_UnityEngine_Pose_System_Boolean_
-  commentId: M:TargetIndicators.TargetIndicator.#ctor(TargetIndicators.TargetIndicatorId,UnityEngine.Transform,UnityEngine.Pose,System.Boolean)
-  name.vb: New(TargetIndicatorId, Transform, Pose, Boolean)
-  fullName: TargetIndicators.TargetIndicator.TargetIndicator(TargetIndicators.TargetIndicatorId, UnityEngine.Transform, UnityEngine.Pose, bool)
-  fullName.vb: TargetIndicators.TargetIndicator.New(TargetIndicators.TargetIndicatorId, UnityEngine.Transform, UnityEngine.Pose, Boolean)
-  nameWithType: TargetIndicator.TargetIndicator(TargetIndicatorId, Transform, Pose, bool)
-  nameWithType.vb: TargetIndicator.New(TargetIndicatorId, Transform, Pose, Boolean)
-- uid: TargetIndicators.TargetIndicator.#ctor(TargetIndicators.TargetIndicatorId,UnityEngine.Transform,UnityEngine.Vector3,UnityEngine.Quaternion,System.Boolean)
-  name: TargetIndicator(TargetIndicatorId, Transform, Vector3, Quaternion, bool)
-  href: api/TargetIndicators.TargetIndicator.html#TargetIndicators_TargetIndicator__ctor_TargetIndicators_TargetIndicatorId_UnityEngine_Transform_UnityEngine_Vector3_UnityEngine_Quaternion_System_Boolean_
-  commentId: M:TargetIndicators.TargetIndicator.#ctor(TargetIndicators.TargetIndicatorId,UnityEngine.Transform,UnityEngine.Vector3,UnityEngine.Quaternion,System.Boolean)
-  name.vb: New(TargetIndicatorId, Transform, Vector3, Quaternion, Boolean)
-  fullName: TargetIndicators.TargetIndicator.TargetIndicator(TargetIndicators.TargetIndicatorId, UnityEngine.Transform, UnityEngine.Vector3, UnityEngine.Quaternion, bool)
-  fullName.vb: TargetIndicators.TargetIndicator.New(TargetIndicators.TargetIndicatorId, UnityEngine.Transform, UnityEngine.Vector3, UnityEngine.Quaternion, Boolean)
-  nameWithType: TargetIndicator.TargetIndicator(TargetIndicatorId, Transform, Vector3, Quaternion, bool)
-  nameWithType.vb: TargetIndicator.New(TargetIndicatorId, Transform, Vector3, Quaternion, Boolean)
+- uid: TargetIndicators.TargetIndicator.#ctor(TargetIndicators.TargetIndicatorId,UnityEngine.Transform,UnityEngine.Pose,System.Boolean,System.Single,System.Single)
+  name: TargetIndicator(TargetIndicatorId, Transform, Pose, bool, float, float)
+  href: api/TargetIndicators.TargetIndicator.html#TargetIndicators_TargetIndicator__ctor_TargetIndicators_TargetIndicatorId_UnityEngine_Transform_UnityEngine_Pose_System_Boolean_System_Single_System_Single_
+  commentId: M:TargetIndicators.TargetIndicator.#ctor(TargetIndicators.TargetIndicatorId,UnityEngine.Transform,UnityEngine.Pose,System.Boolean,System.Single,System.Single)
+  name.vb: New(TargetIndicatorId, Transform, Pose, Boolean, Single, Single)
+  fullName: TargetIndicators.TargetIndicator.TargetIndicator(TargetIndicators.TargetIndicatorId, UnityEngine.Transform, UnityEngine.Pose, bool, float, float)
+  fullName.vb: TargetIndicators.TargetIndicator.New(TargetIndicators.TargetIndicatorId, UnityEngine.Transform, UnityEngine.Pose, Boolean, Single, Single)
+  nameWithType: TargetIndicator.TargetIndicator(TargetIndicatorId, Transform, Pose, bool, float, float)
+  nameWithType.vb: TargetIndicator.New(TargetIndicatorId, Transform, Pose, Boolean, Single, Single)
+- uid: TargetIndicators.TargetIndicator.#ctor(TargetIndicators.TargetIndicatorId,UnityEngine.Transform,UnityEngine.Vector3,UnityEngine.Quaternion,System.Boolean,System.Single,System.Single)
+  name: TargetIndicator(TargetIndicatorId, Transform, Vector3, Quaternion, bool, float, float)
+  href: api/TargetIndicators.TargetIndicator.html#TargetIndicators_TargetIndicator__ctor_TargetIndicators_TargetIndicatorId_UnityEngine_Transform_UnityEngine_Vector3_UnityEngine_Quaternion_System_Boolean_System_Single_System_Single_
+  commentId: M:TargetIndicators.TargetIndicator.#ctor(TargetIndicators.TargetIndicatorId,UnityEngine.Transform,UnityEngine.Vector3,UnityEngine.Quaternion,System.Boolean,System.Single,System.Single)
+  name.vb: New(TargetIndicatorId, Transform, Vector3, Quaternion, Boolean, Single, Single)
+  fullName: TargetIndicators.TargetIndicator.TargetIndicator(TargetIndicators.TargetIndicatorId, UnityEngine.Transform, UnityEngine.Vector3, UnityEngine.Quaternion, bool, float, float)
+  fullName.vb: TargetIndicators.TargetIndicator.New(TargetIndicators.TargetIndicatorId, UnityEngine.Transform, UnityEngine.Vector3, UnityEngine.Quaternion, Boolean, Single, Single)
+  nameWithType: TargetIndicator.TargetIndicator(TargetIndicatorId, Transform, Vector3, Quaternion, bool, float, float)
+  nameWithType.vb: TargetIndicator.New(TargetIndicatorId, Transform, Vector3, Quaternion, Boolean, Single, Single)
 - uid: TargetIndicators.TargetIndicator.#ctor*
   name: TargetIndicator
   href: api/TargetIndicators.TargetIndicator.html#TargetIndicators_TargetIndicator__ctor_
@@ -160,6 +160,18 @@ references:
   commentId: Overload:TargetIndicators.TargetIndicator.Default
   fullName: TargetIndicators.TargetIndicator.Default
   nameWithType: TargetIndicator.Default
+- uid: TargetIndicators.TargetIndicator.Distance
+  name: Distance
+  href: api/TargetIndicators.TargetIndicator.html#TargetIndicators_TargetIndicator_Distance
+  commentId: P:TargetIndicators.TargetIndicator.Distance
+  fullName: TargetIndicators.TargetIndicator.Distance
+  nameWithType: TargetIndicator.Distance
+- uid: TargetIndicators.TargetIndicator.Distance*
+  name: Distance
+  href: api/TargetIndicators.TargetIndicator.html#TargetIndicators_TargetIndicator_Distance_
+  commentId: Overload:TargetIndicators.TargetIndicator.Distance
+  fullName: TargetIndicators.TargetIndicator.Distance
+  nameWithType: TargetIndicator.Distance
 - uid: TargetIndicators.TargetIndicator.Id
   name: Id
   href: api/TargetIndicators.TargetIndicator.html#TargetIndicators_TargetIndicator_Id
@@ -184,6 +196,18 @@ references:
   commentId: Overload:TargetIndicators.TargetIndicator.IsOutsideBoundary
   fullName: TargetIndicators.TargetIndicator.IsOutsideBoundary
   nameWithType: TargetIndicator.IsOutsideBoundary
+- uid: TargetIndicators.TargetIndicator.LookAtDot
+  name: LookAtDot
+  href: api/TargetIndicators.TargetIndicator.html#TargetIndicators_TargetIndicator_LookAtDot
+  commentId: P:TargetIndicators.TargetIndicator.LookAtDot
+  fullName: TargetIndicators.TargetIndicator.LookAtDot
+  nameWithType: TargetIndicator.LookAtDot
+- uid: TargetIndicators.TargetIndicator.LookAtDot*
+  name: LookAtDot
+  href: api/TargetIndicators.TargetIndicator.html#TargetIndicators_TargetIndicator_LookAtDot_
+  commentId: Overload:TargetIndicators.TargetIndicator.LookAtDot
+  fullName: TargetIndicators.TargetIndicator.LookAtDot
+  nameWithType: TargetIndicator.LookAtDot
 - uid: TargetIndicators.TargetIndicator.ScreenPose
   name: ScreenPose
   href: api/TargetIndicators.TargetIndicator.html#TargetIndicators_TargetIndicator_ScreenPose
@@ -397,6 +421,18 @@ references:
   commentId: Overload:TargetIndicators.TargetIndicatorManager.BoundaryType
   fullName: TargetIndicators.TargetIndicatorManager.BoundaryType
   nameWithType: TargetIndicatorManager.BoundaryType
+- uid: TargetIndicators.TargetIndicatorManager.CalculateLookAtDot
+  name: CalculateLookAtDot
+  href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_CalculateLookAtDot
+  commentId: P:TargetIndicators.TargetIndicatorManager.CalculateLookAtDot
+  fullName: TargetIndicators.TargetIndicatorManager.CalculateLookAtDot
+  nameWithType: TargetIndicatorManager.CalculateLookAtDot
+- uid: TargetIndicators.TargetIndicatorManager.CalculateLookAtDot*
+  name: CalculateLookAtDot
+  href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_CalculateLookAtDot_
+  commentId: Overload:TargetIndicators.TargetIndicatorManager.CalculateLookAtDot
+  fullName: TargetIndicators.TargetIndicatorManager.CalculateLookAtDot
+  nameWithType: TargetIndicatorManager.CalculateLookAtDot
 - uid: TargetIndicators.TargetIndicatorManager.Camera
   name: Camera
   href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_Camera
@@ -409,6 +445,18 @@ references:
   commentId: Overload:TargetIndicators.TargetIndicatorManager.Camera
   fullName: TargetIndicators.TargetIndicatorManager.Camera
   nameWithType: TargetIndicatorManager.Camera
+- uid: TargetIndicators.TargetIndicatorManager.CompassForwardReferenceOverride
+  name: CompassForwardReferenceOverride
+  href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_CompassForwardReferenceOverride
+  commentId: P:TargetIndicators.TargetIndicatorManager.CompassForwardReferenceOverride
+  fullName: TargetIndicators.TargetIndicatorManager.CompassForwardReferenceOverride
+  nameWithType: TargetIndicatorManager.CompassForwardReferenceOverride
+- uid: TargetIndicators.TargetIndicatorManager.CompassForwardReferenceOverride*
+  name: CompassForwardReferenceOverride
+  href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_CompassForwardReferenceOverride_
+  commentId: Overload:TargetIndicators.TargetIndicatorManager.CompassForwardReferenceOverride
+  fullName: TargetIndicators.TargetIndicatorManager.CompassForwardReferenceOverride
+  nameWithType: TargetIndicatorManager.CompassForwardReferenceOverride
 - uid: TargetIndicators.TargetIndicatorManager.Ellipse
   name: Ellipse
   href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_Ellipse
