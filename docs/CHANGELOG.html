@@ -88,16 +88,16 @@ and this project adheres to <a href="https://semver.org/spec/v2.0.0.html">Semant
 </ul>
 <h3 id="fixed">Fixed</h3>
 <ul>
-<li>Improved Inspector tooltips.</li>
-<li>Undoing <strong>Add Boundary Visualizer</strong> or <strong>Remove Boundary Visualizer</strong> in the <code>TargetIndicatorManager</code> Inspector returns the scene to its saved state, with no unsaved changes.</li>
-<li><strong>Remove Boundary Visualizer</strong> can be undone and redone any number of times, and the Editor stays stable.</li>
-<li>Fixed <code>TargetIndicatorManager</code> returning default poses for all targets when <code>BoundaryType</code> is <code>CompassTape</code> and <a class="xref" href="api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_CompassForwardReferenceOverride">CompassForwardReferenceOverride</a> is set but the <code>Camera</code> is <code>null</code>. The override is now used as the reference, and the missing camera warnings are no longer logged in this case.</li>
-<li>Fixed <code>TryAddTarget</code>, <code>TryGetTargetIndicator</code>, and <code>GetScreenPose</code> using the compass tape reference from the last update instead of the current reference when <code>BoundaryType</code> is <code>CompassTape</code>.</li>
-<li>Fixed the warning logged by <code>VisualIndicatorManager.RemoveTargetIndicator</code> that incorrectly referenced <code>Manual</code> mode when it is logged in <code>Auto</code> mode.</li>
-<li>Fixed the installation documentation to state that importing the package from the Asset Store places its contents in <code>Assets/Target Indicators</code> instead of <code>Packages</code>.</li>
-<li>Fixed the documentation tip for adding targets with the visual indicator manager to reference <code>VisualIndicatorManager.TryAddVisualIndicator</code> instead of the deprecated <code>AddTargetIndicator</code>.</li>
-<li>Fixed the <a class="xref" href="api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_IsOutsideBoundary_">TargetIndicatorManager.IsOutsideBoundary</a> documentation and code example to pass a screen point instead of a world space position.</li>
-<li>Fixed the <code>GetScreenPose</code> code example comment that stated the depth from the camera is ignored when checking the boundary.</li>
+<li>Fixed several Inspector tooltips so they are more accurate and complete.</li>
+<li>Fixed undoing <strong>Add Boundary Visualizer</strong> or <strong>Remove Boundary Visualizer</strong> in the <code>TargetIndicatorManager</code> Inspector so it correctly returns the scene to its saved state.</li>
+<li>Fixed <strong>Remove Boundary Visualizer</strong> so it reliably handles multiple undo and redo operations.</li>
+<li>Fixed <code>TargetIndicatorManager</code> to use <a class="xref" href="api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_CompassForwardReferenceOverride">CompassForwardReferenceOverride</a> as the reference when <code>BoundaryType</code> is <code>CompassTape</code> and the <code>Camera</code> is <code>null</code>, so every target gets its correct pose and no missing camera warning is logged.</li>
+<li>Fixed <code>TryAddTarget</code>, <code>TryGetTargetIndicator</code>, and <code>GetScreenPose</code> to use the current compass tape reference when <code>BoundaryType</code> is <code>CompassTape</code>.</li>
+<li>Fixed the warning logged by <code>VisualIndicatorManager.RemoveTargetIndicator</code> in <code>Auto</code> mode to state that the manager is set to <code>Auto</code> and that removing targets requires <code>Manual</code> mode.</li>
+<li>Fixed the installation documentation to state that importing the package from the Asset Store places its contents in <code>Assets/Target Indicators</code>.</li>
+<li>Fixed the documentation tip for adding targets with the visual indicator manager to reference <code>VisualIndicatorManager.TryAddVisualIndicator</code>.</li>
+<li>Fixed the <a class="xref" href="api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_IsOutsideBoundary_">TargetIndicatorManager.IsOutsideBoundary</a> documentation and code example to pass a screen point.</li>
+<li>Fixed the <code>GetScreenPose</code> code example comment to state that a position behind the camera is outside <code>Padded</code> and <code>Absolute</code> boundaries.</li>
 <li>Fixed the documentation for <code>VisualIndicatorManager.HideVisualIndicator</code> and <code>VisualIndicatorManager.ShowVisualIndicator</code> to describe that they deactivate and reactivate the visual indicator's GameObject.</li>
 </ul>
 <h2 id="140---06212026">[1.4.0] - 06/21/2026</h2>
