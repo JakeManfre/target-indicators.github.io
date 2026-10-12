@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Set up a compass tape | Target Indicators Documentation </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Set up a compass tape | Target Indicators Documentation ">
+    
+    
+      <link rel="shortcut icon" href="../../images/target_indicators_light_icon.png">
+      <link rel="stylesheet" href="../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../styles/docfx.css">
+      <link rel="stylesheet" href="../../styles/main.css">
+      <meta property="docfx:navrel" content="../../toc.html">
+      <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/target_indicators_light_icon.png" alt="Target Indicators">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="target-indicators-get-started-compass-tape">
+<h1 id="set-up-a-compass-tape">Set up a compass tape</h1>
+
+<p>This page walks you through setting up a compass tape, a horizontal bar across the top of the screen that shows the direction of each target. As the player turns, the visual indicators slide along the tape. This is the same setup as the Compass Tape Demo in the <a class="xref" href="../samples/sample-scenes.html">sample scenes</a>.</p>
+<p>A compass tape works differently from screen indicators. Instead of a position on screen, each target indicator holds the target's direction, and a special visual indicator manager places the visual indicators along the tape. To learn more, refer to <a class="xref" href="target-indicator.html#compass-tape-boundary-type">Compass tape boundary type</a>.</p>
+<p>Before you start, complete the steps in <a class="xref" href="get-started.html#before-you-begin">Get started</a> to prepare your project and scene.</p>
+<h2 id="set-up-your-scene">Set up your scene</h2>
+<p>Follow these steps in order. Each step links to the page that explains its settings in more detail.</p>
+<h3 id="1-add-the-target-indicator-manager">1. Add the Target Indicator Manager</h3>
+<p>The target indicator manager tracks your targets and calculates a target indicator for each one, which holds the target's direction relative to where the player is facing.</p>
+<ol>
+<li>Create an empty GameObject from <strong>GameObject</strong> &gt; <strong>Create Empty</strong> and name it <code>Compass Tape Target Indicator Manager</code>.</li>
+<li>In the Inspector, select <strong>Add Component</strong> and add <strong>Target Indicator Manager</strong>.</li>
+<li>Check that <strong>Camera</strong> is set to your scene's camera. The component assigns the camera tagged <code>MainCamera</code> automatically.</li>
+<li>Set <strong>Boundary Type</strong> to <code>Compass Tape</code>.</li>
+</ol>
+<p>By default, the direction to each target is measured from the camera. If the player can look around freely, for example in a vehicle with a turret camera, you can measure it from another object instead by setting <strong>Compass Forward Override</strong>. For more information, refer to <a class="xref" href="target-indicator-manager.html#compass-forward-reference-override">Compass forward reference override</a>.</p>
+<p><img src="../../images/compass-tape-setup-manager.png" alt="The Target Indicator Manager component in the Inspector with Boundary Type set to Compass Tape and the Camera assigned."></p>
+<h3 id="2-create-the-canvas-and-the-tape">2. Create the Canvas and the tape</h3>
+<p>Visual indicators are Unity UI elements, so they need a Canvas.</p>
+<ol>
+<li>Create a Canvas from <strong>GameObject</strong> &gt; <strong>UI</strong> &gt; <strong>Canvas</strong> and name it <code>Compass Canvas</code>.</li>
+<li>In the <strong>Canvas</strong> component, leave <strong>Render Mode</strong> set to <code>Screen Space - Overlay</code>.</li>
+<li>In the <strong>Canvas Scaler</strong> component, set <strong>UI Scale Mode</strong> to <code>Scale With Screen Size</code> and <strong>Reference Resolution</strong> to <code>1920</code> x <code>1080</code>.</li>
+</ol>
+<p>Next, add the tape. Its width is the visible length of the compass, and the visual indicators are placed along it.</p>
+<ol>
+<li>Right-click <code>Compass Canvas</code> in the Hierarchy, select <strong>Create Empty</strong>, and name the new GameObject <code>Compass Tape</code>.</li>
+<li>In its <strong>Rect Transform</strong>, set the following values to place the tape at the top center of the screen:
+<ul>
+<li><strong>Anchors</strong> <strong>Min</strong> and <strong>Max</strong> to X <code>0.5</code>, Y <code>1</code>.</li>
+<li><strong>Pivot</strong> to X <code>0.5</code>, Y <code>1</code>.</li>
+<li><strong>Pos X</strong> to <code>0</code>, <strong>Pos Y</strong> to <code>-95</code>, <strong>Width</strong> to <code>800</code>, and <strong>Height</strong> to <code>10</code>.</li>
+</ul>
+</li>
+<li>Select <strong>Add Component</strong> and add an <strong>Image</strong>. Lower the alpha of its <strong>Color</strong> so the tape shows as a faint bar, for example to <code>64</code>.</li>
+</ol>
+<p><img src="../../images/compass-tape-setup-ui.png" alt="The Rect Transform and Image of Compass Tape in the Inspector with the values above."></p>
+<h3 id="3-add-the-compass-tape-visual-indicator-manager">3. Add the Compass Tape Visual Indicator Manager</h3>
+<p>The compass tape visual indicator manager creates a visual indicator for each target indicator, and places it along the tape based on the target's direction. Use it instead of the regular Visual Indicator Manager, which can't display compass tape target indicators.</p>
+<ol>
+<li>Create an empty GameObject from <strong>GameObject</strong> &gt; <strong>Create Empty</strong> and name it <code>Compass Tape Visual Indicator Manager</code>.</li>
+<li>Select <strong>Add Component</strong> and add <strong>Compass Tape Visual Indicator Manager</strong>.</li>
+<li>Set <strong>Default Visual Indicator Prefab</strong> to the <code>Compass Tape VisualIndicator</code> prefab in <code>Assets/Target Indicators/Samples/Core Assets/Prefabs</code>.</li>
+<li>Set <strong>Target Indicator Manager</strong> to the <code>Compass Tape Target Indicator Manager</code> GameObject from step 1.</li>
+<li>Set <strong>Canvas</strong> to <code>Compass Canvas</code>, and <strong>Content</strong> to <code>Compass Tape</code>.</li>
+<li>Leave <strong>Add Indicator Mode</strong> set to <code>Auto</code>, so the manager creates a visual indicator for every target you add.</li>
+<li>Set <strong>Full Tape To Visible Tape Ratio</strong> to <code>3.6</code>. The visible tape covers 360 degrees divided by this value, so <code>3.6</code> shows the 100 degrees in front of the player. Targets outside that range are hidden until the player turns toward them. Don't leave it at <code>0</code>, or every visual indicator sits in the middle of the tape.</li>
+</ol>
+<p><img src="../../images/compass-tape-setup-visual-indicator-manager.png" alt="The Compass Tape Visual Indicator Manager component in the Inspector with all fields assigned."></p>
+<p>To learn more about each setting, refer to <a class="xref" href="../samples/visual-indicator-manager-component.html#compass-tape-visual-indicator-manager">Compass tape visual indicator manager</a>.</p>
+<h3 id="4-add-your-targets">4. Add your targets</h3>
+<p>Add your targets the same way as for screen indicators.</p>
+<p><strong>Track targets in your scene</strong></p>
+<ol>
+<li>Create an empty GameObject and name it <code>Compass Targets Setup</code>.</li>
+<li>Select <strong>Add Component</strong> and add <strong>Simple Target Indicator Setup Example</strong>.</li>
+<li>Set <strong>Target Indicator Manager</strong> to <code>Compass Tape Target Indicator Manager</code>.</li>
+<li>Add your target objects to the <strong>Targets</strong> list.</li>
+</ol>
+<p><img src="../../images/compass-tape-setup-targets.png" alt="The Simple Target Indicator Setup Example component with Target Indicator Manager set to Compass Tape Target Indicator Manager and the targets in the Targets list."></p>
+<p><strong>Track targets created at runtime</strong></p>
+<p>To track targets that your game creates at runtime, each with its own visual indicator on the tape, follow <a class="xref" href="get-started-screen-indicators.html#track-targets-created-at-runtime">Track targets created at runtime</a> and set the spawner's <strong>Visual Indicator Manager</strong> to <code>Compass Tape Visual Indicator Manager</code>. The visual indicator prefabs you use must have the <code>CompassTapeVisualIndicator</code> component. The Compass Tape Demo also uses <code>Manual</code> mode, with a different visual indicator prefab for each player. For details, refer to <a class="xref" href="../samples/visual-indicator-component.html#compass-tape-visual-indicator">Compass tape visual indicator</a>.</p>
+<h3 id="5-try-it-in-play-mode">5. Try it in Play mode</h3>
+<p>Enter Play mode. A visual indicator appears on the tape for each target in front of the camera. A target straight ahead sits in the middle of the tape.</p>
+<p>To check that the visual indicators follow their targets, select the camera in the Hierarchy and change its <strong>Y</strong> rotation in the Inspector. The visual indicators slide along the tape as the camera turns, and disappear when their targets move outside the visible range.</p>
+<p><img src="../../images/compass-tape-working-game-view.png" alt="The Game view in Play mode with the compass tape showing visual indicators for targets in front of the camera, one of them in the middle of the tape and one of them to the left in view."></p>
+<h2 id="if-visual-indicators-dont-appear">If visual indicators don't appear</h2>
+<p>If no visual indicators appear on the tape in Play mode, check the following:</p>
+<ul>
+<li>The Console has no errors or warnings. The visual indicator manager logs a warning if the target indicator manager's <strong>Boundary Type</strong> isn't <code>Compass Tape</code>, and an error if the default prefab doesn't use the <code>CompassTapeVisualIndicator</code> component.</li>
+<li>The scene uses the <strong>Compass Tape Visual Indicator Manager</strong>, not the regular Visual Indicator Manager.</li>
+<li><strong>Full Tape To Visible Tape Ratio</strong> is above <code>0</code>. At <code>0</code>, every visual indicator sits in the middle of the tape.</li>
+<li>The targets are within the visible range. Turn the camera toward a target to bring its visual indicator onto the tape.</li>
+</ul>
+<h2 id="next-steps">Next steps</h2>
+<p>To change how the visual indicators on the tape look, refer to <a class="xref" href="../samples/visual-indicator-component.html#set-up-a-prefab">Set up a prefab</a>. To keep visual indicators for targets outside the visible range pinned to the ends of the tape instead of hiding them, set the prefab's <strong>Core Indicator Visibility</strong> to <code>Always</code>. For more information, refer to <a class="xref" href="../samples/visual-indicator-component.html#indicator-visibility">Indicator visibility</a>.</p>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

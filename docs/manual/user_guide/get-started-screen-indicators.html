@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Set up screen indicators | Target Indicators Documentation </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Set up screen indicators | Target Indicators Documentation ">
+    
+    
+      <link rel="shortcut icon" href="../../images/target_indicators_light_icon.png">
+      <link rel="stylesheet" href="../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../styles/docfx.css">
+      <link rel="stylesheet" href="../../styles/main.css">
+      <meta property="docfx:navrel" content="../../toc.html">
+      <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/target_indicators_light_icon.png" alt="Target Indicators">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="target-indicators-get-started-screen-indicators">
+<h1 id="set-up-screen-indicators">Set up screen indicators</h1>
+
+<p>This page walks you through setting up visual indicators that sit on top of your targets while they're on screen, and move to the edge of the screen with an arrow pointing toward them when they're off screen. This is the same setup as the Simple Demo in the <a class="xref" href="../samples/sample-scenes.html">sample scenes</a>.</p>
+<p>Before you start, complete the steps in <a class="xref" href="get-started.html#before-you-begin">Get started</a> to prepare your project and scene.</p>
+<h2 id="set-up-your-scene">Set up your scene</h2>
+<p>Follow these steps in order. Each step links to the page that explains its settings in more detail.</p>
+<h3 id="1-add-the-target-indicator-manager">1. Add the Target Indicator Manager</h3>
+<p>The target indicator manager tracks your targets and calculates a target indicator for each one, which is the data that describes where its visual indicator goes on screen.</p>
+<ol>
+<li>Create an empty GameObject from <strong>GameObject</strong> &gt; <strong>Create Empty</strong> and name it <code>Target Indicators Manager</code>.</li>
+<li>In the Inspector, select <strong>Add Component</strong> and add <strong>Target Indicator Manager</strong>.</li>
+<li>Check that <strong>Camera</strong> is set to your scene's camera. The component assigns the camera tagged <code>MainCamera</code> automatically.</li>
+<li>Leave <strong>Boundary Type</strong> set to <code>Padded</code> and <strong>Boundary Shape</strong> set to <code>Rectangle</code>.</li>
+<li>Set <strong>Top Padding</strong>, <strong>Bottom Padding</strong>, <strong>Left Padding</strong>, and <strong>Right Padding</strong> to <code>60</code>. The padding keeps visual indicators a short distance inside the edge of the screen so they aren't cut off. If your HUD has elements near an edge, such as a health bar or minimap, increase the padding on that side so the visual indicators don't cover them.</li>
+</ol>
+<p><img src="../../images/target-indicators-setup-manager.png" alt="The Target Indicator Manager component in the Inspector after this step where Camera is assigned, Boundary Type is set to Padded, Boundary Shape is Rectangle, all four paddings set to 60."></p>
+<p>To learn more about each setting, refer to <a class="xref" href="target-indicator-manager.html#configure-the-target-indicator-manager">Configure the Target Indicator Manager</a>.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>To see where visual indicators will stop at the edge of the screen, select <strong>Add Boundary Visualizer</strong> at the bottom of the component. The boundary is drawn as a green outline in the Game view. The outline also appears in builds, so select <strong>Remove Boundary Visualizer</strong> before you build. For more information, refer to <a class="xref" href="target-indicator-manager.html#visualize-the-boundary">Visualize the boundary</a>.</p>
+</div>
+<p><img src="../../images/target-indicators-setup-with-visualizer.png" alt="The Game view in Edit mode with the boundary visualizer's green outline inset 60 pixels from each screen edge."></p>
+<h3 id="2-create-the-canvas">2. Create the Canvas</h3>
+<p>Visual indicators are Unity UI elements, so they need a Canvas.</p>
+<ol>
+<li>Create a Canvas from <strong>GameObject</strong> &gt; <strong>UI</strong> &gt; <strong>Canvas</strong> and name it <code>Target Indicators Canvas</code>.</li>
+<li>In the <strong>Canvas</strong> component, leave <strong>Render Mode</strong> set to <code>Screen Space - Overlay</code> so visual indicators always draw on top of the scene.</li>
+<li>In the <strong>Canvas Scaler</strong> component, set <strong>UI Scale Mode</strong> to <code>Scale With Screen Size</code> and <strong>Reference Resolution</strong> to <code>1920</code> x <code>1080</code>. This keeps the visual indicators the same size relative to the screen at any resolution.</li>
+</ol>
+<p><img src="../../images/target-indicators-setup-canvas-scalar.png" alt="The Canvas and Canvas Scaler components in the Inspector with Render Mode set to Screen Space - Overlay, UI Scale Mode set to Scale With Screen Size, and Reference Resolution set to 1920 x 1080."></p>
+<p>Next, add the area of the Canvas that holds the visual indicators. It must fill the whole Canvas so that each visual indicator lines up with its target.</p>
+<ol>
+<li>Right-click <code>Target Indicators Canvas</code> in the Hierarchy, select <strong>Create Empty</strong>, and name the new GameObject <code>Visual Indicators Content</code>.</li>
+<li>In its <strong>Rect Transform</strong>, set the following values:
+<ul>
+<li><strong>Anchors</strong> <strong>Min</strong> to X <code>0</code>, Y <code>0</code>, and <strong>Max</strong> to X <code>1</code>, Y <code>1</code>.</li>
+<li><strong>Pivot</strong> to X <code>0.5</code>, Y <code>0.5</code>.</li>
+<li><strong>Left</strong>, <strong>Top</strong>, <strong>Right</strong>, and <strong>Bottom</strong> to <code>0</code>.</li>
+</ul>
+</li>
+</ol>
+<p><img src="../../images/target-indicators-setup-canvas-content-rect-transform.png" alt="The Rect Transform of Visual Indicators Content in the Inspector with the values above."></p>
+<p>For more information, refer to <a class="xref" href="ugui-indicators.html">uGUI indicators</a>.</p>
+<h3 id="3-add-the-visual-indicator-manager">3. Add the Visual Indicator Manager</h3>
+<p>The visual indicator manager creates a visual indicator for each target indicator. It instantiates a UI prefab under the Canvas for each target, and updates its position and appearance from the target indicator every frame.</p>
+<ol>
+<li>Create an empty GameObject from <strong>GameObject</strong> &gt; <strong>Create Empty</strong> and name it <code>Visual Indicator Manager</code>.</li>
+<li>Select <strong>Add Component</strong> and add <strong>Visual Indicator Manager</strong>.</li>
+<li>Set <strong>Default Visual Indicator Prefab</strong> to the <code>Visual Indicator</code> prefab in <code>Assets/Target Indicators/Samples/Core Assets/Prefabs</code>.</li>
+<li>Set <strong>Target Indicator Manager</strong> to the <code>Target Indicators Manager</code> GameObject from step 1.</li>
+<li>Set <strong>Canvas</strong> to <code>Target Indicators Canvas</code>, and <strong>Content</strong> to <code>Visual Indicators Content</code>.</li>
+<li>Leave <strong>Add Indicator Mode</strong> set to <code>Auto</code>. In this mode, the visual indicator manager creates a visual indicator for every target you add to the target indicator manager.</li>
+<li>Enable <strong>Sync Boundary Scale With Canvas</strong>. This makes the padding from step 1 scale with the Canvas, so it stays proportional to the visual indicators at every resolution.</li>
+</ol>
+<p><img src="../../images/target-indicators-setup-visual-indicator-manager.png" alt="The Visual Indicator Manager component in the Inspector with all fields assigned."></p>
+<p>To learn more about each setting, refer to <a class="xref" href="../samples/visual-indicator-manager-component.html">Visual indicator manager component</a>.</p>
+<h3 id="4-add-your-targets">4. Add your targets</h3>
+<p>The last step is telling the target indicator manager which targets to track. Start with targets that are already in your scene so you can see the setup working. Then read the next section to track targets that your game creates at runtime, each with its own visual indicator.</p>
+<p><a id="track-targets-in-your-scene"></a>
+<strong>Track targets in your scene</strong></p>
+<p>To track targets that are already in your scene without writing code, use the setup component from the samples:</p>
+<ol>
+<li>Create an empty GameObject and name it <code>Target Indicators Setup</code>.</li>
+<li>Select <strong>Add Component</strong> and add <strong>Simple Target Indicator Setup Example</strong>.</li>
+<li>Set <strong>Target Indicator Manager</strong> to <code>Target Indicators Manager</code>.</li>
+<li>Add your target objects to the <strong>Targets</strong> list.</li>
+</ol>
+<p>The component starts tracking the targets when the scene starts, and stops tracking them when it's disabled.</p>
+<p><img src="../../images/target-indicators-setup-simple-example.png" alt="The Simple Target Indicator Setup Example component in the Inspector with the Target Indicator Manager assigned and three cubes in the Targets list."></p>
+<p><a id="track-targets-created-at-runtime"></a>
+<strong>Track targets created at runtime</strong></p>
+<p>Targets that your game creates at runtime, such as enemies or pickups, don't exist in the scene yet, so you can't add them to a list in the Inspector. Instead, add each target from the script that creates it. That script is already in your scene, so it can keep a reference to the visual indicator manager.</p>
+<p>Games often also need a different visual indicator for each kind of target, for example one for enemies and another for pickups. The visual indicator manager supports this in <code>Manual</code> mode, where you add each target together with the visual indicator prefab to use for it. The following example does both. Each target prefab chooses its own visual indicator prefab, and the spawner passes it to the visual indicator manager when it creates the target.</p>
+<pre><code class="lang-cs" name="SpawnTargetsExample">// Add this component to each target prefab, such as an enemy or a pickup, and assign
+// the visual indicator prefab that should represent it.
+public class TargetVisualIndicator : MonoBehaviour
+{
+    [SerializeField]
+    [Tooltip(&quot;The visual indicator prefab that represents this target on screen.&quot;)]
+    VisualIndicator _visualIndicatorPrefab;
+
+    public VisualIndicator VisualIndicatorPrefab =&gt; _visualIndicatorPrefab;
+}
+
+// Add this component to a GameObject in your scene. It spawns targets and gives each one
+// the visual indicator chosen on its prefab.
+public class TargetSpawner : MonoBehaviour
+{
+    [SerializeField]
+    [Tooltip(&quot;The Visual Indicator Manager that displays the spawned targets. &quot; +
+        &quot;Its Add Indicator Mode must be Manual.&quot;)]
+    VisualIndicatorManager _visualIndicatorManager;
+
+    public TargetVisualIndicator SpawnTarget(
+        TargetVisualIndicator targetPrefab, Vector3 position)
+    {
+        var target = Instantiate(targetPrefab, position, Quaternion.identity);
+
+        // Track the target and create its visual indicator from the prefab it chose.
+        _visualIndicatorManager.TryAddVisualIndicator(
+            target.transform, target.VisualIndicatorPrefab, out _);
+
+        // When the target is destroyed, it stops being tracked and its visual indicator
+        // is removed automatically.
+        return target;
+    }
+}
+</code></pre>
+<p>To use the example:</p>
+<ol>
+<li>Create two scripts named <code>TargetVisualIndicator.cs</code> and <code>TargetSpawner.cs</code>, and copy each class into its own script.</li>
+<li>Add <strong>Target Visual Indicator</strong> to each target prefab, and set <strong>Visual Indicator Prefab</strong> to the visual indicator prefab for that kind of target.</li>
+<li>Add <strong>Target Spawner</strong> to a GameObject in your scene, and set its <strong>Visual Indicator Manager</strong> field.</li>
+<li>On the Visual Indicator Manager, set <strong>Add Indicator Mode</strong> to <code>Manual</code>.</li>
+<li>Call <code>SpawnTarget</code> from your game code with the target prefab and a position.</li>
+</ol>
+<p>You don't need to remove targets when they're destroyed. They stop being tracked automatically, and their visual indicators are removed. If you disable a target or return it to an object pool instead of destroying it, keep the <code>TargetIndicatorId</code> from <code>TryAddVisualIndicator</code> and pass it to <code>RemoveTargetIndicator</code>.</p>
+<p>In <code>Manual</code> mode, the visual indicator manager only shows targets that you add through it. If you also track targets in your scene, add them with <code>TryAddVisualIndicator</code> too. For details, refer to <a class="xref" href="../samples/visual-indicator-manager-component.html#manual-mode">Manual mode</a>. To create your own visual indicator prefabs, refer to <a class="xref" href="../samples/visual-indicator-component.html#set-up-a-prefab">Set up a prefab</a>.</p>
+<h3 id="5-try-it-in-play-mode">5. Try it in Play mode</h3>
+<p>Enter Play mode. A visual indicator appears on top of each target that's on screen. For targets that are off screen, the visual indicator sits at the edge of the screen with an arrow pointing toward the target.</p>
+<p>To check that the visual indicators follow their targets, select the camera in the Hierarchy and change its <strong>Y</strong> rotation in the Inspector. As targets leave the view, their visual indicators move to the edge of the screen. When you look almost directly at a target, its distance appears below the visual indicator.</p>
+<p><img src="../../images/target-indicators-setup-working-game-view.png" alt="The Game view in Play mode with a target on screen and two targets off screen and icons pointing towards them."></p>
+<p>Your Hierarchy now looks like this:</p>
+<p><img src="../../images/target-indicators-setup-final-hierarchy.png" alt="The Hierarchy with Target Indicators Manager, Target Indicators Canvas (with Visual Indicators Content as its child), EventSystem, Visual Indicator Manager, Target Indicators Setup, and the three cubes."></p>
+<h2 id="if-visual-indicators-dont-appear">If visual indicators don't appear</h2>
+<p>If no visual indicators appear in Play mode, check the following:</p>
+<ul>
+<li>The Console has no errors. A missing field on the Visual Indicator Manager causes errors when you enter Play mode.</li>
+<li><strong>Add Indicator Mode</strong> is set to <code>Auto</code>. In <code>Manual</code> mode, the visual indicator manager only shows targets that you add through its own <code>TryAddVisualIndicator</code> method.</li>
+<li><code>Visual Indicators Content</code> fills the whole Canvas, and the Canvas uses <code>Screen Space - Overlay</code>. Otherwise, visual indicators appear in the wrong place.</li>
+<li>If the visual indicators show no distance text, import the TextMeshPro essentials from <strong>Window</strong> &gt; <strong>TextMeshPro</strong> &gt; <strong>Import TMP Essential Resources</strong>.</li>
+</ul>
+<h2 id="next-steps">Next steps</h2>
+<p>Now that you have working visual indicators, you can customize them for your project. You can change where visual indicators stop at the edge of the screen with a different <a class="xref" href="target-indicator-manager.html#boundary-type">boundary type or shape</a>, run <a class="xref" href="target-indicator-manager.html#using-multiple-target-indicator-managers">multiple target indicator managers</a> for different categories of targets, or add a <a class="xref" href="get-started-compass-tape.html">compass tape</a>. To build your own visual indicators with any UI system, refer to <a class="xref" href="ugui-indicators.html">uGUI indicators</a> and the <a class="xref" href="target-indicator-manager.html#api">Target Indicator Manager API</a>.</p>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

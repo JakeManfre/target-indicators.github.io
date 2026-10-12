@@ -245,6 +245,46 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/compass-tape-setup-manager.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/compass-tape-setup-manager.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/compass-tape-setup-targets.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/compass-tape-setup-targets.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/compass-tape-setup-ui.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/compass-tape-setup-ui.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/compass-tape-setup-visual-indicator-manager.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/compass-tape-setup-visual-indicator-manager.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/compass-tape-target-indicators-demo-scene.png",
       "output": {
         "resource": {
@@ -269,6 +309,26 @@
       "output": {
         "resource": {
           "relative_path": "images/compass-tape-visual-indicator-prefab.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/compass-tape-working-game-view.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/compass-tape-working-game-view.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/desktop.ini",
+      "output": {
+        "resource": {
+          "relative_path": "images/desktop.ini"
         }
       },
       "version": ""
@@ -379,6 +439,86 @@
       "output": {
         "resource": {
           "relative_path": "images/target-indicator-manager-component.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/target-indicators-setup-canvas-content-rect-transform.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/target-indicators-setup-canvas-content-rect-transform.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/target-indicators-setup-canvas-scalar.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/target-indicators-setup-canvas-scalar.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/target-indicators-setup-final-hierarchy.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/target-indicators-setup-final-hierarchy.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/target-indicators-setup-manager.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/target-indicators-setup-manager.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/target-indicators-setup-simple-example.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/target-indicators-setup-simple-example.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/target-indicators-setup-visual-indicator-manager.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/target-indicators-setup-visual-indicator-manager.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/target-indicators-setup-with-visualizer.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/target-indicators-setup-with-visualizer.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/target-indicators-setup-working-game-view.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/target-indicators-setup-working-game-view.png"
         }
       },
       "version": ""
@@ -542,6 +682,46 @@
       "output": {
         ".html": {
           "relative_path": "manual/user-guide.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/user_guide/ai-agent-skill.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/user_guide/ai-agent-skill.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/user_guide/get-started-compass-tape.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/user_guide/get-started-compass-tape.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/user_guide/get-started-screen-indicators.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/user_guide/get-started-screen-indicators.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/user_guide/get-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/user_guide/get-started.html"
         }
       },
       "version": ""

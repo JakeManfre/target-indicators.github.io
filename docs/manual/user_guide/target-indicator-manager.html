@@ -95,6 +95,7 @@
 <p>To assign the camera reference at runtime, use <a class="xref" href="../../api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_Camera">TargetIndicatorManager.Camera</a>.</p>
 <h3 id="compass-forward-reference-override">Compass forward reference override</h3>
 <p>The <a class="xref" href="../../api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_CompassForwardReferenceOverride">CompassForwardReferenceOverride</a> is an optional transform used to override the forward reference vector when the <a href="#boundary-type">Boundary Type</a> is set to <code>CompassTape</code>. This is useful for tracking targets relative to an independent object (like a vehicle hull) rather than a free-look camera.</p>
+<p>When the override is set and the boundary type is <code>CompassTape</code>, the override is used as the reference for screen poses, <a class="xref" href="../../api/TargetIndicators.TargetIndicator.html#TargetIndicators_TargetIndicator_Distance">Distance</a>, and <a class="xref" href="../../api/TargetIndicators.TargetIndicator.html#TargetIndicators_TargetIndicator_LookAtDot">LookAtDot</a>, and a <a href="#camera">Camera</a> is not required. All other boundary types require a camera.</p>
 <h3 id="boundary-type">Boundary type</h3>
 <p>The <a class="xref" href="../../api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_BoundaryType">BoundaryType</a> property controls how visual indicators are bounded. For example indicators can be bounded by the screen edges or have no boundary at all.</p>
 <p>There are four boundary types:</p>
@@ -133,11 +134,21 @@
 </li>
 </ol>
 <h3 id="padding">Padding</h3>
-<p>When <code>BoundaryType</code> is set to <code>Padded</code>, you can define the pixel distance between the screen edges and the visual indicator's boundary.</p>
-<p>Padding can be independently configured for the <a class="xref" href="../../api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_TopPadding">Top</a>, <a class="xref" href="../../api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_BottomPadding">Bottom</a>, <a class="xref" href="../../api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_LeftPadding">Left</a>, and <a class="xref" href="../../api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_RightPadding">Right</a> edges. These properties are ignored if <code>BoundaryType</code> is not <code>Padded</code>.</p>
+<p>When <code>BoundaryType</code> is set to <code>Padded</code>, you can define the distance between the screen edges and the visual indicator's boundary.</p>
+<p>Padding can be independently configured for the <a class="xref" href="../../api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_TopPadding">Top</a>, <a class="xref" href="../../api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_BottomPadding">Bottom</a>, <a class="xref" href="../../api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_LeftPadding">Left</a>, and <a class="xref" href="../../api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_RightPadding">Right</a> edges. Padding values are multiplied by the <a href="#boundary-scale">Boundary scale</a> to get screen pixels. These properties are ignored if <code>BoundaryType</code> is not <code>Padded</code>.</p>
 <h3 id="width-and-height">Width and Height</h3>
-<p>When <code>BoundaryType</code> is set to <code>Absolute</code>, the boundary's dimensions are defined by the <a class="xref" href="../../api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_Width">Width</a> and <a class="xref" href="../../api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_Height">Height</a> properties.</p>
-<p>Unlike other boundary types, this size remains fixed and does not adapt to changes in screen size. These properties are ignored if <code>BoundaryType</code> is not <code>Absolute</code>.</p>
+<p>When <code>BoundaryType</code> is set to <code>Absolute</code>, the boundary's dimensions are defined by the <a class="xref" href="../../api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_Width">Width</a> and <a class="xref" href="../../api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_Height">Height</a> properties. Width and height are multiplied by the <a href="#boundary-scale">Boundary scale</a> to get screen pixels.</p>
+<p>Unlike other boundary types, this size does not adapt to changes in screen size unless you change the boundary scale. These properties are ignored if <code>BoundaryType</code> is not <code>Absolute</code>.</p>
+<h3 id="boundary-scale">Boundary scale</h3>
+<p>The <a class="xref" href="../../api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_BoundaryScale">BoundaryScale</a> property multiplies the padding, width, and height values. It is useful when your Canvas uses a <code>CanvasScaler</code> set to <strong>Scale With Screen Size</strong>, because your visual indicators then grow and shrink with the screen resolution while the boundary values would otherwise stay a fixed number of screen pixels. Set the boundary scale to the scale factor of the UI that displays your visual indicators, and the padding will stay consistent with your visual indicators at every resolution.</p>
+<p>The default value is <code>1</code>, which uses the padding, width, and height values as screen pixels with no scaling. Boundary scale is only used by the <code>Padded</code> and <code>Absolute</code> boundary types and must be greater than zero.</p>
+<p>For example, a Canvas with a <code>CanvasScaler</code> set to <strong>Scale With Screen Size</strong> and a reference resolution of 1920 x 1080 has a scale factor of <code>2</code> on a 3840 x 2160 screen. Every visual indicator is drawn twice as large in screen pixels. With a boundary scale of <code>1</code>, a padding of <code>60</code> stays 60 screen pixels, so the indicators sit relatively closer to the screen edges than they did at 1920 x 1080. With a boundary scale of <code>2</code>, the padding becomes 120 screen pixels and the layout matches the reference resolution.</p>
+<p>The <code>TargetIndicatorManager</code> does not read any UI system itself, so you decide how the boundary scale is set:</p>
+<ul>
+<li><strong>Sample visual indicators:</strong> enable <a class="xref" href="../samples/visual-indicator-manager-component.html#sync-boundary-scale-with-canvas">Sync boundary scale with canvas</a> on the <code>VisualIndicatorManager</code> to keep the boundary scale equal to its Canvas's <code>scaleFactor</code>.</li>
+<li><strong>Your own visual indicator system:</strong> set <code>BoundaryScale</code> from your own code, for example to <code>Canvas.scaleFactor</code> for uGUI or to your panel's scale for UI Toolkit. Update it whenever your UI's scale changes, such as when the screen resolution changes.</li>
+</ul>
+<p>The <a class="xref" href="../../api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_Rectangle">Rectangle</a> and <a class="xref" href="../../api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_Ellipse">Ellipse</a> properties and the <a href="#visualize-the-boundary">boundary visualizer</a> always report the boundary in screen pixels with the boundary scale applied.</p>
 <h3 id="calculate-look-at-dot">Calculate look at dot</h3>
 <p>This flag determines if the dot product should be calculated between the reference forward vector (Camera or compass forward reference override) and the direction to the target. This is useful for advanced UI mechanics such as displaying the the distance to the target with the visual indicator only when looking within a cone of the target as demonstrated in the <a class="xref" href="../samples/sample-scenes.html#simple-demo">Samples</a>. Disable this if not needed for minor performance gain. To understand more about dot products and how they work, refer to <a class="xref" href="target-indicator.html#understand-the-dot-product">Understand the dot product</a>.</p>
 <h2 id="visualize-the-boundary">Visualize the boundary</h2>
@@ -179,7 +190,7 @@
 <p>Keep track of the returned <code>TargetIndicator.TrackedIndicatorId</code> in the <code>out</code> parameter to know which target indicator corresponds to a target.</p>
 <div class="TIP">
 <h5>Tip</h5>
-<p><strong>Using prebuilt UI?</strong> If you are using the <a class="xref" href="../samples/visual-indicator-manager-component.html">Visual indicator manager</a> to display uGUI, you can let it handle adding targets for you. By setting the manager to <code>Manual</code> mode, calling <code>VisualIndicatorManager.AddTargetIndicator(Transform)</code> will automatically register the target here and spawn the required UI prefab in one step.</p>
+<p><strong>Using prebuilt UI?</strong> If you are using the <a class="xref" href="../samples/visual-indicator-manager-component.html">Visual indicator manager</a> to display uGUI, you can let it handle adding targets for you. By setting the manager to <code>Manual</code> mode, calling <code>VisualIndicatorManager.TryAddVisualIndicator(Transform, out TargetIndicatorId)</code> will automatically register the target here and spawn the required UI prefab in one step.</p>
 </div>
 <h3 id="remove-a-target">Remove a target</h3>
 <p>Remove targets to have the target indicator manager stop tracking and sending updates for a target. Removing a target can only fail if you pass an invalid <code>TargetIndicatorId</code>.</p>
@@ -241,17 +252,21 @@
     // screenPose.rotation = direction to target in screen space.
 
     // isOutsideBoundary = true if the screenPose.position is outside the configured
-    // boundary. The depth from the camera is ignored in this check.
+    // boundary. For Padded and Absolute boundaries, a position behind the camera
+    // is also considered outside.
 }
 </code></pre><h3 id="is-outside-boundary">Is outside boundary</h3>
-<p>Each <code>TargetIndicator</code> contains an <a class="xref" href="../../api/TargetIndicators.TargetIndicator.html#TargetIndicators_TargetIndicator_IsOutsideBoundary">IsOutsideBoundary</a> property that you can use to know if a target indicator is outside the configured boundary. If you want to know if any world space position is outside the current boundary use <a class="xref" href="../../api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_IsOutsideBoundary_">TargetIndicatorManager.IsOutsideBoundary</a> as shown in the following example:</p>
+<p>Each <code>TargetIndicator</code> contains an <a class="xref" href="../../api/TargetIndicators.TargetIndicator.html#TargetIndicators_TargetIndicator_IsOutsideBoundary">IsOutsideBoundary</a> property that you can use to know if a target indicator is outside the configured boundary. If you want to know if any screen point is outside the current boundary use <a class="xref" href="../../api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_IsOutsideBoundary_">TargetIndicatorManager.IsOutsideBoundary</a>. It expects a screen point, so convert a world space position with <code>Camera.WorldToScreenPoint</code> first, as shown in the following example:</p>
 <pre><code class="lang-cs" name="IsOutsideBoundary">public void IsOutsideBoundaryExample(
     TargetIndicatorManager manager, Vector3 worldSpacePosition)
 {
-    var isOutsideBoundary = manager.IsOutsideBoundary(worldSpacePosition);
+    // IsOutsideBoundary expects a screen point, so convert the world space position first.
+    var screenPoint = manager.Camera.WorldToScreenPoint(worldSpacePosition);
+    var isOutsideBoundary = manager.IsOutsideBoundary(screenPoint);
 
-    // isOutsideBoundary = true if the screen pose coordinates are outside the
-    // configured boundary. The depth from the camera is ignored in this check.
+    // isOutsideBoundary = true if the screen point is outside the configured
+    // boundary. For Padded and Absolute boundaries, a point behind the camera
+    // (screenPoint.z &lt; 0) is also considered outside.
 }
 </code></pre>
 <div class="IMPORTANT">

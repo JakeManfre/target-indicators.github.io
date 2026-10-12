@@ -397,6 +397,18 @@ references:
   commentId: Overload:TargetIndicators.TargetIndicatorManager.BottomPadding
   fullName: TargetIndicators.TargetIndicatorManager.BottomPadding
   nameWithType: TargetIndicatorManager.BottomPadding
+- uid: TargetIndicators.TargetIndicatorManager.BoundaryScale
+  name: BoundaryScale
+  href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_BoundaryScale
+  commentId: P:TargetIndicators.TargetIndicatorManager.BoundaryScale
+  fullName: TargetIndicators.TargetIndicatorManager.BoundaryScale
+  nameWithType: TargetIndicatorManager.BoundaryScale
+- uid: TargetIndicators.TargetIndicatorManager.BoundaryScale*
+  name: BoundaryScale
+  href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_BoundaryScale_
+  commentId: Overload:TargetIndicators.TargetIndicatorManager.BoundaryScale
+  fullName: TargetIndicators.TargetIndicatorManager.BoundaryScale
+  nameWithType: TargetIndicatorManager.BoundaryScale
 - uid: TargetIndicators.TargetIndicatorManager.BoundaryShape
   name: BoundaryShape
   href: api/TargetIndicators.TargetIndicatorManager.html#TargetIndicators_TargetIndicatorManager_BoundaryShape
@@ -808,6 +820,18 @@ references:
   commentId: Overload:TargetIndicators.TargetIndicatorManager.Width
   fullName: TargetIndicators.TargetIndicatorManager.Width
   nameWithType: TargetIndicatorManager.Width
+- uid: target-indicators-ai-agent-skill
+  name: AI agent skill
+  href: manual/user_guide/ai-agent-skill.html
+- uid: target-indicators-get-started
+  name: Get started
+  href: manual/user_guide/get-started.html
+- uid: target-indicators-get-started-compass-tape
+  name: Set up a compass tape
+  href: manual/user_guide/get-started-compass-tape.html
+- uid: target-indicators-get-started-screen-indicators
+  name: Set up screen indicators
+  href: manual/user_guide/get-started-screen-indicators.html
 - uid: target-indicators-install-package
   name: Install package
   href: manual/install-package.html

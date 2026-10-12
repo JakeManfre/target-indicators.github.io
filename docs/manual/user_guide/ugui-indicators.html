@@ -95,6 +95,7 @@
 <h5>Important</h5>
 <p>Changing the <a href="https://docs.unity3d.com/Packages/com.unity.ugui@2.0/manual/script-CanvasScaler.html">CanvasScaler.uiScaleMode</a> can alter the Canvas's scale, which affects how screen coordinates are interpreted.</p>
 <p>When applying <code>TargetIndicator</code> screen poses to your visual indicators, ensure you account for the Canvas's current scale. For instance, if the Canvas's scale factor is 0.5, you must double the <code>TargetIndicator</code> screen pose values to achieve correct placement.</p>
+<p>To keep the boundary proportional to your visual indicators, also set <a class="xref" href="target-indicator-manager.html#boundary-scale">TargetIndicatorManager.BoundaryScale</a> to the Canvas's <code>scaleFactor</code>, and update it when the scale factor changes.</p>
 </div>
 
 </article>

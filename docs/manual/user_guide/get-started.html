@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Get started | Target Indicators Documentation </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Get started | Target Indicators Documentation ">
+    
+    
+      <link rel="shortcut icon" href="../../images/target_indicators_light_icon.png">
+      <link rel="stylesheet" href="../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../styles/docfx.css">
+      <link rel="stylesheet" href="../../styles/main.css">
+      <meta property="docfx:navrel" content="../../toc.html">
+      <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/target_indicators_light_icon.png" alt="Target Indicators">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="target-indicators-get-started">
+<h1 id="get-started">Get started</h1>
+
+<p>The pages in this section walk you through setting up a scene with working target indicators, step by step.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>If you use an AI coding agent, it can do this setup for you. Refer to <a class="xref" href="ai-agent-skill.html">AI agent skill</a> to learn how to give your agent the included skill.</p>
+</div>
+<h2 id="target-indicators-and-visual-indicators">Target indicators and visual indicators</h2>
+<p>Each setup uses two managers that work together. The <a class="xref" href="target-indicator-manager.html">Target Indicator Manager</a> tracks your targets and calculates a target indicator for each one, which is the data that describes where the target is on screen. The <a class="xref" href="../samples/visual-indicator-manager-component.html">Visual Indicator Manager</a> from the samples reads those target indicators and creates a visual indicator for each one, which is the UI element you see on screen.</p>
+<p>Keep this difference in mind as you follow the steps. The target indicator manager decides what's tracked and where, and the visual indicator manager decides how it looks. For a fuller explanation, refer to <a class="xref" href="overview.html#target-indicators-and-visual-indicators">Target indicators and visual indicators</a>.</p>
+<h2 id="before-you-begin">Before you begin</h2>
+<p>Make sure Target Indicators is in your project, including its samples. Refer to <a class="xref" href="../install-package.html">Install package</a> if you haven't installed it yet. The visual indicators use TextMeshPro to show the distance to each target, so also import the TextMeshPro essentials from <strong>Window</strong> &gt; <strong>TextMeshPro</strong> &gt; <strong>Import TMP Essential Resources</strong>.</p>
+<p>Open the scene you want to add indicators to. It needs a camera and a few objects for the indicators to point at. If you're trying this in a new scene, create three cubes from <strong>GameObject</strong> &gt; <strong>3D Object</strong> &gt; <strong>Cube</strong> and move them apart so that at least one is out of the camera's view.</p>
+<h2 id="choose-a-setup">Choose a setup</h2>
+<p>If you're not sure which to choose, start with screen indicators. You can use both in the same scene, each with its own target indicator manager.</p>
+<h3 id="screen-indicators">Screen indicators</h3>
+<p>Visual indicators sit on top of your targets while they're on screen. When a target goes off screen, its visual indicator moves to the edge of the screen, inset by a padding you choose, with an arrow pointing toward the target. This is the setup in the Simple Demo scene.</p>
+<p><img src="../../images/padded-rectangle-boundary.png" alt="Visual indicators clamped to a padded rectangle boundary inside the edges of the screen."></p>
+<p>To set it up, follow <a class="xref" href="get-started-screen-indicators.html">Set up screen indicators</a>.</p>
+<h3 id="compass-tape">Compass tape</h3>
+<p>A horizontal bar across the top of the screen shows the direction of each target, like the compass in many first-person games. As the player turns, the visual indicators slide along the tape. This is the setup in the Compass Tape Demo scene.</p>
+<p><img src="../../images/compass-tape-target-indicators-demo-scene.png" alt="The Compass Tape Demo scene with visual indicators on a compass tape at the top of the screen."></p>
+<p>To set it up, follow <a class="xref" href="get-started-compass-tape.html">Set up a compass tape</a>.</p>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

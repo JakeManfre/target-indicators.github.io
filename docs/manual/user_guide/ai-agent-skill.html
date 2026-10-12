@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>AI agent skill | Target Indicators Documentation </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="AI agent skill | Target Indicators Documentation ">
+    
+    
+      <link rel="shortcut icon" href="../../images/target_indicators_light_icon.png">
+      <link rel="stylesheet" href="../../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../../styles/docfx.css">
+      <link rel="stylesheet" href="../../styles/main.css">
+      <meta property="docfx:navrel" content="../../toc.html">
+      <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/target_indicators_light_icon.png" alt="Target Indicators">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first=First data-prev=Previous data-next=Next data-last=Last></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="target-indicators-ai-agent-skill">
+<h1 id="ai-agent-skill">AI agent skill</h1>
+
+<p>Target Indicators includes an Agent Skill, a set of instructions that teaches AI coding agents such as Claude Code how the package works and how to use it correctly. With the skill installed, you can ask an agent to set up or change target indicators in plain language. For example, you can ask it to add markers to your objectives that stick to the screen edge, or to add a compass bar like the one in Apex Legends. The agent then follows the package's recommended setup instead of working it out from the source code.</p>
+<p>You don't need the skill to use Target Indicators, and AI agents don't need it either. Agents can still use the package without the skill by reading its scripts and samples, but with the skill they finish tasks faster and more accurately.</p>
+<h2 id="what-the-skill-covers">What the skill covers</h2>
+<p>The skill gives an agent a short overview of the package and points it to more detailed guidance when a task needs it. It explains how the <a class="xref" href="target-indicator-manager.html">Target Indicator Manager</a> and the sample visual indicators work together, and how to set up screen-edge indicators and compass tapes the same way the <a class="xref" href="../samples/sample-scenes.html">sample scenes</a> do.</p>
+<p>It also covers the <code>TargetIndicatorManager</code> API for tracking targets, choosing and sizing a boundary so indicators stay clear of your HUD, and styling indicators with prefab variants. When something goes wrong, such as indicators that don't appear or that lag behind the camera, the skill helps the agent find the cause.</p>
+<p>The skill is located in <code>Assets/Target Indicators/AI/Skills/target-indicators/</code>. The agent reads <code>SKILL.md</code> first, and only reads the files in the <code>references</code> folder when a task needs more detail.</p>
+<!-- SCREENSHOT: The Unity Project window with Assets/Target Indicators/AI/Skills/target-indicators expanded, showing SKILL.md and the references folder (visual-styling.md, custom-ui-layers.md). Optional callout on SKILL.md. -->
+<h2 id="make-the-skill-available-to-your-agent">Make the skill available to your agent</h2>
+<p>Agents load skills from their own skills folder, so you need to copy the skill to where your agent looks for it.</p>
+<p>For Claude Code, copy the <code>Assets/Target Indicators/AI/Skills/target-indicators</code> folder to <code>.claude/skills/target-indicators</code> in your project's root folder, which is the folder that contains <code>Assets</code>. For other agents, refer to your agent's documentation to find where it loads Agent Skills from.</p>
+<p>After you update Target Indicators, copy the folder again so your agent uses the latest version of the skill.</p>
+<div class="TIP">
+<h5>Tip</h5>
+<p>To create and edit scenes, an agent needs access to the Unity Editor, for example through the <a href="https://learn.unity.com/tutorial/introduction-to-unity-cli">Unity CLI</a> and its MCP server. Without Editor access, an agent can still write scripts that use Target Indicators, but you'll need to set up the scene yourself.</p>
+</div>
+<p>You don't need to mention the skill when you ask for something. Agents that support skills decide when to use one based on your request.</p>
+<!-- SCREENSHOT: An agent conversation (for example Claude Code) showing a request such as "add a compass bar across the top of the screen that shows where Flag_Red and Flag_Blue are", the agent using the target-indicators skill, and its summary of what it set up. Optional callout on the line where the skill is used. -->
+<!-- SCREENSHOT: The resulting Game view in Play mode: the compass bar with red and blue flag markers, or screen-edge indicators with arrows pointing to off-screen targets. -->
+<h2 id="performance">Performance</h2>
+<p>To measure the skill, an AI agent was given the same three tasks with and without the skill, and ran each task three times in each mode. The agent was Claude Opus 5.5 at medium effort in Claude Code, working in a new project with Target Indicators imported.</p>
+<p>Each task started from a scene prepared for it, and the agent received the prompt exactly as written below. For the hard task, the scene had one setting changed so that indicators stopped appearing, and the prompt didn't say which one.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Task</strong></th>
+<th style="text-align: left;"><strong>Prompt</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Simple</td>
+<td style="text-align: left;">i've got 3 cubes, Objective1 2 and 3. put waypoint markers on them that stick to the edge of the screen with an arrow when they're off screen</td>
+</tr>
+<tr>
+<td style="text-align: left;">Medium</td>
+<td style="text-align: left;">add a compass bar across the top of the screen like in apex that shows where Flag_Red and Flag_Blue are</td>
+</tr>
+<tr>
+<td style="text-align: left;">Hard</td>
+<td style="text-align: left;">my target indicators stopped showing up. the targets are still being added in OnEnable by the setup script but no markers appear on screen at all, no errors either. can you figure it out</td>
+</tr>
+</tbody>
+</table>
+<p>The following table compares the median results without the skill and with it. Agent steps are the number of requests the agent made to the model, and input tokens measure how much new content it read while exploring the project.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Task</strong></th>
+<th style="text-align: left;"><strong>Success rate</strong></th>
+<th style="text-align: left;"><strong>Time</strong></th>
+<th style="text-align: left;"><strong>Agent steps</strong></th>
+<th style="text-align: left;"><strong>Input tokens</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Simple</td>
+<td style="text-align: left;">83% to 100%</td>
+<td style="text-align: left;">69s to 52s (25% faster)</td>
+<td style="text-align: left;">14 to 11 (21% fewer)</td>
+<td style="text-align: left;">53% fewer</td>
+</tr>
+<tr>
+<td style="text-align: left;">Medium</td>
+<td style="text-align: left;">100% to 100%</td>
+<td style="text-align: left;">160s to 85s (47% faster)</td>
+<td style="text-align: left;">27 to 18 (33% fewer)</td>
+<td style="text-align: left;">37% fewer</td>
+</tr>
+<tr>
+<td style="text-align: left;">Hard</td>
+<td style="text-align: left;">100% to 100%</td>
+<td style="text-align: left;">64s to 46s (28% faster)</td>
+<td style="text-align: left;">11 to 11 (same)</td>
+<td style="text-align: left;">44% fewer</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Average</strong></td>
+<td style="text-align: left;"><strong>6 points higher</strong></td>
+<td style="text-align: left;"><strong>33% faster</strong></td>
+<td style="text-align: left;"><strong>18% fewer</strong></td>
+<td style="text-align: left;"><strong>45% fewer</strong></td>
+</tr>
+</tbody>
+</table>
+<p>With the skill, the agent completed every task and finished faster. It read much less of the project because it didn't need to study the package's source code to find the right setup. Its results were also closer to the recommended setup, for example adding boundary padding so indicators sit inside the screen edge, and giving targets that need to be told apart their own colored markers.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>These results come from a small number of runs with one agent and model, and they vary between agents, models, and projects. Simple tasks often succeed without the skill, so the main benefit is a faster and more consistent result.</p>
+</div>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

@@ -102,6 +102,13 @@
 <h5>Note</h5>
 <p>If <code>AddIndicatorMode</code> is set to <strong>Auto</strong>, calling <code>VisualIndicatorManager.TryAddVisualIndicator</code> will safely abort, return <code>false</code>, and log a warning to the console to prevent double-instantiation.</p>
 </div>
+<h3 id="sync-boundary-scale-with-canvas">Sync boundary scale with canvas</h3>
+<p>When enabled, the visual indicator manager sets the target indicator manager's <a class="xref" href="../user_guide/target-indicator-manager.html#boundary-scale">Boundary scale</a> to the Canvas's <code>scaleFactor</code>. This makes the target indicator manager's padding, width, and height use the same units as the Canvas, so the boundary stays proportional to your visual indicators at every resolution when the Canvas uses a <code>CanvasScaler</code>. You can also change this setting at runtime with <code>VisualIndicatorManager.SyncBoundaryScaleWithCanvas</code>.</p>
+<p>This setting is disabled by default so existing projects keep their current boundary when upgrading. Disabling it leaves the boundary scale at its current value.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>If several visual indicator managers share one target indicator manager, enable this setting on only one of them, or make sure all of their canvases have the same scale factor.</p>
+</div>
 <h2 id="manage-visual-indicators">Manage visual indicators</h2>
 <p>The <code>VisualIndicatorManager</code> is designed to streamline UI creation so you do not have to manually handle prefab instantiation and UI parenting. How you interact with the API depends on your <code>AddIndicatorMode</code>.</p>
 <p><a id="auto-mode"></a></p>
@@ -177,9 +184,13 @@ Check out the &quot;Multiple Categories Demo&quot; in the <a class="xref" href="
 <h2 id="additional-useful-apis">Additional useful APIs</h2>
 <p>When managing the visibility or lifecycle of existing indicators, use the following APIs. Each of these methods requires the <code>TargetIndicatorId</code> associated with the target.</p>
 <h3 id="hide-a-visual-indicator">Hide a visual indicator</h3>
-<p>Use <code>VisualIndicatorManager.HideVisualIndicator(TargetIndicatorId id)</code> to hide the core and rotation content of a visual indicator without disabling the component at the root. Use this to temporarily hide a visual indicator if you don't want to destroy it.</p>
+<p>Use <code>VisualIndicatorManager.HideVisualIndicator(TargetIndicatorId id)</code> to hide a visual indicator by deactivating its GameObject. The target is still tracked by the <code>TargetIndicatorManager</code> and the visual indicator is not destroyed. Use this to temporarily hide a visual indicator if you don't want to destroy it.</p>
 <h3 id="show-a-visual-indicator">Show a visual indicator</h3>
-<p>Use <code>VisualIndicatorManager.ShowVisualIndicator(TargetIndicatorId id)</code> to show the core and rotation content of a visual indicator that was previously hidden. Use this to reveal hidden indicators from <code>HideVisualIndicator</code>. Visual indicators are shown by default when first instantiated.</p>
+<p>Use <code>VisualIndicatorManager.ShowVisualIndicator(TargetIndicatorId id)</code> to reactivate the GameObject of a visual indicator that was previously hidden with <code>HideVisualIndicator</code>. Visual indicators are shown by default when first instantiated.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Disabling the <code>VisualIndicatorManager</code> component deactivates all of its visual indicators, and enabling it again reactivates all of them, including any that were individually hidden with <code>HideVisualIndicator</code>.</p>
+</div>
 <h3 id="remove-a-target-indicator">Remove a target indicator</h3>
 <p>Use <code>VisualIndicatorManager.RemoveTargetIndicator(TargetIndicatorId id)</code> to completely remove a target from the target indicator manager and destroy its UI GameObject. Use this when you are entirely done tracking a target.</p>
 <h2 id="compass-tape-visual-indicator-manager">Compass tape visual indicator manager</h2>
@@ -204,6 +215,7 @@ Check out the &quot;Multiple Categories Demo&quot; in the <a class="xref" href="
 <li><strong>Implement Object Pooling:</strong> Instead of instantiating and destroying UI prefabs, pre-allocate a pool of visual indicator GameObjects (or UI Toolkit visual elements) during initialization.</li>
 <li><strong>Listen to Lifecycle Events:</strong> Subscribe your custom manager to the <code>TargetIndicatorsAdded</code>, <code>TargetIndicatorsUpdated</code>, and <code>TargetIndicatorsRemoved</code> events.</li>
 <li><strong>Process Spans:</strong> Iterate over the zero-allocation <code>ReadOnlySpan&lt;TargetIndicator&gt;</code> provided by those events. Grab inactive elements from your pool when targets are added, update their screen poses using the span data, and return them to the pool when targets are removed.</li>
+<li><strong>Set the Boundary Scale:</strong> Set <a class="xref" href="../user_guide/target-indicator-manager.html#boundary-scale">TargetIndicatorManager.BoundaryScale</a> to your UI's scale factor, and update it whenever that scale changes, so the boundary uses the same units as your UI. The sample <code>VisualIndicatorManager</code> does this for you when <strong>Sync boundary scale with canvas</strong> is enabled, but a custom system must set it itself.</li>
 </ol>
 <p>You can use the source code of <code>VisualIndicatorManager.cs</code> as a reference for how to interface with the core API while swapping out the standard instantiation logic for your own robust, low-GC architecture.</p>
 
